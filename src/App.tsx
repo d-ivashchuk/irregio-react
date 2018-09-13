@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled from './theme/styled-components';
+import * as React from "react";
+import styled from "./theme/styled-components";
 
 const Title = styled.h1`
   color: ${props => props.color};
@@ -7,7 +7,7 @@ const Title = styled.h1`
 
 class App extends React.Component {
   public render() {
-    return <Title color={'#7FDBFF'}>Typescript with styled-components</Title>;
+    return <Title color={"#7FDBFF"}>Typescript with styled-components</Title>;
   }
 }
 

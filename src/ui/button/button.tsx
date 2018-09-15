@@ -6,6 +6,7 @@ interface IButtonProps {
   disabled?: boolean;
   type?: string;
   label: string;
+  clicked?: any;
 }
 
 const StyledButton = styled.button`
@@ -33,7 +34,12 @@ const StyledButton = styled.button`
 `;
 
 const Button: React.StatelessComponent<IButtonProps> = props => (
-  <StyledButton color={props.color} disabled={props.disabled} type={props.type}>
+  <StyledButton
+    onClick={props.clicked}
+    color={props.color}
+    disabled={props.disabled}
+    type={props.type}
+  >
     {props.label}
   </StyledButton>
 );

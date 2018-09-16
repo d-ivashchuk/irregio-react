@@ -2,11 +2,13 @@ import * as React from "react";
 import styled from "../theme/styled-components";
 import de from "./data";
 
+import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Button from "../ui/button/button";
 
 interface IState {
   data?: object;
   progress: number;
+  fractionCompleted: number;
   hintsTaken: number;
   currentPerfectForm?: string;
   currentPastForm?: string;
@@ -23,6 +25,7 @@ class App extends React.Component<{}, IState> {
   public state = {
     data: de,
     progress: 0,
+    fractionCompleted: 0,
     hintsTaken: 0,
     currentPastForm: "",
     currentPerfectForm: ""
@@ -53,16 +56,29 @@ class App extends React.Component<{}, IState> {
   }
 
   public handleButton = (type: string) => {
-    if (type === "incr") {
+    if (
+      type === "incr" &&
+      this.state.progress !== this.state.data.data.length - 1
+    ) {
       this.setState({
         ...this.state,
-        progress: this.state.progress + 1
+        progress: this.state.progress + 1,
+        fractionCompleted:
+          this.state.fractionCompleted + 100 / this.state.data.data.length
+      });
+    } else if (type === "decr" && this.state.progress === 1) {
+      this.setState({
+        ...this.state,
+        progress: 0,
+        fractionCompleted: 0
       });
     } else if (type === "decr" && this.state.progress !== 0) {
       {
         this.setState({
           ...this.state,
-          progress: this.state.progress - 1
+          progress: this.state.progress - 1,
+          fractionCompleted:
+            this.state.fractionCompleted - 100 / this.state.data.data.length
         });
       }
     }
@@ -77,16 +93,27 @@ class App extends React.Component<{}, IState> {
 
   public handleRightArrow = (event: any) => {
     if (event.keyCode === 39) {
-      this.setState({ ...this.state, progress: this.state.progress + 1 });
+      this.setState({
+        ...this.state,
+        progress: this.state.progress + 1,
+        fractionCompleted:
+          this.state.fractionCompleted + 100 / this.state.data.data.length
+      });
     }
   };
   public handleLeftArrow = (event: any) => {
     if (event.keyCode === 37 && this.state.progress !== 0) {
-      this.setState({ ...this.state, progress: this.state.progress - 1 });
+      this.setState({
+        ...this.state,
+        progress: this.state.progress - 1,
+        fractionCompleted:
+          this.state.fractionCompleted - 100 / this.state.data.data.length
+      });
     }
   };
 
   public render() {
+    console.log(this.state.progress);
     const { data } = this.state.data;
     return (
       <React.Fragment>
@@ -102,6 +129,7 @@ class App extends React.Component<{}, IState> {
           English translation: {data[this.state.progress].translationEn}
         </div>
         <div>Frequency: {data[this.state.progress].frequency}</div>
+        <div>Fraction completed: {this.state.fractionCompleted}</div>
         <Button label="Next" clicked={() => this.handleButton("incr")} />
         <Button label="Previous" clicked={() => this.handleButton("decr")} />
         <input
@@ -118,6 +146,7 @@ class App extends React.Component<{}, IState> {
           value={this.state.currentPerfectForm}
           placeholder="perfect tense"
         />
+        <ProgressBar fractionCompleted={this.state.fractionCompleted} />
       </React.Fragment>
     );
   }

@@ -6,7 +6,9 @@ import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Button from "../ui/button/button";
 
 interface IState {
-  data?: object;
+  verbs?: object;
+  filter?: string;
+  filteredVerbs?: object;
   progress: number;
   fractionCompleted: number;
   hintsTaken: number;
@@ -23,7 +25,9 @@ class App extends React.Component<{}, IState> {
   public refTwo: HTMLInputElement;
 
   public state = {
-    data: de,
+    verbs: de,
+    filter: "",
+    filteredVerbs: de.data,
     progress: 0,
     fractionCompleted: 0,
     hintsTaken: 0,
@@ -38,13 +42,13 @@ class App extends React.Component<{}, IState> {
   public componentDidUpdate() {
     if (
       this.state.currentPastForm ===
-      this.state.data.data[this.state.progress].pastTense
+      this.state.filteredVerbs[this.state.progress].pastTense
     ) {
       this.refTwo.focus();
     }
     if (
       this.state.currentPerfectForm ===
-      this.state.data.data[this.state.progress].presentPerfect
+      this.state.filteredVerbs[this.state.progress].presentPerfect
     ) {
       this.refOne.focus();
       this.setState({
@@ -58,13 +62,25 @@ class App extends React.Component<{}, IState> {
   public handleButton = (type: string) => {
     if (
       type === "incr" &&
-      this.state.progress !== this.state.data.data.length - 1
+      this.state.progress !== this.state.filteredVerbs.length - 2 &&
+      this.state.fractionCompleted !== 100
     ) {
       this.setState({
         ...this.state,
         progress: this.state.progress + 1,
         fractionCompleted:
-          this.state.fractionCompleted + 100 / this.state.data.data.length
+          this.state.fractionCompleted + 100 / this.state.filteredVerbs.length
+      });
+    } else if (
+      type === "incr" &&
+      this.state.progress === this.state.filteredVerbs.length - 2
+    ) {
+      this.setState({
+        ...this.state,
+        progress: this.state.progress + 1,
+        fractionCompleted:
+          this.state.fractionCompleted +
+          (100 / this.state.filteredVerbs.length) * 2
       });
     } else if (type === "decr" && this.state.progress === 1) {
       this.setState({
@@ -78,7 +94,7 @@ class App extends React.Component<{}, IState> {
           ...this.state,
           progress: this.state.progress - 1,
           fractionCompleted:
-            this.state.fractionCompleted - 100 / this.state.data.data.length
+            this.state.fractionCompleted - 100 / this.state.filteredVerbs.length
         });
       }
     }
@@ -92,43 +108,76 @@ class App extends React.Component<{}, IState> {
   };
 
   public handleRightArrow = (event: any) => {
-    if (event.keyCode === 39) {
+    if (
+      event.keyCode === 39 &&
+      this.state.progress === this.state.filteredVerbs.length - 1
+    ) {
+      this.setState({
+        ...this.state,
+        progress: this.state.filteredVerbs.length - 1,
+        fractionCompleted: 100
+      });
+    } else if (
+      event.keyCode === 39 &&
+      this.state.progress !== this.state.filteredVerbs.length - 1
+    ) {
       this.setState({
         ...this.state,
         progress: this.state.progress + 1,
         fractionCompleted:
-          this.state.fractionCompleted + 100 / this.state.data.data.length
+          this.state.fractionCompleted + 100 / this.state.filteredVerbs.length
       });
     }
   };
   public handleLeftArrow = (event: any) => {
-    if (event.keyCode === 37 && this.state.progress !== 0) {
+    if (event.keyCode === 37 && this.state.progress === 1) {
+      this.setState({
+        ...this.state,
+        progress: 0,
+        fractionCompleted: 0
+      });
+    } else if (event.keyCode === 37 && this.state.progress !== 0) {
       this.setState({
         ...this.state,
         progress: this.state.progress - 1,
         fractionCompleted:
-          this.state.fractionCompleted - 100 / this.state.data.data.length
+          this.state.fractionCompleted - 100 / this.state.filteredVerbs.length
       });
     }
   };
+  public handleFilter = (f: string, frequency?: string) => {
+    this.setState({
+      ...this.state,
+      filter: f,
+      filteredVerbs:
+        f === "all"
+          ? de.data
+          : de.data.filter(entry => entry.frequency === `${frequency}`),
+      progress: 0,
+      fractionCompleted: 0
+    });
+  };
 
   public render() {
-    console.log(this.state.progress);
-    const { data } = this.state.data;
+    const { filteredVerbs } = this.state;
     return (
       <React.Fragment>
         <Title color={"#7FDBFF"}>Irreg.io</Title>
         <div>Progress: {this.state.progress}</div>
-        <div>Infinitive: {data[this.state.progress].infinitive}</div>
-        <div>Past form: {data[this.state.progress].pastTense}</div>
-        <div>Perfect form: {data[this.state.progress].presentPerfect}</div>
+        <div>Infinitive: {filteredVerbs[this.state.progress].infinitive}</div>
+        <div>Past form: {filteredVerbs[this.state.progress].pastTense}</div>
         <div>
-          Russian translation: {data[this.state.progress].translationRus}
+          Perfect form: {filteredVerbs[this.state.progress].presentPerfect}
         </div>
         <div>
-          English translation: {data[this.state.progress].translationEn}
+          Russian translation:{" "}
+          {filteredVerbs[this.state.progress].translationRus}
         </div>
-        <div>Frequency: {data[this.state.progress].frequency}</div>
+        <div>
+          English translation:{" "}
+          {filteredVerbs[this.state.progress].translationEn}
+        </div>
+        <div>Frequency: {filteredVerbs[this.state.progress].frequency}</div>
         <div>Fraction completed: {this.state.fractionCompleted}</div>
         <Button label="Next" clicked={() => this.handleButton("incr")} />
         <Button label="Previous" clicked={() => this.handleButton("decr")} />
@@ -147,6 +196,15 @@ class App extends React.Component<{}, IState> {
           placeholder="perfect tense"
         />
         <ProgressBar fractionCompleted={this.state.fractionCompleted} />
+        <Button
+          label="Hard"
+          clicked={() => this.handleFilter("hard", "infrequent")}
+        />
+        <Button
+          label="Easy"
+          clicked={() => this.handleFilter("easy", "frequent")}
+        />
+        <Button label="All" clicked={() => this.handleFilter("all")} />
       </React.Fragment>
     );
   }

@@ -1,9 +1,15 @@
 import * as React from "react";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+
 import styled from "../../theme/styled-components";
 import de from "../data/data";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import Button from "../../ui/button/button";
+
+// import InputBlock from "../../components/InputBlock/InputBlock";
+import Controls from "../../components/Controls/Controls";
+import Learn from "../../components/Learn/Learn";
+import Practice from "../../components/Practice/Practice";
 
 interface IState {
   verbs?: object;
@@ -221,6 +227,9 @@ class App extends React.Component<{}, IState> {
       showTranslation: !this.state.showTranslation
     });
   };
+  public handleTest = (testNum: number) => {
+    console.log(testNum);
+  };
 
   public render() {
     const {
@@ -234,59 +243,82 @@ class App extends React.Component<{}, IState> {
       fractionCompleted,
       showTranslation
     } = this.state;
+
+    const currentVerb = filteredVerbs[progress];
+
     return (
-      <React.Fragment>
-        <Title color={"#7FDBFF"}>Irreg.io</Title>
-        <div>Progress: {progress}</div>
-        <div>Infinitive: {filteredVerbs[progress].infinitive}</div>
-        <div>Past form: {filteredVerbs[progress].pastTense}</div>
-        <div>Perfect form: {filteredVerbs[progress].presentPerfect}</div>
-        {showTranslation ? (
-          <div>
-            <div>
-              Russian translation: {filteredVerbs[progress].translationRus}
-            </div>
-            <div>
-              English translation: {filteredVerbs[progress].translationEn}
-            </div>
-          </div>
-        ) : null}
-        <div>Frequency: {filteredVerbs[progress].frequency}</div>
-        <div>Fraction completed: {fractionCompleted}</div>
-        <div>{isCompleted ? <h2>CONGRATS</h2> : null}</div>
-        <ProgressBar fractionCompleted={this.state.fractionCompleted} />
-        <input
-          ref={refOne => (this.refOne = refOne as HTMLInputElement)}
-          onChange={this.handlePastForm}
-          type="text"
-          value={currentPastForm}
-          placeholder={pastFormHint ? pastFormHint : " "}
-        />
-        <input
-          ref={refTwo => (this.refTwo = refTwo as HTMLInputElement)}
-          onChange={this.handlePerfectForm}
-          type="text"
-          value={currentPerfectForm}
-          placeholder={perfectFormHint ? perfectFormHint : " "}
-        />
-        <Button label="Next" clicked={() => this.handleButton("incr")} />
-        <Button label="Previous" clicked={() => this.handleButton("decr")} />
-        <Button
-          label="Hard"
-          clicked={() => this.handleFilter("hard", "infrequent")}
-        />
-        <Button
-          label="Easy"
-          clicked={() => this.handleFilter("easy", "frequent")}
-        />
-        <Button label="All" clicked={() => this.handleFilter("all")} />
-        <Button label="Shuffle" clicked={() => this.handleShuffle()} />
-        <Button label="Help" clicked={() => this.handleHelp()} />
-        <Button
-          label="Show translation"
-          clicked={() => this.toggleShowTranslation()}
-        />
-      </React.Fragment>
+      <BrowserRouter>
+        <React.Fragment>
+          <Title color={"#7FDBFF"}>Irreg.io</Title>
+          <Link to="/learn">Learn</Link>
+          <br />
+          <Link to="/practice">Practice</Link>
+          <Route
+            path="/learn"
+            render={() => {
+              return (
+                <Learn
+                  isCompleted={isCompleted}
+                  showTranslation={showTranslation}
+                  progress={progress}
+                  frequency={currentVerb.frequency}
+                  infinitive={currentVerb.infinitive}
+                  pastTense={currentVerb.pastTense}
+                  presentPerfect={currentVerb.presentPerfect}
+                  translationEn={currentVerb.translationEn}
+                  translationRus={currentVerb.translationRus}
+                />
+              );
+            }}
+          />
+
+          <Route
+            path="/practice"
+            render={() => {
+              return (
+                <React.Fragment>
+                  <Practice
+                    isCompleted={isCompleted}
+                    showTranslation={showTranslation}
+                    progress={progress}
+                    frequency={currentVerb.frequency}
+                    infinitive={currentVerb.infinitive}
+                    pastTense={currentVerb.pastTense}
+                    presentPerfect={currentVerb.presentPerfect}
+                    translationEn={currentVerb.translationEn}
+                    translationRus={currentVerb.translationRus}
+                  />
+                  <input
+                    ref={refOne => (this.refOne = refOne as HTMLInputElement)}
+                    onChange={this.handlePastForm}
+                    type="text"
+                    value={currentPastForm}
+                    placeholder={pastFormHint ? pastFormHint : " "}
+                  />
+                  <input
+                    ref={refTwo => (this.refTwo = refTwo as HTMLInputElement)}
+                    onChange={this.handlePerfectForm}
+                    type="text"
+                    value={currentPerfectForm}
+                    placeholder={perfectFormHint ? perfectFormHint : " "}
+                  />
+                </React.Fragment>
+              );
+            }}
+          />
+
+          <ProgressBar fractionCompleted={fractionCompleted} />
+          <Controls
+            handleButton={(type: string) => this.handleButton(type)}
+            handleShuffle={() => this.handleShuffle}
+            handleFilter={(difficulty: string, frequency?: string) =>
+              this.handleFilter(difficulty, frequency)
+            }
+            handleHelp={() => this.handleHelp}
+            toggleTranslation={() => this.toggleShowTranslation}
+          />
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }

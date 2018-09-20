@@ -19,13 +19,14 @@ class Controls extends React.Component<IProps, {}> {
       handleShuffle,
       handleFilter,
       handleHelp,
-      toggleTranslation
+      toggleTranslation,
+      location
     } = this.props;
 
     return (
       <React.Fragment>
-        <Button clicked={() => handleButton("incr")} label="increment" />
-        <Button clicked={() => handleButton("decr")} label="decrement" />
+        <Button clicked={() => handleButton("incr")} label="next" />
+        <Button clicked={() => handleButton("decr")} label="previous" />
         <Button clicked={() => handleFilter("easy", "frequent")} label="Easy" />
         <Button
           clicked={() => handleFilter("hard", "infrequent")}
@@ -33,7 +34,9 @@ class Controls extends React.Component<IProps, {}> {
         />
         <Button clicked={() => handleFilter("all")} label="All" />
         <Button clicked={handleShuffle()} label="shuffle" />
-        <Button clicked={handleHelp()} label="help" />
+        {location.pathname === "/practice" ? (
+          <Button clicked={handleHelp()} label="help" />
+        ) : null}
         <Button clicked={toggleTranslation()} label="Show translation" />
       </React.Fragment>
     );

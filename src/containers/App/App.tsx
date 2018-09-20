@@ -6,8 +6,8 @@ import de from "../data/data";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
-// import InputBlock from "../../components/InputBlock/InputBlock";
 import Controls from "../../components/Controls/Controls";
+import InputBlock from "../../components/InputBlock/InputBlock";
 import Learn from "../../components/Learn/Learn";
 import Practice from "../../components/Practice/Practice";
 
@@ -31,8 +31,8 @@ const Title = styled.h1`
 `;
 
 class App extends React.Component<{}, IState> {
-  public refOne: HTMLInputElement;
-  public refTwo: HTMLInputElement;
+  public refOne: null | HTMLInputElement;
+  public refTwo: null | HTMLInputElement;
 
   public state = {
     verbs: de,
@@ -58,14 +58,18 @@ class App extends React.Component<{}, IState> {
       this.state.currentPastForm ===
       this.state.filteredVerbs[this.state.progress].pastTense
     ) {
-      this.refTwo.focus();
+      if (this.refTwo) {
+        this.refTwo.focus();
+      }
     }
     if (
       this.state.currentPerfectForm ===
         this.state.filteredVerbs[this.state.progress].presentPerfect &&
       this.state.progress !== this.state.filteredVerbs.length - 1
     ) {
-      this.refOne.focus();
+      if (this.refOne) {
+        this.refOne.focus();
+      }
       this.setState({
         currentPastForm: "",
         currentPerfectForm: "",
@@ -200,7 +204,7 @@ class App extends React.Component<{}, IState> {
       this.state.pastFormHint !==
       this.state.filteredVerbs[this.state.progress].pastTense
     ) {
-      this.refOne.focus();
+      // this.refOne.focus();
       this.setState({
         ...this.state,
         currentPastForm: "",
@@ -211,7 +215,9 @@ class App extends React.Component<{}, IState> {
       this.state.currentPerfectForm !==
       this.state.filteredVerbs[this.state.progress].presentPerfect
     ) {
-      this.state.currentPastForm ? this.refTwo.focus() : this.refOne.focus();
+      if (this.refOne && this.refTwo) {
+        this.state.currentPastForm ? this.refTwo.focus() : this.refOne.focus();
+      }
       this.setState({
         ...this.state,
         currentPerfectForm: "",
@@ -226,9 +232,6 @@ class App extends React.Component<{}, IState> {
       ...this.state,
       showTranslation: !this.state.showTranslation
     });
-  };
-  public handleTest = (testNum: number) => {
-    console.log(testNum);
   };
 
   public render() {
@@ -288,19 +291,15 @@ class App extends React.Component<{}, IState> {
                     translationEn={currentVerb.translationEn}
                     translationRus={currentVerb.translationRus}
                   />
-                  <input
-                    ref={refOne => (this.refOne = refOne as HTMLInputElement)}
-                    onChange={this.handlePastForm}
-                    type="text"
-                    value={currentPastForm}
-                    placeholder={pastFormHint ? pastFormHint : " "}
-                  />
-                  <input
-                    ref={refTwo => (this.refTwo = refTwo as HTMLInputElement)}
-                    onChange={this.handlePerfectForm}
-                    type="text"
-                    value={currentPerfectForm}
-                    placeholder={perfectFormHint ? perfectFormHint : " "}
+                  <InputBlock
+                    refOne={refOne => (this.refOne = refOne)}
+                    refTwo={refTwo => (this.refTwo = refTwo)}
+                    pastFormHint={pastFormHint}
+                    perfectFormHint={perfectFormHint}
+                    currentPastValue={currentPastForm}
+                    currentPerfectValue={currentPerfectForm}
+                    handlePastForm={this.handlePastForm}
+                    handlePerfectForm={this.handlePerfectForm}
                   />
                 </React.Fragment>
               );

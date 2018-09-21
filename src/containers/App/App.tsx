@@ -1,7 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 
-import styled from "../../theme/styled-components";
 import de from "../data/data";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
@@ -10,6 +9,7 @@ import Controls from "../../components/Controls/Controls";
 import InputBlock from "../../components/InputBlock/InputBlock";
 import Learn from "../../components/Learn/Learn";
 import Practice from "../../components/Practice/Practice";
+import Title from "../../components/Title/Title";
 
 interface IState {
   verbs?: object;
@@ -25,10 +25,6 @@ interface IState {
   perfectFormHint?: string;
   showTranslation?: boolean;
 }
-
-const Title = styled.h1`
-  color: ${props => props.color};
-`;
 
 class App extends React.Component<{}, IState> {
   public refOne: null | HTMLInputElement;
@@ -252,7 +248,7 @@ class App extends React.Component<{}, IState> {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Title color={"#7FDBFF"}>Irreg.io</Title>
+          <Title>Irreg.io</Title>
           <Link to="/learn">Learn</Link>
           <br />
           <Link to="/practice">Practice</Link>
@@ -260,17 +256,28 @@ class App extends React.Component<{}, IState> {
             path="/learn"
             render={() => {
               return (
-                <Learn
-                  isCompleted={isCompleted}
-                  showTranslation={showTranslation}
-                  progress={progress}
-                  frequency={currentVerb.frequency}
-                  infinitive={currentVerb.infinitive}
-                  pastTense={currentVerb.pastTense}
-                  presentPerfect={currentVerb.presentPerfect}
-                  translationEn={currentVerb.translationEn}
-                  translationRus={currentVerb.translationRus}
-                />
+                <React.Fragment>
+                  <Learn
+                    isCompleted={isCompleted}
+                    showTranslation={showTranslation}
+                    progress={progress}
+                    frequency={currentVerb.frequency}
+                    infinitive={currentVerb.infinitive}
+                    pastTense={currentVerb.pastTense}
+                    presentPerfect={currentVerb.presentPerfect}
+                    translationEn={currentVerb.translationEn}
+                    translationRus={currentVerb.translationRus}
+                  />
+                  <Controls
+                    handleButton={(type: string) => this.handleButton(type)}
+                    handleShuffle={() => this.handleShuffle}
+                    handleFilter={(difficulty: string, frequency?: string) =>
+                      this.handleFilter(difficulty, frequency)
+                    }
+                    handleHelp={() => this.handleHelp}
+                    toggleTranslation={() => this.toggleShowTranslation}
+                  />
+                </React.Fragment>
               );
             }}
           />
@@ -301,21 +308,21 @@ class App extends React.Component<{}, IState> {
                     handlePastForm={this.handlePastForm}
                     handlePerfectForm={this.handlePerfectForm}
                   />
+                  <Controls
+                    handleButton={(type: string) => this.handleButton(type)}
+                    handleShuffle={() => this.handleShuffle}
+                    handleFilter={(difficulty: string, frequency?: string) =>
+                      this.handleFilter(difficulty, frequency)
+                    }
+                    handleHelp={() => this.handleHelp}
+                    toggleTranslation={() => this.toggleShowTranslation}
+                  />
                 </React.Fragment>
               );
             }}
           />
 
           <ProgressBar fractionCompleted={fractionCompleted} />
-          <Controls
-            handleButton={(type: string) => this.handleButton(type)}
-            handleShuffle={() => this.handleShuffle}
-            handleFilter={(difficulty: string, frequency?: string) =>
-              this.handleFilter(difficulty, frequency)
-            }
-            handleHelp={() => this.handleHelp}
-            toggleTranslation={() => this.toggleShowTranslation}
-          />
         </React.Fragment>
       </BrowserRouter>
     );

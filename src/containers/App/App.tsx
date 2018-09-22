@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import de from "../data/data";
 
+import { injectGlobal } from "../../theme/styled-components";
+
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Navigation from "../../ui/navi/navigation";
 
@@ -26,6 +28,16 @@ interface IState {
   perfectFormHint?: string;
   showTranslation?: boolean;
 }
+
+injectGlobal`*{ 
+  margin:0;
+  padding:0;
+}
+  body{
+  font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  );
+} `;
 
 class App extends React.Component<{}, IState> {
   public refOne: null | HTMLInputElement;
@@ -195,6 +207,14 @@ class App extends React.Component<{}, IState> {
       progress: 0,
       fractionCompleted: 0
     });
+    if (this.state.isCompleted) {
+      this.setState({
+        ...this.state,
+        isCompleted: false,
+        progress: 0,
+        fractionCompleted: 0
+      });
+    }
   };
   public handleHelp = () => {
     if (
@@ -304,6 +324,7 @@ class App extends React.Component<{}, IState> {
                     currentPerfectValue={currentPerfectForm}
                     handlePastForm={this.handlePastForm}
                     handlePerfectForm={this.handlePerfectForm}
+                    isCompleted={isCompleted}
                   />
                   <ProgressBar fractionCompleted={fractionCompleted} />
                   <Controls

@@ -11,6 +11,7 @@ interface IProps {
   refTwo: React.Ref<HTMLInputElement>;
   handlePastForm: React.ChangeEventHandler<HTMLInputElement>;
   handlePerfectForm: React.ChangeEventHandler<HTMLInputElement>;
+  isCompleted?: boolean;
 }
 
 const StyledInputBlock = styled.div`
@@ -39,25 +40,30 @@ class InputBlock extends React.Component<IProps> {
       handlePastForm,
       handlePerfectForm,
       refOne,
-      refTwo
+      refTwo,
+      isCompleted
     } = this.props;
 
     return (
       <StyledInputBlock>
-        <input
-          ref={refOne}
-          value={currentPastValue}
-          onChange={handlePastForm}
-          type="text"
-          placeholder={pastFormHint ? pastFormHint : ""}
-        />
-        <input
-          ref={refTwo}
-          value={currentPerfectValue}
-          onChange={handlePerfectForm}
-          type="text"
-          placeholder={perfectFormHint ? perfectFormHint : ""}
-        />
+        {!isCompleted ? (
+          <React.Fragment>
+            <input
+              ref={refOne}
+              value={currentPastValue}
+              onChange={handlePastForm}
+              type="text"
+              placeholder={pastFormHint ? pastFormHint : ""}
+            />
+            <input
+              ref={refTwo}
+              value={currentPerfectValue}
+              onChange={handlePerfectForm}
+              type="text"
+              placeholder={perfectFormHint ? perfectFormHint : ""}
+            />
+          </React.Fragment>
+        ) : null}
       </StyledInputBlock>
     );
   }

@@ -1,9 +1,10 @@
 import * as React from "react";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import de from "../data/data";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import Navigation from "../../ui/navi/navigation";
 
 import Controls from "../../components/Controls/Controls";
 import InputBlock from "../../components/InputBlock/InputBlock";
@@ -249,9 +250,7 @@ class App extends React.Component<{}, IState> {
       <BrowserRouter>
         <React.Fragment>
           <Title>Irreg.io</Title>
-          <Link to="/learn">Learn</Link>
-          <br />
-          <Link to="/practice">Practice</Link>
+          <Navigation />
           <Route
             path="/learn"
             render={() => {
@@ -260,7 +259,6 @@ class App extends React.Component<{}, IState> {
                   <Learn
                     isCompleted={isCompleted}
                     showTranslation={showTranslation}
-                    progress={progress}
                     frequency={currentVerb.frequency}
                     infinitive={currentVerb.infinitive}
                     pastTense={currentVerb.pastTense}
@@ -290,7 +288,6 @@ class App extends React.Component<{}, IState> {
                   <Practice
                     isCompleted={isCompleted}
                     showTranslation={showTranslation}
-                    progress={progress}
                     frequency={currentVerb.frequency}
                     infinitive={currentVerb.infinitive}
                     pastTense={currentVerb.pastTense}
@@ -308,6 +305,7 @@ class App extends React.Component<{}, IState> {
                     handlePastForm={this.handlePastForm}
                     handlePerfectForm={this.handlePerfectForm}
                   />
+                  <ProgressBar fractionCompleted={fractionCompleted} />
                   <Controls
                     handleButton={(type: string) => this.handleButton(type)}
                     handleShuffle={() => this.handleShuffle}
@@ -321,8 +319,6 @@ class App extends React.Component<{}, IState> {
               );
             }}
           />
-
-          <ProgressBar fractionCompleted={fractionCompleted} />
         </React.Fragment>
       </BrowserRouter>
     );

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-// import styled from "../../theme/styled-components";
+import styled from "../../theme/styled-components";
 
 interface IProps {
   currentPastValue: string;
@@ -12,6 +12,20 @@ interface IProps {
   handlePastForm: React.ChangeEventHandler<HTMLInputElement>;
   handlePerfectForm: React.ChangeEventHandler<HTMLInputElement>;
 }
+
+const StyledInputBlock = styled.div`
+  display: flex;
+  justify-content: center;
+  input {
+    margin: 5.5px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 2vh;
+    color: #555;
+  }
+`;
 
 class InputBlock extends React.Component<IProps> {
   public refTest: HTMLInputElement;
@@ -29,7 +43,7 @@ class InputBlock extends React.Component<IProps> {
     } = this.props;
 
     return (
-      <React.Fragment>
+      <StyledInputBlock>
         <input
           ref={refOne}
           value={currentPastValue}
@@ -44,7 +58,7 @@ class InputBlock extends React.Component<IProps> {
           type="text"
           placeholder={perfectFormHint ? perfectFormHint : ""}
         />
-      </React.Fragment>
+      </StyledInputBlock>
     );
   }
 }

@@ -10,7 +10,7 @@ const StyledProgressBar = styled.div<IProgressProps>`
   height: 3px;
   border-radius: 4px;
   background-color: #bada55;
-  margin: auto;
+  margin: 15px auto 15px auto;
   transition: all 0.3s;
 `;
 

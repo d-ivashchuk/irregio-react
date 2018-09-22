@@ -1,11 +1,11 @@
 import * as React from "react";
-// import styled from "../../theme/styled-components";
+import styled from "../../theme/styled-components";
 
 interface IProps {
-  progress: number;
+  progress?: number;
   infinitive: string;
-  pastTense: string;
-  presentPerfect: string;
+  pastTense?: string;
+  presentPerfect?: string;
   translationRus?: string;
   translationEn?: string;
   frequency: string;
@@ -13,13 +13,24 @@ interface IProps {
   isCompleted: boolean;
 }
 
+const StyledPractice = styled.div`
+  display: flex;
+  max-width: 400px;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  > div {
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+`;
+
 class Learn extends React.Component<IProps> {
   public render() {
     const {
-      progress,
       infinitive,
-      pastTense,
-      presentPerfect,
       translationRus,
       translationEn,
       frequency,
@@ -27,11 +38,8 @@ class Learn extends React.Component<IProps> {
       isCompleted
     } = this.props;
     return (
-      <React.Fragment>
-        <div>Progress: {progress}</div>
+      <StyledPractice>
         <div>Infinitive: {infinitive}</div>
-        <div>Past form: {pastTense}</div>
-        <div>Perfect form: {presentPerfect}</div>
         {showTranslation ? (
           <div>
             <div>Russian translation: {translationRus}</div>
@@ -39,8 +47,8 @@ class Learn extends React.Component<IProps> {
           </div>
         ) : null}
         <div>Frequency: {frequency}</div>
-        <div>{isCompleted ? <h2>CONGRATS</h2> : null}</div>
-      </React.Fragment>
+        {isCompleted ? <h2>CONGRATS</h2> : null}
+      </StyledPractice>
     );
   }
 }

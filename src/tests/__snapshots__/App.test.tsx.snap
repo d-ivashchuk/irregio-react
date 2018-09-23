@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component renders without crashing 1`] = `
+<div
+  className="sc-bwzfXH iMxmHM"
+>
+  <a
+    href="/learn"
+    onClick={[Function]}
+  >
+    Learn
+  </a>
+  <a
+    href="/practice"
+    onClick={[Function]}
+  >
+    Practice
+  </a>
+</div>
+`;
+
+exports[`Title component matches snapshot 1`] = `
+<div
+  className="sc-gzVnrw ilzDvH"
+>
+  IRREG.IO
+</div>
+`;

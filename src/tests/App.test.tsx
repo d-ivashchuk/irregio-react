@@ -4,15 +4,53 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import { shallow } from "enzyme";
+import * as renderer from "react-test-renderer";
+
+import Navigation from "../ui/navi/navigation";
+import { MemoryRouter } from "react-router";
 
 import Practice from "../components/Practice/Practice";
 
-import Navigation from "../ui/navi/navigation";
+import Title from "../components/Title/Title";
 
-it("App renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe("App container", () => {
+  const wrapper = shallow(<App />);
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+  it("has correct starting state", () => {
+    expect(wrapper.state("isCompleted")).toBe(false);
+    expect(wrapper.state("progress")).toBe(0);
+    expect(wrapper.state("fractionCompleted")).toBe(0);
+  });
+  it("has verbs to render", () => {
+    expect(wrapper.state("filteredVerbs")).not.toHaveLength(0);
+  });
+  describe("methods", () => {
+    const instance = wrapper.instance() as App;
+    it("'next' method increases progress", () => {
+      expect(wrapper.state("progress")).toBe(0);
+      instance.handleButton("incr");
+      expect(wrapper.state("progress")).toBe(1);
+    });
+    it("'previous' method decreases progress", () => {
+      expect(wrapper.state("progress")).toBe(1);
+      instance.handleButton("decr");
+      expect(wrapper.state("progress")).toBe(0);
+    });
+    it("'toggleShowTranslation' method changes showTranslation state", () => {
+      expect(wrapper.state("showTranslation")).toBe(true);
+      instance.toggleShowTranslation();
+      expect(wrapper.state("showTranslation")).toBe(false);
+    });
+    it("'handleShuffle' method returns new shuffled array instead of current", () => {
+      const currentVerbs = wrapper.state("filteredVerbs");
+      instance.handleShuffle();
+      expect(wrapper.state("filteredVerbs")).not.toBe(currentVerbs);
+    });
+  });
 });
 
 describe("Practice component", () => {
@@ -48,9 +86,31 @@ describe("Practice component", () => {
     ).toBe(`English translation: ${obj.translationEn}`);
   });
 });
+
 describe("Navigation component", () => {
-  it("Has length of 2", () => {
+  it("renders without crashing", () => {
+    const wrapper = renderer
+      .create(
+        <MemoryRouter>
+          <Navigation />
+        </MemoryRouter>
+      )
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("has length of 2", () => {
     const wrapper = shallow(<Navigation />);
     expect(wrapper.children()).toHaveLength(2);
+  });
+});
+
+describe("Title component", () => {
+  it("renders correct number of children", () => {
+    const wrapper = shallow(<Title />);
+    expect(wrapper.children()).toHaveLength(1);
+  });
+  it("matches snapshot", () => {
+    const wrapper = renderer.create(<Title />).toJSON();
+    expect(wrapper).toMatchSnapshot();
   });
 });

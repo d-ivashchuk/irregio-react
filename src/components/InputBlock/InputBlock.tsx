@@ -54,6 +54,8 @@ class InputBlock extends React.Component<IProps> {
               onChange={handlePastForm}
               type="text"
               placeholder={pastFormHint ? pastFormHint : ""}
+              autoComplete="off"
+              autoCapitalize="off"
             />
             <input
               ref={refTwo}
@@ -61,6 +63,8 @@ class InputBlock extends React.Component<IProps> {
               onChange={handlePerfectForm}
               type="text"
               placeholder={perfectFormHint ? perfectFormHint : ""}
+              autoComplete="off"
+              autoCapitalize="off"
             />
           </React.Fragment>
         ) : null}

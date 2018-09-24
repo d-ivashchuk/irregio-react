@@ -35,27 +35,30 @@ class Controls extends React.Component<IProps, {}> {
 
     return (
       <React.Fragment>
-        <StyledControlGroup>
-          <Button clicked={() => handleButton("decr")} label="previous" />
-          <Button clicked={() => handleButton("incr")} label="next" />
-        </StyledControlGroup>
+        {location.pathname === "/learn" ? (
+          <StyledControlGroup>
+            <Button clicked={() => handleButton("decr")} label="previous" />
+            <Button clicked={() => handleButton("incr")} label="next" />
+          </StyledControlGroup>
+        ) : null}
+
         <StyledControlGroup>
           <Button
             clicked={() => handleFilter("easy", "frequent")}
-            label="Easy"
+            label="easy"
           />
           <Button
             clicked={() => handleFilter("hard", "infrequent")}
-            label="Hard"
+            label="hard"
           />
-          <Button clicked={() => handleFilter("all")} label="All" />
+          <Button clicked={() => handleFilter("all")} label="all" />
         </StyledControlGroup>
         <StyledControlGroup>
           <Button clicked={handleShuffle()} label="shuffle" />
           {location.pathname === "/practice" ? (
             <Button clicked={handleHelp()} label="help" />
           ) : null}
-          <Button clicked={toggleTranslation()} label="Show translation" />
+          <Button clicked={toggleTranslation()} label="show translation" />
         </StyledControlGroup>
       </React.Fragment>
     );

@@ -6,10 +6,13 @@ import * as ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 import * as renderer from "react-test-renderer";
 
+import Controls from "../components/Controls/Controls";
+
 import Navigation from "../ui/navi/navigation";
 import { MemoryRouter } from "react-router";
 
 import Practice from "../components/Practice/Practice";
+import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 import Title from "../components/Title/Title";
 
@@ -112,5 +115,59 @@ describe("Title component", () => {
   it("matches snapshot", () => {
     const wrapper = renderer.create(<Title />).toJSON();
     expect(wrapper).toMatchSnapshot();
+  });
+});
+describe("Controls component", () => {
+  const app = shallow(<App />);
+  const instance = app.instance() as App;
+  it("matches snapshot", () => {
+    const wrapper = renderer
+      .create(
+        <MemoryRouter>
+          <Controls
+            handleButton={(type: string) => instance.handleButton(type)}
+            handleShuffle={() => instance.handleShuffle}
+            handleFilter={(difficulty: string, frequency?: string) =>
+              instance.handleFilter(difficulty, frequency)
+            }
+            handleHelp={() => instance.handleHelp}
+            toggleTranslation={() => instance.toggleShowTranslation}
+          />
+        </MemoryRouter>
+      )
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+describe("Progress bar component", () => {
+  const app = shallow(<App />);
+  const instance = app.instance() as App;
+  it("matches snapshot", () => {
+    const wrapper = renderer
+      .create(<ProgressBar fractionCompleted={0} />)
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("responds to increase of progress state", () => {
+    const wrapper = shallow(
+      <ProgressBar fractionCompleted={app.state("fractionCompleted")} />
+    );
+    expect(app.state("progress")).toBe(0);
+    instance.handleButton("incr");
+    expect(app.state("progress")).toBe(1);
+    expect(app.state("fractionCompleted")).not.toBe(0);
+    wrapper.setProps({ fractionCompleted: app.state("fractionCompleted") });
+    expect(wrapper.props().fractionCompleted).not.toBe(0);
+  });
+  it("responds to decrease of progress state", () => {
+    const wrapper = shallow(
+      <ProgressBar fractionCompleted={app.state("fractionCompleted")} />
+    );
+    expect(app.state("progress")).toBe(1);
+    instance.handleButton("decr");
+    expect(app.state("progress")).toBe(0);
+    expect(app.state("fractionCompleted")).toBe(0);
+    wrapper.setProps({ fractionCompleted: app.state("fractionCompleted") });
+    expect(wrapper.props().fractionCompleted).toBe(0);
   });
 });

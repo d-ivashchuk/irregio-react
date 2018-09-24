@@ -36,7 +36,7 @@ injectGlobal`*{
   body{
   font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
-  );
+  
 } `;
 
 class App extends React.Component<{}, IState> {
@@ -58,10 +58,10 @@ class App extends React.Component<{}, IState> {
     showTranslation: true
   };
 
-  public componentDidMount() {
-    document.addEventListener("keypress", this.handleRightArrow);
-    document.addEventListener("keypress", this.handleLeftArrow);
-  }
+  // public componentDidMount() {
+  //   document.addEventListener("keypress", this.handleRightArrow);
+  //   document.addEventListener("keypress", this.handleLeftArrow);
+  // }
   public componentDidUpdate() {
     if (
       this.state.currentPastForm ===
@@ -145,44 +145,44 @@ class App extends React.Component<{}, IState> {
     }
   };
 
-  public handleRightArrow = (event: any) => {
-    if (
-      event.keyCode === 39 &&
-      this.state.progress === this.state.filteredVerbs.length - 1
-    ) {
-      this.setState({
-        ...this.state,
-        progress: this.state.filteredVerbs.length - 1,
-        fractionCompleted: 100
-      });
-    } else if (
-      event.keyCode === 39 &&
-      this.state.progress !== this.state.filteredVerbs.length - 1
-    ) {
-      this.setState({
-        ...this.state,
-        progress: this.state.progress + 1,
-        fractionCompleted:
-          this.state.fractionCompleted + 100 / this.state.filteredVerbs.length
-      });
-    }
-  };
-  public handleLeftArrow = (event: any) => {
-    if (event.keyCode === 37 && this.state.progress === 1) {
-      this.setState({
-        ...this.state,
-        progress: 0,
-        fractionCompleted: 0
-      });
-    } else if (event.keyCode === 37 && this.state.progress !== 0) {
-      this.setState({
-        ...this.state,
-        progress: this.state.progress - 1,
-        fractionCompleted:
-          this.state.fractionCompleted - 100 / this.state.filteredVerbs.length
-      });
-    }
-  };
+  // public handleRightArrow = (event: any) => {
+  //   if (
+  //     event.keyCode === 39 &&
+  //     this.state.progress === this.state.filteredVerbs.length - 1
+  //   ) {
+  //     this.setState({
+  //       ...this.state,
+  //       progress: this.state.filteredVerbs.length - 1,
+  //       fractionCompleted: 100
+  //     });
+  //   } else if (
+  //     event.keyCode === 39 &&
+  //     this.state.progress !== this.state.filteredVerbs.length - 1
+  //   ) {
+  //     this.setState({
+  //       ...this.state,
+  //       progress: this.state.progress + 1,
+  //       fractionCompleted:
+  //         this.state.fractionCompleted + 100 / this.state.filteredVerbs.length
+  //     });
+  //   }
+  // };
+  // public handleLeftArrow = (event: any) => {
+  //   if (event.keyCode === 37 && this.state.progress === 1) {
+  //     this.setState({
+  //       ...this.state,
+  //       progress: 0,
+  //       fractionCompleted: 0
+  //     });
+  //   } else if (event.keyCode === 37 && this.state.progress !== 0) {
+  //     this.setState({
+  //       ...this.state,
+  //       progress: this.state.progress - 1,
+  //       fractionCompleted:
+  //         this.state.fractionCompleted - 100 / this.state.filteredVerbs.length
+  //     });
+  //   }
+  // };
   public handleFilter = (f: string, frequency?: string) => {
     this.setState({
       ...this.state,
@@ -221,7 +221,9 @@ class App extends React.Component<{}, IState> {
       this.state.pastFormHint !==
       this.state.filteredVerbs[this.state.progress].pastTense
     ) {
-      // this.refOne.focus();
+      if (this.refOne) {
+        this.refOne.focus();
+      }
       this.setState({
         ...this.state,
         currentPastForm: "",

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "../../theme/styled-components";
 
 const StyledNavi = styled.div`
@@ -8,19 +8,25 @@ const StyledNavi = styled.div`
   a {
     text-decoration: none;
     margin: 5px;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
+    color: #888;
+    font-weight: 700;
+    font-size: 1.5em;
+    transition: all 0.3s, opacity 0.3s;
     &:hover {
-      color: #777;
+      color: red;
+      transition: all 0.3s, opacity 0.3s;
     }
+  }
+  .active {
+    color: red;
+    transition: all 0.3s, opacity 0.3s;
   }
 `;
 
 const Navi: React.StatelessComponent = props => (
   <StyledNavi>
-    <Link to="/learn">Learn</Link>
-    <Link to="/practice">Practice</Link>
+    <NavLink to="/learn">Learn</NavLink>
+    <NavLink to="/practice">Practice</NavLink>
   </StyledNavi>
 );
 

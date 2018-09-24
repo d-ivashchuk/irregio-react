@@ -1,22 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Controls component matches snapshot 1`] = `
+Array [
+  <div
+    className="sc-bxivhb cazewt"
+  >
+    <button
+      className="sc-htpNat eFSQth"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      easy
+    </button>
+    <button
+      className="sc-htpNat eFSQth"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      hard
+    </button>
+    <button
+      className="sc-htpNat eFSQth"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      all
+    </button>
+  </div>,
+  <div
+    className="sc-bxivhb cazewt"
+  >
+    <button
+      className="sc-htpNat eFSQth"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      shuffle
+    </button>
+    <button
+      className="sc-htpNat eFSQth"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      show translation
+    </button>
+  </div>,
+]
+`;
+
 exports[`Navigation component renders without crashing 1`] = `
 <div
-  className="sc-bwzfXH iMxmHM"
+  className="sc-bwzfXH ktSYYA"
 >
   <a
+    aria-current={null}
+    className={undefined}
     href="/learn"
     onClick={[Function]}
+    style={undefined}
   >
     Learn
   </a>
   <a
+    aria-current={null}
+    className={undefined}
     href="/practice"
     onClick={[Function]}
+    style={undefined}
   >
     Practice
   </a>
 </div>
+`;
+
+exports[`Progress bar component matches snapshot 1`] = `
+<div
+  className="sc-bdVaJa efQTOv"
+/>
 `;
 
 exports[`Title component matches snapshot 1`] = `

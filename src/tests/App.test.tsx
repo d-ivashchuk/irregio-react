@@ -63,7 +63,8 @@ describe("Practice component", () => {
     translationEn: "go",
     showTranslation: true,
     frequency: "frequent",
-    isCompleted: false
+    isCompleted: false,
+    hintsTaken: 0
   };
   const wrapper = shallow(
     <Practice
@@ -72,21 +73,26 @@ describe("Practice component", () => {
       translationEn={obj.translationEn}
       showTranslation={obj.showTranslation}
       isCompleted={obj.isCompleted}
+      hintsTaken={obj.hintsTaken}
     />
   );
   it("renders correct number of children", () => {
     expect(wrapper).toHaveLength(1);
-    expect(wrapper.dive().children()).toHaveLength(3);
+    expect(wrapper.dive().children()).toHaveLength(2);
   });
   it("renders correct text", () => {
-    expect(wrapper.childAt(0).text()).toBe(`Infinitive: ${obj.infinitive}`);
-    expect(wrapper.childAt(2).text()).toBe(`Frequency: ${obj.frequency}`);
+    expect(
+      wrapper
+        .childAt(0)
+        .childAt(0)
+        .text()
+    ).toBe(`${obj.infinitive}`);
     expect(
       wrapper
         .childAt(1)
-        .childAt(1)
+        .childAt(0)
         .text()
-    ).toBe(`English translation: ${obj.translationEn}`);
+    ).toBe(`${obj.translationEn}`);
   });
 });
 
@@ -157,7 +163,7 @@ describe("Progress bar component", () => {
     expect(app.state("progress")).toBe(1);
     expect(app.state("fractionCompleted")).not.toBe(0);
     wrapper.setProps({ fractionCompleted: app.state("fractionCompleted") });
-    expect(wrapper.props().fractionCompleted).not.toBe(0);
+    expect(wrapper.childAt(0).props().fractionCompleted).not.toBe(0);
   });
   it("responds to decrease of progress state", () => {
     const wrapper = shallow(
@@ -168,6 +174,6 @@ describe("Progress bar component", () => {
     expect(app.state("progress")).toBe(0);
     expect(app.state("fractionCompleted")).toBe(0);
     wrapper.setProps({ fractionCompleted: app.state("fractionCompleted") });
-    expect(wrapper.props().fractionCompleted).toBe(0);
+    expect(wrapper.childAt(0).props().fractionCompleted).toBe(0);
   });
 });

@@ -9,9 +9,17 @@ const StyledProgressBar = styled.div<IProgressProps>`
   width: ${props => `${props.fractionCompleted}%`};
   height: 3px;
   border-radius: 4px;
-  background-color: #bada55;
-  margin: 15px auto 15px auto;
+  background-color: #76ff03;
+  margin: auto;
   transition: all 0.3s;
+  z-index: 999;
+`;
+const ProgressContainer = styled.div`
+  margin: 10px auto 10px auto;
+  width: 80%;
+  height: 3px;
+  border-radius: 4px;
+  background-color: white;
 `;
 
 interface IProps {
@@ -21,7 +29,9 @@ interface IProps {
 class ProgressBar extends React.Component<IProps, {}> {
   public render() {
     return (
-      <StyledProgressBar fractionCompleted={this.props.fractionCompleted} />
+      <ProgressContainer>
+        <StyledProgressBar fractionCompleted={this.props.fractionCompleted} />
+      </ProgressContainer>
     );
   }
 }

@@ -10,23 +10,24 @@ import Navigation from "../../ui/navi/navigation";
 
 import Controls from "../../components/Controls/Controls";
 import InputBlock from "../../components/InputBlock/InputBlock";
+import Layout from "../../ui/layout/layout";
 import Learn from "../../components/Learn/Learn";
 import Practice from "../../components/Practice/Practice";
 import Title from "../../components/Title/Title";
 
 interface IState {
   verbs?: object;
-  filter?: string;
-  filteredVerbs?: object;
+  filter: string;
+  filteredVerbs: object;
   progress: number;
   fractionCompleted: number;
   isCompleted: boolean;
   hintsTaken: number;
-  currentPerfectForm?: string;
-  currentPastForm?: string;
-  pastFormHint?: string;
-  perfectFormHint?: string;
-  showTranslation?: boolean;
+  currentPerfectForm: string;
+  currentPastForm: string;
+  pastFormHint: string;
+  perfectFormHint: string;
+  showTranslation: boolean;
 }
 
 injectGlobal`*{ 
@@ -36,6 +37,10 @@ injectGlobal`*{
   body{
   font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
+  background: #56ccf2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #56ccf2, #2f80ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   
 } `;
 
@@ -45,7 +50,7 @@ class App extends React.Component<{}, IState> {
 
   public state = {
     verbs: de,
-    filter: "",
+    filter: "all verbs",
     filteredVerbs: de.data,
     progress: 0,
     fractionCompleted: 0,
@@ -192,7 +197,10 @@ class App extends React.Component<{}, IState> {
           ? de.data
           : de.data.filter(entry => entry.frequency === `${frequency}`),
       progress: 0,
-      fractionCompleted: 0
+      fractionCompleted: 0,
+      hintsTaken: 0,
+      pastFormHint: "",
+      perfectFormHint: ""
     });
   };
   public handleShuffle = () => {
@@ -205,14 +213,20 @@ class App extends React.Component<{}, IState> {
     this.setState({
       filteredVerbs: shuffledVerbs,
       progress: 0,
-      fractionCompleted: 0
+      fractionCompleted: 0,
+      hintsTaken: 0,
+      pastFormHint: "",
+      perfectFormHint: ""
     });
     if (this.state.isCompleted) {
       this.setState({
         ...this.state,
         isCompleted: false,
         progress: 0,
-        fractionCompleted: 0
+        fractionCompleted: 0,
+        hintsTaken: 0,
+        pastFormHint: "",
+        perfectFormHint: ""
       });
     }
   };
@@ -253,6 +267,18 @@ class App extends React.Component<{}, IState> {
     });
   };
 
+  public resetProgress = () => {
+    this.setState({
+      ...this.state,
+      progress: 0,
+      fractionCompleted: 0,
+      hintsTaken: 0,
+      isCompleted: false,
+      pastFormHint: "",
+      perfectFormHint: ""
+    });
+  };
+
   public render() {
     const {
       filteredVerbs,
@@ -263,7 +289,9 @@ class App extends React.Component<{}, IState> {
       perfectFormHint,
       isCompleted,
       fractionCompleted,
-      showTranslation
+      showTranslation,
+      hintsTaken,
+      filter
     } = this.state;
 
     const currentVerb = filteredVerbs[progress];
@@ -277,7 +305,7 @@ class App extends React.Component<{}, IState> {
             path="/learn"
             render={() => {
               return (
-                <React.Fragment>
+                <Layout>
                   <Learn
                     isCompleted={isCompleted}
                     showTranslation={showTranslation}
@@ -287,17 +315,18 @@ class App extends React.Component<{}, IState> {
                     presentPerfect={currentVerb.presentPerfect}
                     translationEn={currentVerb.translationEn}
                     translationRus={currentVerb.translationRus}
-                  />
-                  <Controls
-                    handleButton={(type: string) => this.handleButton(type)}
-                    handleShuffle={() => this.handleShuffle}
-                    handleFilter={(difficulty: string, frequency?: string) =>
-                      this.handleFilter(difficulty, frequency)
-                    }
-                    handleHelp={() => this.handleHelp}
-                    toggleTranslation={() => this.toggleShowTranslation}
-                  />
-                </React.Fragment>
+                  >
+                    <Controls
+                      handleButton={(type: string) => this.handleButton(type)}
+                      handleShuffle={() => this.handleShuffle}
+                      handleFilter={(difficulty: string, frequency?: string) =>
+                        this.handleFilter(difficulty, frequency)
+                      }
+                      handleHelp={() => this.handleHelp}
+                      toggleTranslation={() => this.toggleShowTranslation}
+                    />
+                  </Learn>
+                </Layout>
               );
             }}
           />
@@ -306,7 +335,7 @@ class App extends React.Component<{}, IState> {
             path="/practice"
             render={() => {
               return (
-                <React.Fragment>
+                <Layout>
                   <Practice
                     isCompleted={isCompleted}
                     showTranslation={showTranslation}
@@ -316,29 +345,33 @@ class App extends React.Component<{}, IState> {
                     presentPerfect={currentVerb.presentPerfect}
                     translationEn={currentVerb.translationEn}
                     translationRus={currentVerb.translationRus}
-                  />
-                  <InputBlock
-                    refOne={refOne => (this.refOne = refOne)}
-                    refTwo={refTwo => (this.refTwo = refTwo)}
-                    pastFormHint={pastFormHint}
-                    perfectFormHint={perfectFormHint}
-                    currentPastValue={currentPastForm}
-                    currentPerfectValue={currentPerfectForm}
-                    handlePastForm={this.handlePastForm}
-                    handlePerfectForm={this.handlePerfectForm}
-                    isCompleted={isCompleted}
-                  />
-                  <ProgressBar fractionCompleted={fractionCompleted} />
-                  <Controls
-                    handleButton={(type: string) => this.handleButton(type)}
-                    handleShuffle={() => this.handleShuffle}
-                    handleFilter={(difficulty: string, frequency?: string) =>
-                      this.handleFilter(difficulty, frequency)
-                    }
-                    handleHelp={() => this.handleHelp}
-                    toggleTranslation={() => this.toggleShowTranslation}
-                  />
-                </React.Fragment>
+                    hintsTaken={hintsTaken}
+                    filter={filter}
+                    reset={this.resetProgress}
+                  >
+                    <InputBlock
+                      refOne={refOne => (this.refOne = refOne)}
+                      refTwo={refTwo => (this.refTwo = refTwo)}
+                      pastFormHint={pastFormHint}
+                      perfectFormHint={perfectFormHint}
+                      currentPastValue={currentPastForm}
+                      currentPerfectValue={currentPerfectForm}
+                      handlePastForm={this.handlePastForm}
+                      handlePerfectForm={this.handlePerfectForm}
+                      isCompleted={isCompleted}
+                    />
+                    <ProgressBar fractionCompleted={fractionCompleted} />
+                    <Controls
+                      handleButton={(type: string) => this.handleButton(type)}
+                      handleShuffle={() => this.handleShuffle}
+                      handleFilter={(difficulty: string, frequency?: string) =>
+                        this.handleFilter(difficulty, frequency)
+                      }
+                      handleHelp={() => this.handleHelp}
+                      toggleTranslation={() => this.toggleShowTranslation}
+                    />
+                  </Practice>
+                </Layout>
               );
             }}
           />

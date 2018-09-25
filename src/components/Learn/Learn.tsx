@@ -8,7 +8,7 @@ interface IProps {
   presentPerfect: string;
   translationRus?: string;
   translationEn?: string;
-  frequency: string;
+  frequency?: string;
   showTranslation: boolean;
   isCompleted: boolean;
 }
@@ -22,11 +22,42 @@ const StyledLearn = styled.div`
   > div {
     margin: 5px;
     padding: 2px;
-    border: 1px solid #ccc;
-    color: #333;
+    color: white;
   }
 `;
 
+const StyledInfinitive = styled.div`
+  font-size: 3rem;
+`;
+
+const StyledFormContainer = styled.div`
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  div {
+    margin-right: 10px;
+  }
+`;
+const StyledForm = styled.div`
+  position: relative;
+  top: -15px;
+  font-size: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  color: #f0f0f0;
+  opacity: 0.7;
+`;
+
+const StyledTranslation = styled.div`
+  position: relative;
+  top: -25px;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: #f0f0f0;
+  opacity: 0.4;
+`;
 class Learn extends React.Component<IProps> {
   public render() {
     const {
@@ -35,23 +66,24 @@ class Learn extends React.Component<IProps> {
       presentPerfect,
       translationRus,
       translationEn,
-      frequency,
       showTranslation,
       isCompleted
     } = this.props;
     return (
       <StyledLearn>
-        <div>Infinitive: {infinitive}</div>
-        <div>Past form: {pastTense}</div>
-        <div>Perfect form: {presentPerfect}</div>
+        <StyledInfinitive>{infinitive}</StyledInfinitive>
+        <StyledFormContainer>
+          <StyledForm>{pastTense}</StyledForm>
+          <StyledForm>{presentPerfect}</StyledForm>
+        </StyledFormContainer>
+
         {showTranslation ? (
-          <div>
-            <div>Russian translation: {translationRus}</div>
-            <div>English translation: {translationEn}</div>
-          </div>
+          <StyledTranslation>
+            {translationEn}/{translationRus}
+          </StyledTranslation>
         ) : null}
-        <div>Frequency: {frequency}</div>
         {isCompleted ? <h2>CONGRATS</h2> : null}
+        {this.props.children}
       </StyledLearn>
     );
   }

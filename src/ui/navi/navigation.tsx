@@ -8,17 +8,19 @@ const StyledNavi = styled.div`
   a {
     text-decoration: none;
     margin: 5px;
-    color: #888;
+    color: white;
     font-weight: 700;
     font-size: 1.5em;
     transition: all 0.3s, opacity 0.3s;
     &:hover {
-      color: red;
+      color: #444;
+      opacity: 0.8;
       transition: all 0.3s, opacity 0.3s;
     }
   }
   .active {
-    color: red;
+    color: #444;
+    opacity: 0.8;
     transition: all 0.3s, opacity 0.3s;
   }
 `;

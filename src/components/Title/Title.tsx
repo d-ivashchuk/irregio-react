@@ -7,7 +7,7 @@ const StyledTitle = styled.div`
   font-weight: bold;
   font-size: 3rem;
   margin: auto;
-  color: #10aded;
+  color: white;
 `;
 
 class Title extends React.Component<{}> {

@@ -3,10 +3,10 @@
 exports[`Controls component matches snapshot 1`] = `
 Array [
   <div
-    className="sc-bxivhb cazewt"
+    className="sc-ifAKCX kcIHzQ"
   >
     <button
-      className="sc-htpNat eFSQth"
+      className="sc-bxivhb ewRLaL"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -15,7 +15,7 @@ Array [
       easy
     </button>
     <button
-      className="sc-htpNat eFSQth"
+      className="sc-bxivhb ewRLaL"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -24,7 +24,7 @@ Array [
       hard
     </button>
     <button
-      className="sc-htpNat eFSQth"
+      className="sc-bxivhb ewRLaL"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -34,10 +34,10 @@ Array [
     </button>
   </div>,
   <div
-    className="sc-bxivhb cazewt"
+    className="sc-ifAKCX kcIHzQ"
   >
     <button
-      className="sc-htpNat eFSQth"
+      className="sc-bxivhb ewRLaL"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -46,7 +46,7 @@ Array [
       shuffle
     </button>
     <button
-      className="sc-htpNat eFSQth"
+      className="sc-bxivhb ewRLaL"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -60,7 +60,7 @@ Array [
 
 exports[`Navigation component renders without crashing 1`] = `
 <div
-  className="sc-bwzfXH ktSYYA"
+  className="sc-htpNat hDHTck"
 >
   <a
     aria-current={null}
@@ -85,13 +85,17 @@ exports[`Navigation component renders without crashing 1`] = `
 
 exports[`Progress bar component matches snapshot 1`] = `
 <div
-  className="sc-bdVaJa efQTOv"
-/>
+  className="sc-bwzfXH izntMt"
+>
+  <div
+    className="sc-bdVaJa bKNoPd"
+  />
+</div>
 `;
 
 exports[`Title component matches snapshot 1`] = `
 <div
-  className="sc-gzVnrw ilzDvH"
+  className="sc-jzJRlG krcVoK"
 >
   IRREG.IO
 </div>

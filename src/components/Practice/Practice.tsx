@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "../../theme/styled-components";
 
+import Congratulations from "../Congratulations/Congratulations";
+
 interface IProps {
   progress?: number;
   infinitive: string;
@@ -11,6 +13,9 @@ interface IProps {
   frequency: string;
   showTranslation: boolean;
   isCompleted: boolean;
+  reset?: () => void;
+  hintsTaken: number;
+  filter?: string;
 }
 
 const StyledPractice = styled.div`
@@ -20,34 +25,51 @@ const StyledPractice = styled.div`
   flex-direction: column;
   text-align: center;
   > div {
-    margin: 5px;
     padding: 2px;
-    border: 1px solid #ccc;
-    color: #333;
+    color: white;
   }
+`;
+const StyledInfinitive = styled.div`
+  font-size: 3rem;
+`;
+
+const StyledTranslation = styled.div`
+  position: relative;
+  color: #f0f0f0;
+  opacity: 0.4;
+  font-size: 2rem;
+  top: -15px;
 `;
 
 class Learn extends React.Component<IProps> {
+  public componentDidMount() {
+    if (this.props.reset) {
+      this.props.reset();
+    }
+  }
+
   public render() {
     const {
       infinitive,
       translationRus,
       translationEn,
-      frequency,
       showTranslation,
-      isCompleted
+      isCompleted,
+      hintsTaken,
+      filter
     } = this.props;
     return (
       <StyledPractice>
-        <div>Infinitive: {infinitive}</div>
+        <StyledInfinitive>{infinitive}</StyledInfinitive>
         {showTranslation ? (
-          <div>
-            <div>Russian translation: {translationRus}</div>
-            <div>English translation: {translationEn}</div>
-          </div>
+          <StyledTranslation>
+            {translationEn}/{translationRus}
+          </StyledTranslation>
         ) : null}
-        <div>Frequency: {frequency}</div>
-        {isCompleted ? <h2>CONGRATS</h2> : null}
+        {isCompleted ? (
+          <Congratulations hintsTaken={hintsTaken} filter={filter} />
+        ) : null}
+        {this.props.children}
       </StyledPractice>
     );
   }

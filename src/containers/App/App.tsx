@@ -2,6 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import de from "../data/data";
+import en from "../data/en";
 
 import { injectGlobal } from "../../theme/styled-components";
 
@@ -9,25 +10,26 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Navigation from "../../ui/navi/navigation";
 
 import Controls from "../../components/Controls/Controls";
+import Home from "../../components/Home/Home";
 import InputBlock from "../../components/InputBlock/InputBlock";
 import Layout from "../../ui/layout/layout";
 import Learn from "../../components/Learn/Learn";
 import Practice from "../../components/Practice/Practice";
-import Title from "../../components/Title/Title";
 
 interface IState {
-  verbs?: object;
+  currentPastForm: string;
+  currentPerfectForm: string;
   filter: string;
   filteredVerbs: object;
-  progress: number;
   fractionCompleted: number;
-  isCompleted: boolean;
   hintsTaken: number;
-  currentPerfectForm: string;
-  currentPastForm: string;
+  isCompleted: boolean;
+  language?: string;
   pastFormHint: string;
   perfectFormHint: string;
+  progress: number;
   showTranslation: boolean;
+  verbs?: object;
 }
 
 injectGlobal`*{ 
@@ -37,10 +39,9 @@ injectGlobal`*{
   body{
   font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
-  background: #56ccf2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #56ccf2, #2f80ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #56ccf2; 
+  background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed); 
+  background: linear-gradient(to right, #56ccf2, #2f80ed); 
   
 } `;
 
@@ -49,24 +50,21 @@ class App extends React.Component<{}, IState> {
   public refTwo: null | HTMLInputElement;
 
   public state = {
-    verbs: de,
-    filter: "all verbs",
-    filteredVerbs: de.data,
-    progress: 0,
-    fractionCompleted: 0,
-    hintsTaken: 0,
     currentPastForm: "",
     currentPerfectForm: "",
+    filter: "all verbs",
+    filteredVerbs: de.data,
+    fractionCompleted: 0,
+    hintsTaken: 0,
+    isCompleted: false,
+    language: "de",
     pastFormHint: "",
     perfectFormHint: "",
-    isCompleted: false,
-    showTranslation: true
+    progress: 0,
+    showTranslation: true,
+    verbs: de
   };
 
-  // public componentDidMount() {
-  //   document.addEventListener("keypress", this.handleRightArrow);
-  //   document.addEventListener("keypress", this.handleLeftArrow);
-  // }
   public componentDidUpdate() {
     if (
       this.state.currentPastForm ===
@@ -149,45 +147,6 @@ class App extends React.Component<{}, IState> {
       });
     }
   };
-
-  // public handleRightArrow = (event: any) => {
-  //   if (
-  //     event.keyCode === 39 &&
-  //     this.state.progress === this.state.filteredVerbs.length - 1
-  //   ) {
-  //     this.setState({
-  //       ...this.state,
-  //       progress: this.state.filteredVerbs.length - 1,
-  //       fractionCompleted: 100
-  //     });
-  //   } else if (
-  //     event.keyCode === 39 &&
-  //     this.state.progress !== this.state.filteredVerbs.length - 1
-  //   ) {
-  //     this.setState({
-  //       ...this.state,
-  //       progress: this.state.progress + 1,
-  //       fractionCompleted:
-  //         this.state.fractionCompleted + 100 / this.state.filteredVerbs.length
-  //     });
-  //   }
-  // };
-  // public handleLeftArrow = (event: any) => {
-  //   if (event.keyCode === 37 && this.state.progress === 1) {
-  //     this.setState({
-  //       ...this.state,
-  //       progress: 0,
-  //       fractionCompleted: 0
-  //     });
-  //   } else if (event.keyCode === 37 && this.state.progress !== 0) {
-  //     this.setState({
-  //       ...this.state,
-  //       progress: this.state.progress - 1,
-  //       fractionCompleted:
-  //         this.state.fractionCompleted - 100 / this.state.filteredVerbs.length
-  //     });
-  //   }
-  // };
   public handleFilter = (f: string, frequency?: string) => {
     this.setState({
       ...this.state,
@@ -267,6 +226,21 @@ class App extends React.Component<{}, IState> {
     });
   };
 
+  public handleLanguageChange = (lang: string) => {
+    if (lang === "de" && this.state.language !== "de") {
+      this.setState({
+        ...this.state,
+        filteredVerbs: de.data,
+        language: lang
+      });
+    } else if (lang === "en" && this.state.language !== "en") {
+      this.setState({
+        ...this.state,
+        filteredVerbs: en.data,
+        language: lang
+      });
+    }
+  };
   public resetProgress = () => {
     this.setState({
       ...this.state,
@@ -299,8 +273,17 @@ class App extends React.Component<{}, IState> {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Title>Irreg.io</Title>
           <Navigation />
+          <Route
+            path="/home"
+            render={() => {
+              return (
+                <Layout>
+                  <Home />
+                </Layout>
+              );
+            }}
+          />
           <Route
             path="/learn"
             render={() => {
@@ -324,6 +307,9 @@ class App extends React.Component<{}, IState> {
                       }
                       handleHelp={() => this.handleHelp}
                       toggleTranslation={() => this.toggleShowTranslation}
+                      handleLanguageChange={(lang: string) =>
+                        this.handleLanguageChange(lang)
+                      }
                     />
                   </Learn>
                 </Layout>
@@ -369,6 +355,9 @@ class App extends React.Component<{}, IState> {
                       }
                       handleHelp={() => this.handleHelp}
                       toggleTranslation={() => this.toggleShowTranslation}
+                      handleLanguageChange={(lang: string) =>
+                        this.handleLanguageChange(lang)
+                      }
                     />
                   </Practice>
                 </Layout>

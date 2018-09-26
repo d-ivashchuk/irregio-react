@@ -3,10 +3,10 @@
 exports[`Controls component matches snapshot 1`] = `
 Array [
   <div
-    className="sc-ifAKCX kcIHzQ"
+    className="sc-EHOje fIYEwc"
   >
     <button
-      className="sc-bxivhb ewRLaL"
+      className="sc-ifAKCX cWBsvP"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -15,7 +15,7 @@ Array [
       easy
     </button>
     <button
-      className="sc-bxivhb ewRLaL"
+      className="sc-ifAKCX cWBsvP"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -24,7 +24,7 @@ Array [
       hard
     </button>
     <button
-      className="sc-bxivhb ewRLaL"
+      className="sc-ifAKCX cWBsvP"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -34,10 +34,10 @@ Array [
     </button>
   </div>,
   <div
-    className="sc-ifAKCX kcIHzQ"
+    className="sc-EHOje fIYEwc"
   >
     <button
-      className="sc-bxivhb ewRLaL"
+      className="sc-ifAKCX cWBsvP"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -46,7 +46,7 @@ Array [
       shuffle
     </button>
     <button
-      className="sc-bxivhb ewRLaL"
+      className="sc-ifAKCX cWBsvP"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -55,31 +55,69 @@ Array [
       show translation
     </button>
   </div>,
+  <div
+    className="sc-EHOje fIYEwc"
+  >
+    <button
+      className="sc-ifAKCX cWBsvP"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      en
+    </button>
+    <button
+      className="sc-ifAKCX cWBsvP"
+      color={undefined}
+      disabled={undefined}
+      onClick={[Function]}
+      type={undefined}
+    >
+      de
+    </button>
+  </div>,
 ]
 `;
 
 exports[`Navigation component renders without crashing 1`] = `
 <div
-  className="sc-htpNat hDHTck"
+  className="sc-bxivhb kzflkI"
 >
   <a
     aria-current={null}
     className={undefined}
-    href="/learn"
+    href="/home"
     onClick={[Function]}
     style={undefined}
   >
-    Learn
+    <img
+      className="sc-htpNat jJVdOH"
+      height="65px"
+      src={undefined}
+      width="65px"
+    />
   </a>
-  <a
-    aria-current={null}
-    className={undefined}
-    href="/practice"
-    onClick={[Function]}
-    style={undefined}
-  >
-    Practice
-  </a>
+  <div>
+    <a
+      aria-current={null}
+      className={undefined}
+      href="/learn"
+      onClick={[Function]}
+      style={undefined}
+    >
+      Learn
+    </a>
+    <a
+      aria-current={null}
+      className={undefined}
+      href="/practice"
+      onClick={[Function]}
+      style={undefined}
+    >
+      Practice
+    </a>
+  </div>
 </div>
 `;
 
@@ -95,8 +133,12 @@ exports[`Progress bar component matches snapshot 1`] = `
 
 exports[`Title component matches snapshot 1`] = `
 <div
-  className="sc-jzJRlG krcVoK"
+  className="sc-bZQynM fyoVRI"
 >
-  IRREG.IO
+  i
+  <span>
+    r
+  </span>
+  reg.io
 </div>
 `;

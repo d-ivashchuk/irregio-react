@@ -45,6 +45,7 @@ injectGlobal`*{
   
 } `;
 
+console.log(en);
 class App extends React.Component<{}, IState> {
   public refOne: null | HTMLInputElement;
   public refTwo: null | HTMLInputElement;

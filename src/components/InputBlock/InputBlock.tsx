@@ -17,14 +17,15 @@ interface IProps {
 const StyledInputBlock = styled.div`
   display: flex;
   justify-content: center;
+  margin: 5px;
   input {
     margin: 5.5px;
     padding: 5px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
+    border-radius: 25px;
+    border: 0.1px solid #ccc;
     text-align: center;
     font-size: 2vh;
-    color: #555;
+    color: rgba(94, 94, 94, 0.8);
   }
 `;
 

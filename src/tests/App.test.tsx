@@ -53,6 +53,11 @@ describe("App container", () => {
       instance.handleShuffle();
       expect(wrapper.state("filteredVerbs")).not.toBe(currentVerbs);
     });
+    it("'handleLanguageChange' method changes language", () => {
+      expect(wrapper.state("language")).toBe("de");
+      instance.handleLanguageChange("en");
+      expect(wrapper.state("language")).toBe("en");
+    });
   });
 });
 
@@ -116,7 +121,7 @@ describe("Navigation component", () => {
 describe("Title component", () => {
   it("renders correct number of children", () => {
     const wrapper = shallow(<Title />);
-    expect(wrapper.children()).toHaveLength(1);
+    expect(wrapper.children()).toHaveLength(3);
   });
   it("matches snapshot", () => {
     const wrapper = renderer.create(<Title />).toJSON();
@@ -138,6 +143,7 @@ describe("Controls component", () => {
             }
             handleHelp={() => instance.handleHelp}
             toggleTranslation={() => instance.toggleShowTranslation}
+            handleLanguageChange={() => instance.handleLanguageChange("en")}
           />
         </MemoryRouter>
       )

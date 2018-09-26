@@ -12,6 +12,7 @@ type IProps = RouteComponentProps & {
   handleFilter: (f: string, type?: string) => void;
   handleHelp: () => void;
   toggleTranslation: () => void;
+  handleLanguageChange: (lang: string) => void;
 };
 
 const StyledControlGroup = styled.div`
@@ -29,6 +30,7 @@ class Controls extends React.Component<IProps, {}> {
       handleShuffle,
       handleFilter,
       handleHelp,
+      handleLanguageChange,
       toggleTranslation,
       location
     } = this.props;
@@ -59,6 +61,10 @@ class Controls extends React.Component<IProps, {}> {
             <Button clicked={handleHelp()} label="help" />
           ) : null}
           <Button clicked={toggleTranslation()} label="show translation" />
+        </StyledControlGroup>
+        <StyledControlGroup>
+          <Button clicked={() => handleLanguageChange("en")} label="en" />
+          <Button clicked={() => handleLanguageChange("de")} label="de" />
         </StyledControlGroup>
       </React.Fragment>
     );

@@ -2,24 +2,28 @@ import * as React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "../../theme/styled-components";
 
+import Icon from "../icon/icon";
+
 const StyledNavi = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  background: white;
+  justify-content: flex-start;
   a {
     text-decoration: none;
     margin: 5px;
-    color: white;
+    color: #ccc;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.2em;
     transition: all 0.3s, opacity 0.3s;
     &:hover {
-      color: #444;
+      color: #343637;
       opacity: 0.8;
       transition: all 0.3s, opacity 0.3s;
     }
   }
   .active {
-    color: #444;
+    color: #343637;
     opacity: 0.8;
     transition: all 0.3s, opacity 0.3s;
   }
@@ -27,8 +31,13 @@ const StyledNavi = styled.div`
 
 const Navi: React.StatelessComponent = props => (
   <StyledNavi>
-    <NavLink to="/learn">Learn</NavLink>
-    <NavLink to="/practice">Practice</NavLink>
+    <NavLink to="/home">
+      <Icon height="65px" width="65px" />
+    </NavLink>
+    <div>
+      <NavLink to="/learn">Learn</NavLink>
+      <NavLink to="/practice">Practice</NavLink>
+    </div>
   </StyledNavi>
 );
 

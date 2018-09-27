@@ -82,7 +82,7 @@ class Learn extends React.Component<IProps> {
             {translationEn}/{translationRus}
           </StyledTranslation>
         ) : null}
-        {isCompleted ? <h2>CONGRATS</h2> : null}
+        {isCompleted ? <h2>That's it</h2> : null}
         {this.props.children}
       </StyledLearn>
     );

@@ -2,6 +2,7 @@
   "name": "irregio-remastered",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://d-ivashchuk.github.io/irregio-react/",
   "dependencies": {
     "@types/enzyme": "^3.1.14",
     "@types/enzyme-adapter-react-16": "^1.0.3",
@@ -24,13 +25,16 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
     "@types/node": "^10.9.4",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
+    "gh-pages": "^2.0.0",
     "typescript": "^3.0.3"
   }
 }

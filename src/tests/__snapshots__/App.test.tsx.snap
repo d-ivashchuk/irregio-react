@@ -55,41 +55,19 @@ Array [
       show translation
     </button>
   </div>,
-  <div
-    className="sc-EHOje fIYEwc"
-  >
-    <button
-      className="sc-ifAKCX cWBsvP"
-      color={undefined}
-      disabled={undefined}
-      onClick={[Function]}
-      type={undefined}
-    >
-      en
-    </button>
-    <button
-      className="sc-ifAKCX cWBsvP"
-      color={undefined}
-      disabled={undefined}
-      onClick={[Function]}
-      type={undefined}
-    >
-      de
-    </button>
-  </div>,
 ]
 `;
 
 exports[`Navigation component renders without crashing 1`] = `
 <div
-  className="sc-bxivhb kzflkI"
+  className="sc-bxivhb dVTrOO"
 >
   <a
-    aria-current={null}
-    className={undefined}
-    href="/home"
+    aria-current="page"
+    className="active"
+    href="/"
     onClick={[Function]}
-    style={undefined}
+    style={Object {}}
   >
     <img
       className="sc-htpNat jJVdOH"
@@ -117,13 +95,28 @@ exports[`Navigation component renders without crashing 1`] = `
     >
       Practice
     </a>
+    <a
+      aria-current={null}
+      className={undefined}
+      href="/supported-languages"
+      onClick={[Function]}
+      style={undefined}
+    >
+      Languages
+    </a>
+  </div>
+  <div>
+    <img
+      onClick={undefined}
+      src={undefined}
+    />
   </div>
 </div>
 `;
 
 exports[`Progress bar component matches snapshot 1`] = `
 <div
-  className="sc-bwzfXH izntMt"
+  className="sc-bwzfXH fTxpOP"
 >
   <div
     className="sc-bdVaJa bKNoPd"

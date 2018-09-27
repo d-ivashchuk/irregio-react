@@ -12,6 +12,7 @@ import Navigation from "../../ui/navi/navigation";
 import Controls from "../../components/Controls/Controls";
 import Home from "../../components/Home/Home";
 import InputBlock from "../../components/InputBlock/InputBlock";
+import Languages from "../../components/Languages/Languages";
 import Layout from "../../ui/layout/layout";
 import Learn from "../../components/Learn/Learn";
 import Practice from "../../components/Practice/Practice";
@@ -45,7 +46,6 @@ injectGlobal`*{
   
 } `;
 
-console.log(en);
 class App extends React.Component<{}, IState> {
   public refOne: null | HTMLInputElement;
   public refTwo: null | HTMLInputElement;
@@ -154,8 +154,10 @@ class App extends React.Component<{}, IState> {
       filter: f,
       filteredVerbs:
         f === "all"
-          ? de.data
-          : de.data.filter(entry => entry.frequency === `${frequency}`),
+          ? this.state.verbs.data
+          : this.state.verbs.data.filter(
+              entry => entry.frequency === `${frequency}`
+            ),
       progress: 0,
       fractionCompleted: 0,
       hintsTaken: 0,
@@ -227,18 +229,32 @@ class App extends React.Component<{}, IState> {
     });
   };
 
-  public handleLanguageChange = (lang: string) => {
-    if (lang === "de" && this.state.language !== "de") {
-      this.setState({
-        ...this.state,
-        filteredVerbs: de.data,
-        language: lang
-      });
-    } else if (lang === "en" && this.state.language !== "en") {
+  public toggleLanguage = () => {
+    if (this.state.language === "de") {
       this.setState({
         ...this.state,
         filteredVerbs: en.data,
-        language: lang
+        language: "en",
+        verbs: en,
+        progress: 0,
+        fractionCompleted: 0,
+        hintsTaken: 0,
+        isCompleted: false,
+        pastFormHint: "",
+        perfectFormHint: ""
+      });
+    } else if (this.state.language === "en") {
+      this.setState({
+        ...this.state,
+        filteredVerbs: de.data,
+        language: "de",
+        verbs: de,
+        progress: 0,
+        fractionCompleted: 0,
+        hintsTaken: 0,
+        isCompleted: false,
+        pastFormHint: "",
+        perfectFormHint: ""
       });
     }
   };
@@ -266,7 +282,8 @@ class App extends React.Component<{}, IState> {
       fractionCompleted,
       showTranslation,
       hintsTaken,
-      filter
+      filter,
+      language
     } = this.state;
 
     const currentVerb = filteredVerbs[progress];
@@ -274,9 +291,23 @@ class App extends React.Component<{}, IState> {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Navigation />
+          <Navigation
+            language={language}
+            toggleLanguage={this.toggleLanguage}
+          />
           <Route
-            path="/home"
+            path="/supported-languages"
+            render={() => {
+              return (
+                <Layout>
+                  <Languages />
+                </Layout>
+              );
+            }}
+          />
+          <Route
+            exact={true}
+            path="/"
             render={() => {
               return (
                 <Layout>
@@ -308,9 +339,6 @@ class App extends React.Component<{}, IState> {
                       }
                       handleHelp={() => this.handleHelp}
                       toggleTranslation={() => this.toggleShowTranslation}
-                      handleLanguageChange={(lang: string) =>
-                        this.handleLanguageChange(lang)
-                      }
                     />
                   </Learn>
                 </Layout>
@@ -356,9 +384,6 @@ class App extends React.Component<{}, IState> {
                       }
                       handleHelp={() => this.handleHelp}
                       toggleTranslation={() => this.toggleShowTranslation}
-                      handleLanguageChange={(lang: string) =>
-                        this.handleLanguageChange(lang)
-                      }
                     />
                   </Practice>
                 </Layout>

@@ -53,11 +53,6 @@ describe("App container", () => {
       instance.handleShuffle();
       expect(wrapper.state("filteredVerbs")).not.toBe(currentVerbs);
     });
-    it("'handleLanguageChange' method changes language", () => {
-      expect(wrapper.state("language")).toBe("de");
-      instance.handleLanguageChange("en");
-      expect(wrapper.state("language")).toBe("en");
-    });
   });
 });
 
@@ -106,15 +101,15 @@ describe("Navigation component", () => {
     const wrapper = renderer
       .create(
         <MemoryRouter>
-          <Navigation />
+          <Navigation language={"de"} />
         </MemoryRouter>
       )
       .toJSON();
     expect(wrapper).toMatchSnapshot();
   });
   it("has length of 2", () => {
-    const wrapper = shallow(<Navigation />);
-    expect(wrapper.children()).toHaveLength(2);
+    const wrapper = shallow(<Navigation language={"de"} />);
+    expect(wrapper.children()).toHaveLength(3);
   });
 });
 
@@ -143,7 +138,6 @@ describe("Controls component", () => {
             }
             handleHelp={() => instance.handleHelp}
             toggleTranslation={() => instance.toggleShowTranslation}
-            handleLanguageChange={() => instance.handleLanguageChange("en")}
           />
         </MemoryRouter>
       )

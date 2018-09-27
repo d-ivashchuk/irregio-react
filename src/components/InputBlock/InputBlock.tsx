@@ -19,6 +19,7 @@ const StyledInputBlock = styled.div`
   justify-content: center;
   margin: 5px;
   input {
+    max-width: 180px;
     margin: 5.5px;
     padding: 5px;
     border-radius: 25px;

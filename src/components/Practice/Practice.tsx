@@ -40,6 +40,24 @@ const StyledTranslation = styled.div`
   font-size: 2rem;
   top: -15px;
 `;
+const StyledRedo = styled.button`
+  margin: 20px auto 0 auto;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  color: white;
+  border: 1.5px solid #f0f0f0;
+  border-radius: 20px;
+  background: none;
+  &:hover {
+    background: white;
+    color: #56ccf2;
+    cursor: pointer;
+  }
+`;
 
 class Learn extends React.Component<IProps> {
   public componentDidMount() {
@@ -56,20 +74,28 @@ class Learn extends React.Component<IProps> {
       showTranslation,
       isCompleted,
       hintsTaken,
-      filter
+      filter,
+      reset
     } = this.props;
     return (
       <StyledPractice>
-        <StyledInfinitive>{infinitive}</StyledInfinitive>
-        {showTranslation ? (
-          <StyledTranslation>
-            {translationEn}/{translationRus}
-          </StyledTranslation>
-        ) : null}
         {isCompleted ? (
-          <Congratulations hintsTaken={hintsTaken} filter={filter} />
-        ) : null}
-        {this.props.children}
+          <React.Fragment>
+            <Congratulations hintsTaken={hintsTaken} filter={filter} />
+            <StyledRedo onClick={reset}>redo</StyledRedo>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <StyledInfinitive>{infinitive}</StyledInfinitive>
+            {showTranslation ? (
+              <StyledTranslation>
+                {translationEn}/{translationRus}
+              </StyledTranslation>
+            ) : null}
+
+            {this.props.children}
+          </React.Fragment>
+        )}
       </StyledPractice>
     );
   }

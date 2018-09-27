@@ -7,10 +7,10 @@ const StyledCongratulations = styled.div`
   font-size: 1.4rem;
   margin: auto;
   p {
-    color: #777;
+    color: white;
   }
   i {
-    color: #999;
+    color: #f0f0f0;
   }
 `;
 interface IProps {

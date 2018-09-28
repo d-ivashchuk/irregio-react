@@ -15,7 +15,12 @@ const StyledIcon = styled.img`
 `;
 
 const Icon: React.StatelessComponent<IProps> = props => (
-  <StyledIcon src={icon} height={props.height} width={props.width} />
+  <StyledIcon
+    src={icon}
+    height={props.height}
+    width={props.width}
+    alt="irregio icon"
+  />
 );
 
 export default Icon;

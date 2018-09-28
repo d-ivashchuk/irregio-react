@@ -70,6 +70,7 @@ exports[`Navigation component renders without crashing 1`] = `
     style={Object {}}
   >
     <img
+      alt="irregio icon"
       className="sc-htpNat jJVdOH"
       height="65px"
       src={undefined}

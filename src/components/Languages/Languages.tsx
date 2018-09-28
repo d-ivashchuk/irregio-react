@@ -56,8 +56,8 @@ class Home extends React.Component<{}> {
       <StyledLanguages>
         <h1>Supported languages</h1>
         <IconContainer>
-          <img src={de} />
-          <img src={uk} />
+          <img src={de} alt="german flag icon" />
+          <img src={uk} alt="british flag icon" />
         </IconContainer>
         <h3>Feel free to contact us if you want to request a new language</h3>
         <a href="mailto:dimitri.ivashchuk@m">Contact</a>

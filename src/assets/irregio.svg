@@ -5,8 +5,8 @@
 <rect y="45.3051" width="57" height="57" transform="rotate(-45 0 45.3051)" fill="#56CCF2"/>
 <rect y="45.3051" width="57" height="57" transform="rotate(-45 0 45.3051)" fill="url(#paint0_linear)"/>
 </g>
-<path d="M44.8125 40C44.8125 34.0833 48.6354 31.125 56.2812 31.125H60.6562V47.0625H44.8125V40ZM22.9375 31.125H40.3125V63H22.9375V31.125Z" fill="white"/>
 </g>
+<path d="M44.8125 40C44.8125 34.0833 48.6354 31.125 56.2812 31.125H60.6562V47.0625H44.8125V40ZM22.9375 31.125H40.3125V63H22.9375V31.125Z" fill="white"/>
 <defs>
 <linearGradient id="paint0_linear" x1="52.5416" y1="40.8467" x2="-5.44113" y2="107.315" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>

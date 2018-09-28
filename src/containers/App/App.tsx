@@ -289,7 +289,7 @@ class App extends React.Component<{}, IState> {
     const currentVerb = filteredVerbs[progress];
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <React.Fragment>
           <Navigation
             language={language}

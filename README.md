@@ -1,5 +1,7 @@
 # Irreg.io - remastered
 
+<img src="https://raw.github.com/d-ivashchuk/irregio-react/test/screenshots/irregio.gif" width="350" />
+
 ## What is Irreg.io
 
 It is a simple app I've built in the past to get comfortable with german irregular verbs. Previously [it](https://github.com/d-ivashchuk/irreg.io) has been written in mostly vanilla javascript but as my skills progressed I've decided to rebuilt it as React SPA and use some intermediate techniques like test-driven development and static types.

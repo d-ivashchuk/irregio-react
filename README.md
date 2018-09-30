@@ -1,6 +1,6 @@
 # Irreg.io - remastered
 
-<img src="https://raw.github.com/d-ivashchuk/irregio-react/test/screenshots/irregio.gif" width="350" />
+<img src="https://raw.github.com/d-ivashchuk/irregio-react/master/screenshots/irregio.gif" width="350" />
 
 ## What is Irreg.io
 

@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "../../theme/styled-components";
 
+import DifficultyLabel from "../../components/DifficultyLabel/DifficultyLabel";
+
 interface IProps {
   progress?: number;
   infinitive: string;
@@ -27,7 +29,10 @@ const StyledLearn = styled.div`
 `;
 
 const StyledInfinitive = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 3rem;
+  justify-content: center;
 `;
 
 const StyledFormContainer = styled.div`
@@ -58,6 +63,7 @@ const StyledTranslation = styled.div`
   color: #f0f0f0;
   opacity: 0.4;
 `;
+
 class Learn extends React.Component<IProps> {
   public render() {
     const {
@@ -67,11 +73,16 @@ class Learn extends React.Component<IProps> {
       translationRus,
       translationEn,
       showTranslation,
-      isCompleted
+      isCompleted,
+      frequency
     } = this.props;
     return (
       <StyledLearn>
-        <StyledInfinitive>{infinitive}</StyledInfinitive>
+        <StyledInfinitive>
+          {infinitive}
+          <DifficultyLabel frequency={frequency} />
+        </StyledInfinitive>
+
         <StyledFormContainer>
           <StyledForm>{pastTense}</StyledForm>
           <StyledForm>{presentPerfect}</StyledForm>

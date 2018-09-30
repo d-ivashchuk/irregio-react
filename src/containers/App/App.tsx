@@ -194,7 +194,7 @@ class App extends React.Component<{}, IState> {
   };
   public handleHelp = () => {
     if (
-      this.state.pastFormHint !==
+      this.state.currentPastForm !==
       this.state.filteredVerbs[this.state.progress].pastTense
     ) {
       if (this.refOne) {

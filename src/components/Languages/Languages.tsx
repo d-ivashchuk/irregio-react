@@ -34,6 +34,7 @@ const StyledLanguages = styled.div`
     &:hover {
       background: white;
       color: #56ccf2;
+      transition: all 0.3s;
     }
   }
 `;
@@ -60,7 +61,7 @@ class Home extends React.Component<{}> {
           <img src={uk} alt="british flag icon" />
         </IconContainer>
         <h3>Feel free to contact us if you want to request a new language</h3>
-        <a href="mailto:dimitri.ivashchuk@m">Contact</a>
+        <a href="mailto:dimitri.ivashchuk@gmail.com">Contact</a>
       </StyledLanguages>
     );
   }

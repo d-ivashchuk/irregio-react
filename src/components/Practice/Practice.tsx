@@ -3,6 +3,8 @@ import styled from "../../theme/styled-components";
 
 import Congratulations from "../Congratulations/Congratulations";
 
+import DifficultyLabel from "../DifficultyLabel/DifficultyLabel";
+
 interface IProps {
   progress?: number;
   infinitive: string;
@@ -10,7 +12,7 @@ interface IProps {
   presentPerfect?: string;
   translationRus?: string;
   translationEn?: string;
-  frequency: string;
+  frequency?: string;
   showTranslation: boolean;
   isCompleted: boolean;
   reset?: () => void;
@@ -30,7 +32,10 @@ const StyledPractice = styled.div`
   }
 `;
 const StyledInfinitive = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 3rem;
+  justify-content: center;
 `;
 
 const StyledTranslation = styled.div`
@@ -75,7 +80,8 @@ class Learn extends React.Component<IProps> {
       isCompleted,
       hintsTaken,
       filter,
-      reset
+      reset,
+      frequency
     } = this.props;
     return (
       <StyledPractice>
@@ -86,7 +92,10 @@ class Learn extends React.Component<IProps> {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <StyledInfinitive>{infinitive}</StyledInfinitive>
+            <StyledInfinitive>
+              {infinitive}
+              <DifficultyLabel frequency={frequency} />
+            </StyledInfinitive>
             {showTranslation ? (
               <StyledTranslation>
                 {translationEn}/{translationRus}

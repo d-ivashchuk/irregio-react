@@ -27,6 +27,9 @@ const StyledInputBlock = styled.div`
     text-align: center;
     font-size: 2vh;
     color: rgba(94, 94, 94, 0.8);
+    &::placeholder {
+      color: #ccc;
+    }
   }
 `;
 

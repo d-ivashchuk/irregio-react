@@ -35,6 +35,7 @@ const LinkContainer = styled.div`
     &:hover {
       background: white;
       color: #56ccf2;
+      transition: all 0.3s;
     }
   }
 `;
@@ -47,7 +48,7 @@ class Home extends React.Component<{}> {
         <Title />
         <StyledInfo>
           Irreg.io is designed to help you with learning foreign irregular verbs
-          and mastering them with the help of powerful yet simple tool.
+          and mastering them with the help of powerful yet simple tool
         </StyledInfo>
         <LinkContainer>
           <NavLink to="/practice">practice</NavLink>

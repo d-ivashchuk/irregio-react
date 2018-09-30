@@ -10,7 +10,7 @@ It is a simple app I've built in the past to get comfortable with german irregul
 
 This application is built with `react` and `styled-components`. It utilizes static types via `Typescript` so usual _js_ and _jsx_ will be _ts_ and _tsx_ instead.
 
-## Installing anв using locally
+## Installing and using locally
 
 If you want to play with the app or tweak its code you need to install it locally on your machine. To achieve that clone the repo, run `npm install` command in your terminal and run `npm start`. As this portfolio uses `create-react-app` a new browser window with an app running on local server will open and any changes to the code will trigger hot reload of the page.
 

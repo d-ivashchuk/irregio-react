@@ -6,6 +6,7 @@ export default {
       presentPerfect: "borne",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "aushalten"
     },
     {
@@ -14,6 +15,7 @@ export default {
       presentPerfect: "beaten",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schlagen"
     },
     {
@@ -22,6 +24,7 @@ export default {
       presentPerfect: "begot",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "zeugen"
     },
     {
@@ -30,6 +33,7 @@ export default {
       presentPerfect: "begun",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "anfangen"
     },
     {
@@ -38,6 +42,7 @@ export default {
       presentPerfect: "bent",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "nachgeben"
     },
     {
@@ -46,6 +51,7 @@ export default {
       presentPerfect: "bet",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "wetten"
     },
 
@@ -55,6 +61,7 @@ export default {
       presentPerfect: "bid",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "bieten"
     },
 
@@ -64,6 +71,7 @@ export default {
       presentPerfect: "bidden",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "abwarten"
     },
     {
@@ -72,6 +80,7 @@ export default {
       presentPerfect: "bound",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "binden"
     },
     {
@@ -80,6 +89,7 @@ export default {
       presentPerfect: "bitten",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "beißen"
     },
     {
@@ -88,6 +98,7 @@ export default {
       presentPerfect: "bled",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "bluten"
     },
     {
@@ -96,6 +107,7 @@ export default {
       presentPerfect: "blown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "blasen"
     },
     {
@@ -104,6 +116,7 @@ export default {
       presentPerfect: "broken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "brechen"
     },
     {
@@ -112,6 +125,7 @@ export default {
       presentPerfect: "bred",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "brüten"
     },
     {
@@ -120,6 +134,7 @@ export default {
       presentPerfect: "brought",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "bringen"
     },
     {
@@ -128,6 +143,7 @@ export default {
       presentPerfect: "built",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "bauen"
     },
     {
@@ -136,6 +152,7 @@ export default {
       presentPerfect: "burnt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "brennen"
     },
     {
@@ -144,6 +161,7 @@ export default {
       presentPerfect: "burst",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "platzen"
     },
     {
@@ -152,6 +170,7 @@ export default {
       presentPerfect: "bought",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "kaufen"
     },
 
@@ -160,6 +179,7 @@ export default {
       pastTense: "cast",
       presentPerfect: "cast",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "dummy",
       frequency: "werfen"
     },
@@ -169,6 +189,7 @@ export default {
       presentPerfect: "caught",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fangen"
     },
     {
@@ -177,6 +198,7 @@ export default {
       presentPerfect: "chosen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "auswählen"
     },
     {
@@ -185,6 +207,7 @@ export default {
       presentPerfect: "clad",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verkleiden"
     },
     {
@@ -193,6 +216,7 @@ export default {
       presentPerfect: "cloven",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "spalten"
     },
     {
@@ -201,6 +225,7 @@ export default {
       presentPerfect: "clung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "kleben"
     },
     {
@@ -209,6 +234,7 @@ export default {
       presentPerfect: "come",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "kommen"
     },
     {
@@ -217,6 +243,7 @@ export default {
       presentPerfect: "cost",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "kosten"
     },
     {
@@ -225,6 +252,7 @@ export default {
       presentPerfect: "crept",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schleichen"
     },
     {
@@ -233,6 +261,7 @@ export default {
       presentPerfect: "crowed",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "angeben"
     },
     {
@@ -241,6 +270,7 @@ export default {
       presentPerfect: "cut",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schneiden"
     },
 
@@ -250,6 +280,7 @@ export default {
       presentPerfect: "dealt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "handeln"
     },
     {
@@ -258,6 +289,7 @@ export default {
       presentPerfect: "dug",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "graben"
     },
 
@@ -267,6 +299,7 @@ export default {
       presentPerfect: "done",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "dummy"
     },
 
@@ -276,6 +309,7 @@ export default {
       presentPerfect: "drawn",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "ziehen"
     },
     {
@@ -284,6 +318,7 @@ export default {
       presentPerfect: "dreamt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "träumen"
     },
     {
@@ -292,6 +327,7 @@ export default {
       presentPerfect: "drunk",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "trinken"
     },
     {
@@ -300,6 +336,7 @@ export default {
       presentPerfect: "driven",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fahren"
     },
     {
@@ -308,6 +345,7 @@ export default {
       presentPerfect: "dwelt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verweilen"
     },
     {
@@ -316,6 +354,7 @@ export default {
       presentPerfect: "eaten",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "essen"
     },
     {
@@ -324,6 +363,7 @@ export default {
       presentPerfect: "fallen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fallen"
     },
     {
@@ -332,6 +372,7 @@ export default {
       presentPerfect: "fed",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "füttern"
     },
     {
@@ -340,6 +381,7 @@ export default {
       presentPerfect: "felt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fühlen"
     },
     {
@@ -348,6 +390,7 @@ export default {
       presentPerfect: "fought",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "kämpfen"
     },
     {
@@ -356,6 +399,7 @@ export default {
       presentPerfect: "found",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "finden"
     },
     {
@@ -364,6 +408,7 @@ export default {
       presentPerfect: "fit",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "passen"
     },
     {
@@ -372,6 +417,7 @@ export default {
       presentPerfect: "fled",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "flüchten"
     },
     {
@@ -380,6 +426,7 @@ export default {
       presentPerfect: "flung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "werfen"
     },
     {
@@ -388,6 +435,7 @@ export default {
       presentPerfect: "flown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fliegen"
     },
 
@@ -397,6 +445,7 @@ export default {
       presentPerfect: "forbidden",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verbieten"
     },
     {
@@ -405,6 +454,7 @@ export default {
       presentPerfect: "forgotten",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "vergessen"
     },
     {
@@ -413,6 +463,7 @@ export default {
       presentPerfect: "forsaken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "aufgeben"
     },
     {
@@ -421,6 +472,7 @@ export default {
       presentPerfect: "frozen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "frieren"
     },
     {
@@ -429,6 +481,7 @@ export default {
       presentPerfect: "gotten",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "erhalten"
     },
 
@@ -438,6 +491,7 @@ export default {
       presentPerfect: "given",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "geben"
     },
     {
@@ -446,6 +500,7 @@ export default {
       presentPerfect: "gone ",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "gehen"
     },
     {
@@ -454,6 +509,7 @@ export default {
       presentPerfect: "ground",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "zerreiben"
     },
     {
@@ -462,6 +518,7 @@ export default {
       presentPerfect: "grown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "wachsen"
     },
     {
@@ -470,6 +527,7 @@ export default {
       presentPerfect: "hung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "hängen"
     },
     {
@@ -478,6 +536,7 @@ export default {
       presentPerfect: "had",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "haben"
     },
     {
@@ -486,6 +545,7 @@ export default {
       presentPerfect: "heard",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "hören"
     },
     {
@@ -494,6 +554,7 @@ export default {
       presentPerfect: "hewed",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fällen"
     },
     {
@@ -502,6 +563,7 @@ export default {
       presentPerfect: "hidden",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verstecken"
     },
     {
@@ -510,6 +572,7 @@ export default {
       presentPerfect: "hit",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "treffen"
     },
     {
@@ -518,6 +581,7 @@ export default {
       presentPerfect: "hoist",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "heben"
     },
     {
@@ -526,6 +590,7 @@ export default {
       presentPerfect: "held",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "halten"
     },
     {
@@ -534,6 +599,7 @@ export default {
       presentPerfect: "hurt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verletzen"
     },
     {
@@ -542,6 +608,7 @@ export default {
       presentPerfect: "kept",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "behalten"
     },
     {
@@ -550,6 +617,7 @@ export default {
       presentPerfect: "knelt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "knien"
     },
     {
@@ -558,6 +626,7 @@ export default {
       presentPerfect: "knit",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "stricken"
     },
     {
@@ -566,6 +635,7 @@ export default {
       presentPerfect: "known",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "wissen"
     },
     {
@@ -574,6 +644,7 @@ export default {
       presentPerfect: "laid",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "legen"
     },
     {
@@ -582,6 +653,7 @@ export default {
       presentPerfect: "led",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "führen"
     },
     {
@@ -590,6 +662,7 @@ export default {
       presentPerfect: "leant",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "lehnen"
     },
     {
@@ -598,6 +671,7 @@ export default {
       presentPerfect: "leapt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "springen"
     },
 
@@ -607,6 +681,7 @@ export default {
       presentPerfect: "left",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verlassen"
     },
     {
@@ -615,6 +690,7 @@ export default {
       presentPerfect: "lent",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "leihen"
     },
     {
@@ -623,6 +699,7 @@ export default {
       presentPerfect: "let",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "lassen"
     },
     {
@@ -631,6 +708,7 @@ export default {
       presentPerfect: "lain",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "lügen"
     },
     {
@@ -639,6 +717,7 @@ export default {
       presentPerfect: "lit",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "beleuchten"
     },
     {
@@ -647,6 +726,7 @@ export default {
       presentPerfect: "lost",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verlieren"
     },
     {
@@ -655,6 +735,7 @@ export default {
       presentPerfect: "made",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "machen"
     },
 
@@ -664,6 +745,7 @@ export default {
       presentPerfect: "meant",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "meinen"
     },
     {
@@ -672,6 +754,7 @@ export default {
       presentPerfect: "met",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "treffen"
     },
 
@@ -681,6 +764,7 @@ export default {
       presentPerfect: "mown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "mähen"
     },
     {
@@ -689,6 +773,7 @@ export default {
       presentPerfect: "paid",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "zahlen"
     },
     {
@@ -697,6 +782,7 @@ export default {
       presentPerfect: "pled",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "bitten"
     },
 
@@ -706,6 +792,7 @@ export default {
       presentPerfect: "proven",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "beweisen"
     },
     {
@@ -714,6 +801,7 @@ export default {
       presentPerfect: "put",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "setzen"
     },
     {
@@ -722,6 +810,7 @@ export default {
       presentPerfect: "quit",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "beenden"
     },
 
@@ -731,6 +820,7 @@ export default {
       presentPerfect: "read",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "lesen"
     },
     {
@@ -739,6 +829,7 @@ export default {
       presentPerfect: "rent",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "reißen"
     },
     {
@@ -747,6 +838,7 @@ export default {
       presentPerfect: "ridden",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "loswerden"
     },
     {
@@ -755,6 +847,7 @@ export default {
       presentPerfect: "ridden",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fahren"
     },
     {
@@ -763,6 +856,7 @@ export default {
       presentPerfect: "rung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "läuten"
     },
     {
@@ -771,6 +865,7 @@ export default {
       presentPerfect: "risen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "ansteigen"
     },
     {
@@ -779,6 +874,7 @@ export default {
       presentPerfect: "run",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "rennen"
     },
     {
@@ -787,6 +883,7 @@ export default {
       presentPerfect: "sawn",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "sägen"
     },
     {
@@ -795,6 +892,7 @@ export default {
       presentPerfect: "said",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "sagen"
     },
     {
@@ -803,6 +901,7 @@ export default {
       presentPerfect: "seen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "dummy"
     },
     {
@@ -811,6 +910,7 @@ export default {
       presentPerfect: "sought",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "suchen"
     },
     {
@@ -819,6 +919,7 @@ export default {
       presentPerfect: "sold",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verkaufen"
     },
     {
@@ -827,6 +928,7 @@ export default {
       presentPerfect: "sent",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "senden"
     },
     {
@@ -835,6 +937,7 @@ export default {
       presentPerfect: "set",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "setzen"
     },
     {
@@ -843,6 +946,7 @@ export default {
       presentPerfect: "sewn",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "nähen"
     },
     {
@@ -851,6 +955,7 @@ export default {
       presentPerfect: "shaken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schütteln"
     },
 
@@ -860,6 +965,7 @@ export default {
       presentPerfect: "shorn",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "scheren"
     },
     {
@@ -868,6 +974,7 @@ export default {
       presentPerfect: "shed",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "loswerden"
     },
     {
@@ -876,6 +983,7 @@ export default {
       presentPerfect: "shone",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "scheinen"
     },
     {
@@ -884,6 +992,7 @@ export default {
       presentPerfect: "shat",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "scheißen"
     },
     {
@@ -892,6 +1001,7 @@ export default {
       presentPerfect: "shod",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "beschuhen"
     },
     {
@@ -900,6 +1010,7 @@ export default {
       presentPerfect: "shot",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schießen"
     },
     {
@@ -908,6 +1019,7 @@ export default {
       presentPerfect: "shown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "zeigen"
     },
     {
@@ -916,6 +1028,7 @@ export default {
       presentPerfect: "shrunk",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schrumpfen"
     },
     {
@@ -924,6 +1037,7 @@ export default {
       presentPerfect: "shriven",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "beichten"
     },
     {
@@ -932,6 +1046,7 @@ export default {
       presentPerfect: "shut",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schließen"
     },
     {
@@ -940,6 +1055,7 @@ export default {
       presentPerfect: "sung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "singen"
     },
     {
@@ -948,6 +1064,7 @@ export default {
       presentPerfect: "sunk",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "senken"
     },
     {
@@ -956,6 +1073,7 @@ export default {
       presentPerfect: "sat",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "sitzen"
     },
     {
@@ -964,6 +1082,7 @@ export default {
       presentPerfect: "slain",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "erschlagen"
     },
     {
@@ -972,6 +1091,7 @@ export default {
       presentPerfect: "slept",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schlafen"
     },
     {
@@ -980,6 +1100,7 @@ export default {
       presentPerfect: "slid",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "gleiten"
     },
     {
@@ -988,6 +1109,7 @@ export default {
       presentPerfect: "slung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schleudern"
     },
     {
@@ -996,6 +1118,7 @@ export default {
       presentPerfect: "slunk",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schleichen"
     },
     {
@@ -1004,6 +1127,7 @@ export default {
       presentPerfect: "slit",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schlitzen"
     },
     {
@@ -1012,6 +1136,7 @@ export default {
       presentPerfect: "smelled/smelt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "riechen"
     },
     {
@@ -1020,6 +1145,7 @@ export default {
       presentPerfect: "smitten",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "zerschmettern"
     },
     {
@@ -1028,6 +1154,7 @@ export default {
       presentPerfect: "sown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "säen"
     },
     {
@@ -1036,6 +1163,7 @@ export default {
       presentPerfect: "spoken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "sprechen"
     },
     {
@@ -1044,6 +1172,7 @@ export default {
       presentPerfect: "sped",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "eilen"
     },
 
@@ -1053,6 +1182,7 @@ export default {
       presentPerfect: "spent",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verbringen"
     },
     {
@@ -1061,6 +1191,7 @@ export default {
       presentPerfect: "spilt",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "ausschütten"
     },
     {
@@ -1069,6 +1200,7 @@ export default {
       presentPerfect: "spun",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "drehen"
     },
     {
@@ -1077,6 +1209,7 @@ export default {
       presentPerfect: "spat",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "spucken"
     },
     {
@@ -1085,6 +1218,7 @@ export default {
       presentPerfect: "split",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "teilen"
     },
 
@@ -1094,6 +1228,7 @@ export default {
       presentPerfect: "spread",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verteilen"
     },
     {
@@ -1102,6 +1237,7 @@ export default {
       presentPerfect: "sprung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "springen"
     },
     {
@@ -1110,6 +1246,7 @@ export default {
       presentPerfect: "stood",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "stehen"
     },
     {
@@ -1118,6 +1255,7 @@ export default {
       presentPerfect: "stove",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "zusammenschlagen"
     },
     {
@@ -1126,6 +1264,7 @@ export default {
       presentPerfect: "stolen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "stehlen"
     },
     {
@@ -1134,6 +1273,7 @@ export default {
       presentPerfect: "stuck",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "stecken"
     },
     {
@@ -1142,6 +1282,7 @@ export default {
       presentPerfect: "stung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "reizen"
     },
     {
@@ -1150,6 +1291,7 @@ export default {
       presentPerfect: "stunk",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "stinken"
     },
     {
@@ -1158,6 +1300,7 @@ export default {
       presentPerfect: "strewn",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "streuen"
     },
     {
@@ -1166,6 +1309,7 @@ export default {
       presentPerfect: "stridden",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "dummy"
     },
     {
@@ -1174,6 +1318,7 @@ export default {
       presentPerfect: "stricken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "dummy"
     },
     {
@@ -1182,6 +1327,7 @@ export default {
       presentPerfect: "strung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "überschreiten"
     },
     {
@@ -1190,6 +1336,7 @@ export default {
       presentPerfect: "striven",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "anstreben"
     },
     {
@@ -1198,6 +1345,7 @@ export default {
       presentPerfect: "sworn",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fluchen"
     },
     {
@@ -1206,6 +1354,7 @@ export default {
       presentPerfect: "sweat",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schwitzen"
     },
     {
@@ -1214,6 +1363,7 @@ export default {
       presentPerfect: "swept",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "fegen"
     },
     {
@@ -1222,6 +1372,7 @@ export default {
       presentPerfect: "swollen",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "anschwellen"
     },
     {
@@ -1230,6 +1381,7 @@ export default {
       presentPerfect: "swum",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schwimmen"
     },
     {
@@ -1238,6 +1390,7 @@ export default {
       presentPerfect: "swung",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schwingen"
     },
     {
@@ -1246,6 +1399,7 @@ export default {
       presentPerfect: "taken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "bringen"
     },
     {
@@ -1254,6 +1408,7 @@ export default {
       presentPerfect: "taught",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "lehren"
     },
     {
@@ -1262,6 +1417,7 @@ export default {
       presentPerfect: "torn",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "reißen"
     },
     {
@@ -1270,6 +1426,7 @@ export default {
       presentPerfect: "told",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "erzählen"
     },
     {
@@ -1278,6 +1435,7 @@ export default {
       presentPerfect: "thought",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "denken"
     },
     {
@@ -1286,6 +1444,7 @@ export default {
       presentPerfect: "thrown",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "werfen"
     },
     {
@@ -1294,6 +1453,7 @@ export default {
       presentPerfect: "thrust",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "stoßen"
     },
     {
@@ -1302,6 +1462,7 @@ export default {
       presentPerfect: "trod",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schreiten"
     },
 
@@ -1311,6 +1472,7 @@ export default {
       presentPerfect: "woken",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "wecken"
     },
     {
@@ -1319,6 +1481,7 @@ export default {
       presentPerfect: "worn",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "tragen"
     },
     {
@@ -1327,6 +1490,7 @@ export default {
       presentPerfect: "woven",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "verflechten"
     },
     {
@@ -1335,6 +1499,7 @@ export default {
       presentPerfect: "wed",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "heiraten"
     },
     {
@@ -1343,6 +1508,7 @@ export default {
       presentPerfect: "wept",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "weinen"
     },
     {
@@ -1351,6 +1517,7 @@ export default {
       presentPerfect: "wet",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "anfeuchten"
     },
 
@@ -1360,6 +1527,7 @@ export default {
       presentPerfect: "won",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "gewinnen"
     },
     {
@@ -1368,6 +1536,7 @@ export default {
       presentPerfect: "wound ",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "wickeln"
     },
     {
@@ -1376,6 +1545,7 @@ export default {
       presentPerfect: "wrung",
       frequency: "infrequent",
       translationRus: "dummy",
+      translationEn: "dummy", translationEn: "dummy",
       translationDe: "erzwingen"
     },
     {
@@ -1384,6 +1554,7 @@ export default {
       presentPerfect: "written",
       frequency: "frequent",
       translationRus: "dummy",
+      translationEn: "dummy",
       translationDe: "schreiben"
     }
   ]

@@ -5,7 +5,7 @@ export default {
       pastTense: "bore",
       presentPerfect: "borne",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "терпеть",
       translationEn: "dummy"
     },
     {
@@ -13,7 +13,7 @@ export default {
       pastTense: "beat",
       presentPerfect: "beaten",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "бить",
       translationEn: "dummy"
     },
     {
@@ -21,7 +21,7 @@ export default {
       pastTense: "begot",
       presentPerfect: "begot",
       frequency: "infrequent",
-      translationRus: "dummy",
+      translationRus: "рождать",
       translationEn: "dummy"
     },
     {
@@ -29,7 +29,7 @@ export default {
       pastTense: "began",
       presentPerfect: "begun",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "начинать",
       translationEn: "dummy"
     },
     {
@@ -37,7 +37,7 @@ export default {
       pastTense: "bent",
       presentPerfect: "bent",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "сгибать",
       translationEn: "dummy"
     },
     {
@@ -45,7 +45,7 @@ export default {
       pastTense: "bet",
       presentPerfect: "bet",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "держать пари",
       translationEn: "dummy"
     },
 
@@ -54,7 +54,7 @@ export default {
       pastTense: "bid",
       presentPerfect: "bid",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "предлагать цену",
       translationEn: "dummy"
     },
 
@@ -71,7 +71,7 @@ export default {
       pastTense: "bound",
       presentPerfect: "bound",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "связывать",
       translationEn: "dummy"
     },
     {
@@ -79,7 +79,7 @@ export default {
       pastTense: "bit",
       presentPerfect: "bitten",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "кусать",
       translationEn: "dummy"
     },
     {
@@ -87,7 +87,7 @@ export default {
       pastTense: "bled",
       presentPerfect: "bled",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "кровоточить",
       translationEn: "dummy"
     },
     {
@@ -95,7 +95,7 @@ export default {
       pastTense: "blew",
       presentPerfect: "blown",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "дуть",
       translationEn: "dummy"
     },
     {
@@ -103,7 +103,7 @@ export default {
       pastTense: "broke",
       presentPerfect: "broken",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "ламать",
       translationEn: "dummy"
     },
     {
@@ -111,7 +111,7 @@ export default {
       pastTense: "bred",
       presentPerfect: "bred",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "разводить",
       translationEn: "dummy"
     },
     {
@@ -119,7 +119,7 @@ export default {
       pastTense: "brought",
       presentPerfect: "brought",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "принести",
       translationEn: "dummy"
     },
     {
@@ -127,7 +127,7 @@ export default {
       pastTense: "built",
       presentPerfect: "built",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "строить",
       translationEn: "dummy"
     },
     {
@@ -135,7 +135,7 @@ export default {
       pastTense: "burnt",
       presentPerfect: "burnt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "сжечь",
       translationEn: "dummy"
     },
     {
@@ -143,7 +143,7 @@ export default {
       pastTense: "burst",
       presentPerfect: "burst",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "взрываться",
       translationEn: "dummy"
     },
     {
@@ -151,7 +151,7 @@ export default {
       pastTense: "bought",
       presentPerfect: "bought",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "покупать",
       translationEn: "dummy"
     },
 
@@ -159,16 +159,17 @@ export default {
       infinitive: "cast",
       pastTense: "cast",
       presentPerfect: "cast",
-      translationRus: "dummy",
-      translationEn: "dummy",
-      frequency: "frequent"
+      frequency: "frequent",
+      translationRus: "транслировать",
+      translationEn: "dummy"
+      
     },
     {
       infinitive: "catch",
       pastTense: "caught",
       presentPerfect: "caught",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "ловить",
       translationEn: "dummy"
     },
     {
@@ -176,7 +177,7 @@ export default {
       pastTense: "chose",
       presentPerfect: "chosen",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "выбирать",
       translationEn: "dummy"
     },
     {
@@ -208,7 +209,7 @@ export default {
       pastTense: "came",
       presentPerfect: "come",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "приходить",
       translationEn: "dummy"
     },
     {
@@ -216,7 +217,7 @@ export default {
       pastTense: "cost",
       presentPerfect: "cost",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "стоить",
       translationEn: "dummy"
     },
     {
@@ -240,7 +241,7 @@ export default {
       pastTense: "cut",
       presentPerfect: "cut",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "резать",
       translationEn: "dummy"
     },
 
@@ -249,7 +250,7 @@ export default {
       pastTense: "dealt",
       presentPerfect: "dealt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "иметь дело",
       translationEn: "dummy"
     },
     {
@@ -266,7 +267,7 @@ export default {
       pastTense: "did",
       presentPerfect: "done",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "делать",
       translationEn: "dummy"
     },
 
@@ -275,7 +276,7 @@ export default {
       pastTense: "drew",
       presentPerfect: "drawn",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "рисовать",
       translationEn: "dummy"
     },
     {
@@ -283,7 +284,7 @@ export default {
       pastTense: "dreamt",
       presentPerfect: "dreamt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "мечтать",
       translationEn: "dummy"
     },
     {
@@ -291,7 +292,7 @@ export default {
       pastTense: "drank",
       presentPerfect: "drunk",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "пить",
       translationEn: "dummy"
     },
     {
@@ -299,7 +300,7 @@ export default {
       pastTense: "drove",
       presentPerfect: "driven",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "водить",
       translationEn: "dummy"
     },
     {
@@ -315,7 +316,7 @@ export default {
       pastTense: "ate",
       presentPerfect: "eaten",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "есть",
       translationEn: "dummy"
     },
     {
@@ -323,7 +324,7 @@ export default {
       pastTense: "fell",
       presentPerfect: "fallen",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "падать",
       translationEn: "dummy"
     },
     {
@@ -331,7 +332,7 @@ export default {
       pastTense: "fed",
       presentPerfect: "fed",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "кормить",
       translationEn: "dummy"
     },
     {
@@ -339,7 +340,7 @@ export default {
       pastTense: "felt",
       presentPerfect: "felt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "чувствовать",
       translationEn: "dummy"
     },
     {
@@ -347,7 +348,7 @@ export default {
       pastTense: "fought",
       presentPerfect: "fought",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "бороться",
       translationEn: "dummy"
     },
     {
@@ -355,7 +356,7 @@ export default {
       pastTense: "found",
       presentPerfect: "found",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "находить",
       translationEn: "dummy"
     },
     {
@@ -387,7 +388,7 @@ export default {
       pastTense: "flew",
       presentPerfect: "flown",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "летать",
       translationEn: "dummy"
     },
 
@@ -396,7 +397,7 @@ export default {
       pastTense: "forbid",
       presentPerfect: "forbidden",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "запрещать",
       translationEn: "dummy"
     },
     {
@@ -404,7 +405,7 @@ export default {
       pastTense: "forgot",
       presentPerfect: "forgotten",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "забывать",
       translationEn: "dummy"
     },
     {
@@ -420,7 +421,7 @@ export default {
       pastTense: "froze",
       presentPerfect: "frozen",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "заморозить",
       translationEn: "dummy"
     },
     {
@@ -428,7 +429,7 @@ export default {
       pastTense: "got",
       presentPerfect: "gotten",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "получать",
       translationEn: "dummy"
     },
 
@@ -437,7 +438,7 @@ export default {
       pastTense: "gave",
       presentPerfect: "given",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "давать",
       translationEn: "dummy"
     },
     {
@@ -445,7 +446,7 @@ export default {
       pastTense: "went",
       presentPerfect: "gone ",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "идти",
       translationEn: "dummy"
     },
     {
@@ -461,7 +462,7 @@ export default {
       pastTense: "grew",
       presentPerfect: "grown",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "расти",
       translationEn: "dummy"
     },
     {
@@ -469,7 +470,7 @@ export default {
       pastTense: "hung",
       presentPerfect: "hung",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "повесить",
       translationEn: "dummy"
     },
     {
@@ -477,7 +478,7 @@ export default {
       pastTense: "had",
       presentPerfect: "had",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "иметь",
       translationEn: "dummy"
     },
     {
@@ -485,7 +486,7 @@ export default {
       pastTense: "heard",
       presentPerfect: "heard",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "слышать",
       translationEn: "dummy"
     },
     {
@@ -501,7 +502,7 @@ export default {
       pastTense: "hid",
       presentPerfect: "hidden",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "прятать",
       translationEn: "dummy"
     },
     {
@@ -509,7 +510,7 @@ export default {
       pastTense: "hit",
       presentPerfect: "hit",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "бить",
       translationEn: "dummy"
     },
     {
@@ -525,7 +526,7 @@ export default {
       pastTense: "held",
       presentPerfect: "held",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "держать",
       translationEn: "dummy"
     },
     {
@@ -565,7 +566,7 @@ export default {
       pastTense: "knew",
       presentPerfect: "known",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "знать",
       translationEn: "dummy"
     },
     {
@@ -581,7 +582,7 @@ export default {
       pastTense: "led",
       presentPerfect: "led",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "вести",
       translationEn: "dummy"
     },
     {
@@ -597,7 +598,7 @@ export default {
       pastTense: "leapt",
       presentPerfect: "leapt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "прыгать",
       translationEn: "dummy"
     },
 
@@ -606,7 +607,7 @@ export default {
       pastTense: "left",
       presentPerfect: "left",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "оставлять",
       translationEn: "dummy"
     },
     {
@@ -614,7 +615,7 @@ export default {
       pastTense: "lent",
       presentPerfect: "lent",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "одолжить",
       translationEn: "dummy"
     },
     {
@@ -622,7 +623,7 @@ export default {
       pastTense: "let",
       presentPerfect: "let",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "давать",
       translationEn: "dummy"
     },
     {
@@ -646,7 +647,7 @@ export default {
       pastTense: "lost",
       presentPerfect: "lost",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "терять",
       translationEn: "dummy"
     },
     {
@@ -654,7 +655,7 @@ export default {
       pastTense: "made",
       presentPerfect: "made",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "делать",
       translationEn: "dummy"
     },
 
@@ -671,7 +672,7 @@ export default {
       pastTense: "met",
       presentPerfect: "met",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "встречать",
       translationEn: "dummy"
     },
 
@@ -680,7 +681,7 @@ export default {
       pastTense: "mowed",
       presentPerfect: "mown",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "косить",
       translationEn: "dummy"
     },
     {
@@ -688,7 +689,7 @@ export default {
       pastTense: "paid",
       presentPerfect: "paid",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "платить",
       translationEn: "dummy"
     },
     {
@@ -705,7 +706,7 @@ export default {
       pastTense: "proved",
       presentPerfect: "proven",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "доказывать",
       translationEn: "dummy"
     },
     {
@@ -713,7 +714,7 @@ export default {
       pastTense: "put",
       presentPerfect: "put",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "ставить",
       translationEn: "dummy"
     },
     {
@@ -721,7 +722,7 @@ export default {
       pastTense: "quit",
       presentPerfect: "quit",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "уходить",
       translationEn: "dummy"
     },
 
@@ -730,7 +731,7 @@ export default {
       pastTense: "read",
       presentPerfect: "read",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "читать",
       translationEn: "dummy"
     },
     {
@@ -762,7 +763,7 @@ export default {
       pastTense: "rang",
       presentPerfect: "rung",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "звонить",
       translationEn: "dummy"
     },
     {
@@ -778,7 +779,7 @@ export default {
       pastTense: "ran",
       presentPerfect: "run",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "бежать",
       translationEn: "dummy"
     },
     {
@@ -794,7 +795,7 @@ export default {
       pastTense: "said",
       presentPerfect: "said",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "сказать",
       translationEn: "dummy"
     },
     {
@@ -802,7 +803,7 @@ export default {
       pastTense: "saw",
       presentPerfect: "seen",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "видеть",
       translationEn: "dummy"
     },
     {
@@ -818,7 +819,7 @@ export default {
       pastTense: "sold",
       presentPerfect: "sold",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "продавать",
       translationEn: "dummy"
     },
     {
@@ -826,7 +827,7 @@ export default {
       pastTense: "sent",
       presentPerfect: "sent",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "отправлять",
       translationEn: "dummy"
     },
     {
@@ -850,7 +851,7 @@ export default {
       pastTense: "shook",
       presentPerfect: "shaken",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "трусить",
       translationEn: "dummy"
     },
 
@@ -875,7 +876,7 @@ export default {
       pastTense: "shone",
       presentPerfect: "shone",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "сиять",
       translationEn: "dummy"
     },
     {
@@ -899,7 +900,7 @@ export default {
       pastTense: "shot",
       presentPerfect: "shot",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "стрелять",
       translationEn: "dummy"
     },
     {
@@ -907,7 +908,7 @@ export default {
       pastTense: "showed",
       presentPerfect: "shown",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "показывать",
       translationEn: "dummy"
     },
     {
@@ -939,7 +940,7 @@ export default {
       pastTense: "sang",
       presentPerfect: "sung",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "петь",
       translationEn: "dummy"
     },
     {
@@ -955,7 +956,7 @@ export default {
       pastTense: "sat",
       presentPerfect: "sat",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "сидеть",
       translationEn: "dummy"
     },
     {
@@ -971,7 +972,7 @@ export default {
       pastTense: "slept",
       presentPerfect: "slept",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "спать",
       translationEn: "dummy"
     },
     {
@@ -1011,7 +1012,7 @@ export default {
       pastTense: "smelled/smelt",
       presentPerfect: "smelled/smelt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "нюхать",
       translationEn: "dummy"
     },
     {
@@ -1035,7 +1036,7 @@ export default {
       pastTense: "spoke",
       presentPerfect: "spoken",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "говорить",
       translationEn: "dummy"
     },
     {
@@ -1060,7 +1061,7 @@ export default {
       pastTense: "spilt",
       presentPerfect: "spilt",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "проливать",
       translationEn: "dummy"
     },
     {
@@ -1068,7 +1069,7 @@ export default {
       pastTense: "spun",
       presentPerfect: "spun",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "крутить",
       translationEn: "dummy"
     },
     {
@@ -1109,7 +1110,7 @@ export default {
       pastTense: "stood",
       presentPerfect: "stood",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "стоять",
       translationEn: "dummy"
     },
     {
@@ -1125,7 +1126,7 @@ export default {
       pastTense: "stole",
       presentPerfect: "stolen",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "воровать",
       translationEn: "dummy"
     },
     {
@@ -1141,7 +1142,7 @@ export default {
       pastTense: "stung",
       presentPerfect: "stung",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "жалить",
       translationEn: "dummy"
     },
     {
@@ -1197,7 +1198,7 @@ export default {
       pastTense: "swore",
       presentPerfect: "sworn",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "клясться",
       translationEn: "dummy"
     },
     {
@@ -1205,7 +1206,7 @@ export default {
       pastTense: "sweat",
       presentPerfect: "sweat",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "потеть",
       translationEn: "dummy"
     },
     {
@@ -1229,7 +1230,7 @@ export default {
       pastTense: "swam",
       presentPerfect: "swum",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "плыть",
       translationEn: "dummy"
     },
     {
@@ -1245,7 +1246,7 @@ export default {
       pastTense: "took",
       presentPerfect: "taken",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "брать",
       translationEn: "dummy"
     },
     {
@@ -1253,7 +1254,7 @@ export default {
       pastTense: "taught",
       presentPerfect: "taught",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "учить",
       translationEn: "dummy"
     },
     {
@@ -1261,7 +1262,7 @@ export default {
       pastTense: "tore",
       presentPerfect: "torn",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "рвать",
       translationEn: "dummy"
     },
     {
@@ -1269,7 +1270,7 @@ export default {
       pastTense: "told",
       presentPerfect: "told",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "рассказывать",
       translationEn: "dummy"
     },
     {
@@ -1277,7 +1278,7 @@ export default {
       pastTense: "thought",
       presentPerfect: "thought",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "думать",
       translationEn: "dummy"
     },
     {
@@ -1285,7 +1286,7 @@ export default {
       pastTense: "threw",
       presentPerfect: "thrown",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "бросать",
       translationEn: "dummy"
     },
     {
@@ -1318,7 +1319,7 @@ export default {
       pastTense: "wore",
       presentPerfect: "worn",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "носить",
       translationEn: "dummy"
     },
     {
@@ -1359,7 +1360,7 @@ export default {
       pastTense: "won",
       presentPerfect: "won",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "побеждать",
       translationEn: "dummy"
     },
     {
@@ -1383,7 +1384,7 @@ export default {
       pastTense: "wrote",
       presentPerfect: "written",
       frequency: "frequent",
-      translationRus: "dummy",
+      translationRus: "писать",
       translationEn: "dummy"
     }
   ]

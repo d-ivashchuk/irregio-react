@@ -6,7 +6,8 @@ export default {
       presentPerfect: "borne",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "aushalten"
     },
     {
       infinitive: "beat",
@@ -14,7 +15,8 @@ export default {
       presentPerfect: "beaten",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schlagen"
     },
     {
       infinitive: "beget",
@@ -22,7 +24,8 @@ export default {
       presentPerfect: "begot",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "zeugen"
     },
     {
       infinitive: "begin",
@@ -30,7 +33,8 @@ export default {
       presentPerfect: "begun",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "anfangen"
     },
     {
       infinitive: "bend",
@@ -38,7 +42,8 @@ export default {
       presentPerfect: "bent",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "nachgeben"
     },
     {
       infinitive: "bet",
@@ -46,7 +51,8 @@ export default {
       presentPerfect: "bet",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "wetten"
     },
 
     {
@@ -55,7 +61,8 @@ export default {
       presentPerfect: "bid",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "bieten"
     },
 
     {
@@ -64,7 +71,8 @@ export default {
       presentPerfect: "bidden",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "abwarten"
     },
     {
       infinitive: "bind",
@@ -72,7 +80,8 @@ export default {
       presentPerfect: "bound",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "binden"
     },
     {
       infinitive: "bite",
@@ -80,7 +89,8 @@ export default {
       presentPerfect: "bitten",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "beißen"
     },
     {
       infinitive: "bleed",
@@ -88,7 +98,8 @@ export default {
       presentPerfect: "bled",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "bluten"
     },
     {
       infinitive: "blow",
@@ -96,7 +107,8 @@ export default {
       presentPerfect: "blown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "blasen"
     },
     {
       infinitive: "break",
@@ -104,7 +116,8 @@ export default {
       presentPerfect: "broken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "brechen"
     },
     {
       infinitive: "breed",
@@ -112,7 +125,8 @@ export default {
       presentPerfect: "bred",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "brüten"
     },
     {
       infinitive: "bring",
@@ -120,7 +134,8 @@ export default {
       presentPerfect: "brought",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "bringen"
     },
     {
       infinitive: "build",
@@ -128,7 +143,8 @@ export default {
       presentPerfect: "built",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "bauen"
     },
     {
       infinitive: "burn",
@@ -136,7 +152,8 @@ export default {
       presentPerfect: "burnt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "brennen"
     },
     {
       infinitive: "burst",
@@ -144,7 +161,8 @@ export default {
       presentPerfect: "burst",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "platzen"
     },
     {
       infinitive: "buy",
@@ -152,7 +170,8 @@ export default {
       presentPerfect: "bought",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "kaufen"
     },
 
     {
@@ -161,7 +180,8 @@ export default {
       presentPerfect: "cast",
       translationRus: "dummy",
       translationEn: "dummy",
-      frequency: "frequent"
+      translationDe: "dummy",
+      frequency: "werfen"
     },
     {
       infinitive: "catch",
@@ -169,7 +189,8 @@ export default {
       presentPerfect: "caught",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fangen"
     },
     {
       infinitive: "choose",
@@ -177,7 +198,8 @@ export default {
       presentPerfect: "chosen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "auswählen"
     },
     {
       infinitive: "clad",
@@ -185,7 +207,8 @@ export default {
       presentPerfect: "clad",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verkleiden"
     },
     {
       infinitive: "cleave",
@@ -193,7 +216,8 @@ export default {
       presentPerfect: "cloven",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "spalten"
     },
     {
       infinitive: "cling",
@@ -201,7 +225,8 @@ export default {
       presentPerfect: "clung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "kleben"
     },
     {
       infinitive: "come",
@@ -209,7 +234,8 @@ export default {
       presentPerfect: "come",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "kommen"
     },
     {
       infinitive: "cost",
@@ -217,7 +243,8 @@ export default {
       presentPerfect: "cost",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "kosten"
     },
     {
       infinitive: "creep",
@@ -225,7 +252,8 @@ export default {
       presentPerfect: "crept",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schleichen"
     },
     {
       infinitive: "crow",
@@ -233,7 +261,8 @@ export default {
       presentPerfect: "crowed",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "angeben"
     },
     {
       infinitive: "cut",
@@ -241,7 +270,8 @@ export default {
       presentPerfect: "cut",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schneiden"
     },
 
     {
@@ -250,7 +280,8 @@ export default {
       presentPerfect: "dealt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "handeln"
     },
     {
       infinitive: "dig",
@@ -258,7 +289,8 @@ export default {
       presentPerfect: "dug",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "graben"
     },
 
     {
@@ -267,7 +299,8 @@ export default {
       presentPerfect: "done",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "dummy"
     },
 
     {
@@ -276,7 +309,8 @@ export default {
       presentPerfect: "drawn",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "ziehen"
     },
     {
       infinitive: "dream",
@@ -284,7 +318,8 @@ export default {
       presentPerfect: "dreamt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "träumen"
     },
     {
       infinitive: "drink",
@@ -292,7 +327,8 @@ export default {
       presentPerfect: "drunk",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "trinken"
     },
     {
       infinitive: "drive",
@@ -300,7 +336,8 @@ export default {
       presentPerfect: "driven",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fahren"
     },
     {
       infinitive: "dwell",
@@ -308,7 +345,8 @@ export default {
       presentPerfect: "dwelt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verweilen"
     },
     {
       infinitive: "eat",
@@ -316,7 +354,8 @@ export default {
       presentPerfect: "eaten",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "essen"
     },
     {
       infinitive: "fall",
@@ -324,7 +363,8 @@ export default {
       presentPerfect: "fallen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fallen"
     },
     {
       infinitive: "feed",
@@ -332,7 +372,8 @@ export default {
       presentPerfect: "fed",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "füttern"
     },
     {
       infinitive: "feel",
@@ -340,7 +381,8 @@ export default {
       presentPerfect: "felt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fühlen"
     },
     {
       infinitive: "fight",
@@ -348,7 +390,8 @@ export default {
       presentPerfect: "fought",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "kämpfen"
     },
     {
       infinitive: "find",
@@ -356,7 +399,8 @@ export default {
       presentPerfect: "found",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "finden"
     },
     {
       infinitive: "fit",
@@ -364,7 +408,8 @@ export default {
       presentPerfect: "fit",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "passen"
     },
     {
       infinitive: "flee",
@@ -372,7 +417,8 @@ export default {
       presentPerfect: "fled",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "flüchten"
     },
     {
       infinitive: "fling",
@@ -380,7 +426,8 @@ export default {
       presentPerfect: "flung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "werfen"
     },
     {
       infinitive: "fly",
@@ -388,7 +435,8 @@ export default {
       presentPerfect: "flown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fliegen"
     },
 
     {
@@ -397,7 +445,8 @@ export default {
       presentPerfect: "forbidden",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verbieten"
     },
     {
       infinitive: "forget",
@@ -405,7 +454,8 @@ export default {
       presentPerfect: "forgotten",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "vergessen"
     },
     {
       infinitive: "forsake",
@@ -413,7 +463,8 @@ export default {
       presentPerfect: "forsaken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "aufgeben"
     },
     {
       infinitive: "freeze",
@@ -421,7 +472,8 @@ export default {
       presentPerfect: "frozen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "frieren"
     },
     {
       infinitive: "get",
@@ -429,7 +481,8 @@ export default {
       presentPerfect: "gotten",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "erhalten"
     },
 
     {
@@ -438,7 +491,8 @@ export default {
       presentPerfect: "given",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "geben"
     },
     {
       infinitive: "go",
@@ -446,7 +500,8 @@ export default {
       presentPerfect: "gone ",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "gehen"
     },
     {
       infinitive: "grind",
@@ -454,7 +509,8 @@ export default {
       presentPerfect: "ground",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "zerreiben"
     },
     {
       infinitive: "grow",
@@ -462,7 +518,8 @@ export default {
       presentPerfect: "grown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "wachsen"
     },
     {
       infinitive: "hang",
@@ -470,7 +527,8 @@ export default {
       presentPerfect: "hung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "hängen"
     },
     {
       infinitive: "have",
@@ -478,7 +536,8 @@ export default {
       presentPerfect: "had",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "haben"
     },
     {
       infinitive: "hear",
@@ -486,7 +545,8 @@ export default {
       presentPerfect: "heard",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "hören"
     },
     {
       infinitive: "hew",
@@ -494,7 +554,8 @@ export default {
       presentPerfect: "hewed",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fällen"
     },
     {
       infinitive: "hide",
@@ -502,7 +563,8 @@ export default {
       presentPerfect: "hidden",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verstecken"
     },
     {
       infinitive: "hit",
@@ -510,7 +572,8 @@ export default {
       presentPerfect: "hit",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "treffen"
     },
     {
       infinitive: "hoist",
@@ -518,7 +581,8 @@ export default {
       presentPerfect: "hoist",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "heben"
     },
     {
       infinitive: "hold",
@@ -526,7 +590,8 @@ export default {
       presentPerfect: "held",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "halten"
     },
     {
       infinitive: "hurt",
@@ -534,7 +599,8 @@ export default {
       presentPerfect: "hurt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verletzen"
     },
     {
       infinitive: "keep",
@@ -542,7 +608,8 @@ export default {
       presentPerfect: "kept",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "behalten"
     },
     {
       infinitive: "kneel",
@@ -550,7 +617,8 @@ export default {
       presentPerfect: "knelt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "knien"
     },
     {
       infinitive: "knit",
@@ -558,7 +626,8 @@ export default {
       presentPerfect: "knit",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "stricken"
     },
     {
       infinitive: "know",
@@ -566,7 +635,8 @@ export default {
       presentPerfect: "known",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "wissen"
     },
     {
       infinitive: "lay",
@@ -574,7 +644,8 @@ export default {
       presentPerfect: "laid",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "legen"
     },
     {
       infinitive: "lead",
@@ -582,7 +653,8 @@ export default {
       presentPerfect: "led",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "führen"
     },
     {
       infinitive: "lean",
@@ -590,7 +662,8 @@ export default {
       presentPerfect: "leant",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "lehnen"
     },
     {
       infinitive: "leap",
@@ -598,7 +671,8 @@ export default {
       presentPerfect: "leapt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "springen"
     },
 
     {
@@ -607,7 +681,8 @@ export default {
       presentPerfect: "left",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verlassen"
     },
     {
       infinitive: "lend",
@@ -615,7 +690,8 @@ export default {
       presentPerfect: "lent",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "leihen"
     },
     {
       infinitive: "let",
@@ -623,7 +699,8 @@ export default {
       presentPerfect: "let",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "lassen"
     },
     {
       infinitive: "lie",
@@ -631,7 +708,8 @@ export default {
       presentPerfect: "lain",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "lügen"
     },
     {
       infinitive: "light",
@@ -639,7 +717,8 @@ export default {
       presentPerfect: "lit",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "beleuchten"
     },
     {
       infinitive: "lose",
@@ -647,7 +726,8 @@ export default {
       presentPerfect: "lost",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verlieren"
     },
     {
       infinitive: "make",
@@ -655,7 +735,8 @@ export default {
       presentPerfect: "made",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "machen"
     },
 
     {
@@ -664,7 +745,8 @@ export default {
       presentPerfect: "meant",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "meinen"
     },
     {
       infinitive: "meet",
@@ -672,7 +754,8 @@ export default {
       presentPerfect: "met",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "treffen"
     },
 
     {
@@ -681,7 +764,8 @@ export default {
       presentPerfect: "mown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "mähen"
     },
     {
       infinitive: "pay",
@@ -689,7 +773,8 @@ export default {
       presentPerfect: "paid",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "zahlen"
     },
     {
       infinitive: "plead",
@@ -697,7 +782,8 @@ export default {
       presentPerfect: "pled",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "bitten"
     },
 
     {
@@ -706,7 +792,8 @@ export default {
       presentPerfect: "proven",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "beweisen"
     },
     {
       infinitive: "put",
@@ -714,7 +801,8 @@ export default {
       presentPerfect: "put",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "setzen"
     },
     {
       infinitive: "quit",
@@ -722,7 +810,8 @@ export default {
       presentPerfect: "quit",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "beenden"
     },
 
     {
@@ -731,7 +820,8 @@ export default {
       presentPerfect: "read",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "lesen"
     },
     {
       infinitive: "rend",
@@ -739,7 +829,8 @@ export default {
       presentPerfect: "rent",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "reißen"
     },
     {
       infinitive: "rid",
@@ -747,7 +838,8 @@ export default {
       presentPerfect: "ridden",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "loswerden"
     },
     {
       infinitive: "ride",
@@ -755,7 +847,8 @@ export default {
       presentPerfect: "ridden",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fahren"
     },
     {
       infinitive: "ring",
@@ -763,7 +856,8 @@ export default {
       presentPerfect: "rung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "läuten"
     },
     {
       infinitive: "rise",
@@ -771,7 +865,8 @@ export default {
       presentPerfect: "risen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "ansteigen"
     },
     {
       infinitive: "run",
@@ -779,7 +874,8 @@ export default {
       presentPerfect: "run",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "rennen"
     },
     {
       infinitive: "saw",
@@ -787,7 +883,8 @@ export default {
       presentPerfect: "sawn",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "sägen"
     },
     {
       infinitive: "say",
@@ -795,7 +892,8 @@ export default {
       presentPerfect: "said",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "sagen"
     },
     {
       infinitive: "see",
@@ -803,7 +901,8 @@ export default {
       presentPerfect: "seen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "dummy"
     },
     {
       infinitive: "seek",
@@ -811,7 +910,8 @@ export default {
       presentPerfect: "sought",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "suchen"
     },
     {
       infinitive: "sell",
@@ -819,7 +919,8 @@ export default {
       presentPerfect: "sold",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verkaufen"
     },
     {
       infinitive: "send",
@@ -827,7 +928,8 @@ export default {
       presentPerfect: "sent",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "senden"
     },
     {
       infinitive: "set",
@@ -835,7 +937,8 @@ export default {
       presentPerfect: "set",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "setzen"
     },
     {
       infinitive: "sew",
@@ -843,7 +946,8 @@ export default {
       presentPerfect: "sewn",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "nähen"
     },
     {
       infinitive: "shake",
@@ -851,7 +955,8 @@ export default {
       presentPerfect: "shaken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schütteln"
     },
 
     {
@@ -860,7 +965,8 @@ export default {
       presentPerfect: "shorn",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "scheren"
     },
     {
       infinitive: "shed",
@@ -868,7 +974,8 @@ export default {
       presentPerfect: "shed",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "loswerden"
     },
     {
       infinitive: "shine",
@@ -876,7 +983,8 @@ export default {
       presentPerfect: "shone",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "scheinen"
     },
     {
       infinitive: "shit",
@@ -884,7 +992,8 @@ export default {
       presentPerfect: "shat",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "scheißen"
     },
     {
       infinitive: "shoe",
@@ -892,7 +1001,8 @@ export default {
       presentPerfect: "shod",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "beschuhen"
     },
     {
       infinitive: "shoot",
@@ -900,7 +1010,8 @@ export default {
       presentPerfect: "shot",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schießen"
     },
     {
       infinitive: "show",
@@ -908,7 +1019,8 @@ export default {
       presentPerfect: "shown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "zeigen"
     },
     {
       infinitive: "shrink",
@@ -916,7 +1028,8 @@ export default {
       presentPerfect: "shrunk",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schrumpfen"
     },
     {
       infinitive: "shrive",
@@ -924,7 +1037,8 @@ export default {
       presentPerfect: "shriven",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "beichten"
     },
     {
       infinitive: "shut",
@@ -932,7 +1046,8 @@ export default {
       presentPerfect: "shut",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schließen"
     },
     {
       infinitive: "sing",
@@ -940,7 +1055,8 @@ export default {
       presentPerfect: "sung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "singen"
     },
     {
       infinitive: "sink",
@@ -948,7 +1064,8 @@ export default {
       presentPerfect: "sunk",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "senken"
     },
     {
       infinitive: "sit",
@@ -956,7 +1073,8 @@ export default {
       presentPerfect: "sat",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "sitzen"
     },
     {
       infinitive: "slay",
@@ -964,7 +1082,8 @@ export default {
       presentPerfect: "slain",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "erschlagen"
     },
     {
       infinitive: "sleep",
@@ -972,7 +1091,8 @@ export default {
       presentPerfect: "slept",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schlafen"
     },
     {
       infinitive: "slide",
@@ -980,7 +1100,8 @@ export default {
       presentPerfect: "slid",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "gleiten"
     },
     {
       infinitive: "sling",
@@ -988,7 +1109,8 @@ export default {
       presentPerfect: "slung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schleudern"
     },
     {
       infinitive: "slink",
@@ -996,7 +1118,8 @@ export default {
       presentPerfect: "slunk",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schleichen"
     },
     {
       infinitive: "slit",
@@ -1004,7 +1127,8 @@ export default {
       presentPerfect: "slit",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schlitzen"
     },
     {
       infinitive: "smell",
@@ -1012,7 +1136,8 @@ export default {
       presentPerfect: "smelled/smelt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "riechen"
     },
     {
       infinitive: "smite",
@@ -1020,7 +1145,8 @@ export default {
       presentPerfect: "smitten",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "zerschmettern"
     },
     {
       infinitive: "sow",
@@ -1028,7 +1154,8 @@ export default {
       presentPerfect: "sown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "säen"
     },
     {
       infinitive: "speak",
@@ -1036,7 +1163,8 @@ export default {
       presentPerfect: "spoken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "sprechen"
     },
     {
       infinitive: "speed",
@@ -1044,7 +1172,8 @@ export default {
       presentPerfect: "sped",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "eilen"
     },
 
     {
@@ -1053,7 +1182,8 @@ export default {
       presentPerfect: "spent",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verbringen"
     },
     {
       infinitive: "spill",
@@ -1061,7 +1191,8 @@ export default {
       presentPerfect: "spilt",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "ausschütten"
     },
     {
       infinitive: "spin",
@@ -1069,7 +1200,8 @@ export default {
       presentPerfect: "spun",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "drehen"
     },
     {
       infinitive: "spit",
@@ -1077,7 +1209,8 @@ export default {
       presentPerfect: "spat",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "spucken"
     },
     {
       infinitive: "split",
@@ -1085,7 +1218,8 @@ export default {
       presentPerfect: "split",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "teilen"
     },
 
     {
@@ -1094,7 +1228,8 @@ export default {
       presentPerfect: "spread",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verteilen"
     },
     {
       infinitive: "spring",
@@ -1102,7 +1237,8 @@ export default {
       presentPerfect: "sprung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "springen"
     },
     {
       infinitive: "stand",
@@ -1110,7 +1246,8 @@ export default {
       presentPerfect: "stood",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "stehen"
     },
     {
       infinitive: "stave",
@@ -1118,7 +1255,8 @@ export default {
       presentPerfect: "stove",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "zusammenschlagen"
     },
     {
       infinitive: "steal",
@@ -1126,7 +1264,8 @@ export default {
       presentPerfect: "stolen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "stehlen"
     },
     {
       infinitive: "stick",
@@ -1134,7 +1273,8 @@ export default {
       presentPerfect: "stuck",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "stecken"
     },
     {
       infinitive: "sting",
@@ -1142,7 +1282,8 @@ export default {
       presentPerfect: "stung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "reizen"
     },
     {
       infinitive: "stink",
@@ -1150,7 +1291,8 @@ export default {
       presentPerfect: "stunk",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "stinken"
     },
     {
       infinitive: "strew",
@@ -1158,7 +1300,8 @@ export default {
       presentPerfect: "strewn",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "streuen"
     },
     {
       infinitive: "stride",
@@ -1166,7 +1309,8 @@ export default {
       presentPerfect: "stridden",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "dummy"
     },
     {
       infinitive: "strike",
@@ -1174,7 +1318,8 @@ export default {
       presentPerfect: "stricken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "dummy"
     },
     {
       infinitive: "string",
@@ -1182,7 +1327,8 @@ export default {
       presentPerfect: "strung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "überschreiten"
     },
     {
       infinitive: "strive",
@@ -1190,7 +1336,8 @@ export default {
       presentPerfect: "striven",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "anstreben"
     },
     {
       infinitive: "swear",
@@ -1198,7 +1345,8 @@ export default {
       presentPerfect: "sworn",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fluchen"
     },
     {
       infinitive: "sweat",
@@ -1206,7 +1354,8 @@ export default {
       presentPerfect: "sweat",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schwitzen"
     },
     {
       infinitive: "sweep",
@@ -1214,7 +1363,8 @@ export default {
       presentPerfect: "swept",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "fegen"
     },
     {
       infinitive: "swell",
@@ -1222,7 +1372,8 @@ export default {
       presentPerfect: "swollen",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "anschwellen"
     },
     {
       infinitive: "swim",
@@ -1230,7 +1381,8 @@ export default {
       presentPerfect: "swum",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schwimmen"
     },
     {
       infinitive: "swing",
@@ -1238,7 +1390,8 @@ export default {
       presentPerfect: "swung",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schwingen"
     },
     {
       infinitive: "take",
@@ -1246,7 +1399,8 @@ export default {
       presentPerfect: "taken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "bringen"
     },
     {
       infinitive: "teach",
@@ -1254,7 +1408,8 @@ export default {
       presentPerfect: "taught",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "lehren"
     },
     {
       infinitive: "tear",
@@ -1262,7 +1417,8 @@ export default {
       presentPerfect: "torn",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "reißen"
     },
     {
       infinitive: "tell",
@@ -1270,7 +1426,8 @@ export default {
       presentPerfect: "told",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "erzählen"
     },
     {
       infinitive: "think",
@@ -1278,7 +1435,8 @@ export default {
       presentPerfect: "thought",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "denken"
     },
     {
       infinitive: "throw",
@@ -1286,7 +1444,8 @@ export default {
       presentPerfect: "thrown",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "werfen"
     },
     {
       infinitive: "thrust",
@@ -1294,7 +1453,8 @@ export default {
       presentPerfect: "thrust",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "stoßen"
     },
     {
       infinitive: "tread",
@@ -1302,7 +1462,8 @@ export default {
       presentPerfect: "trod",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schreiten"
     },
 
     {
@@ -1311,7 +1472,8 @@ export default {
       presentPerfect: "woken",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "wecken"
     },
     {
       infinitive: "wear",
@@ -1319,7 +1481,8 @@ export default {
       presentPerfect: "worn",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "tragen"
     },
     {
       infinitive: "weave",
@@ -1327,7 +1490,8 @@ export default {
       presentPerfect: "woven",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "verflechten"
     },
     {
       infinitive: "wed",
@@ -1335,7 +1499,8 @@ export default {
       presentPerfect: "wed",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "heiraten"
     },
     {
       infinitive: "weep",
@@ -1343,7 +1508,8 @@ export default {
       presentPerfect: "wept",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "weinen"
     },
     {
       infinitive: "wet",
@@ -1351,7 +1517,8 @@ export default {
       presentPerfect: "wet",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "anfeuchten"
     },
 
     {
@@ -1360,7 +1527,8 @@ export default {
       presentPerfect: "won",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "gewinnen"
     },
     {
       infinitive: "wind",
@@ -1368,7 +1536,8 @@ export default {
       presentPerfect: "wound ",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "wickeln"
     },
     {
       infinitive: "wring",
@@ -1376,7 +1545,8 @@ export default {
       presentPerfect: "wrung",
       frequency: "infrequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy", translationEn: "dummy",
+      translationDe: "erzwingen"
     },
     {
       infinitive: "write",
@@ -1384,7 +1554,8 @@ export default {
       presentPerfect: "written",
       frequency: "frequent",
       translationRus: "dummy",
-      translationEn: "dummy"
+      translationEn: "dummy",
+      translationDe: "schreiben"
     }
   ]
 };

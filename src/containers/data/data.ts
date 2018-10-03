@@ -57,11 +57,11 @@ export default {
       translationRus: "обманывать"
     },
     {
-      frequency: "frequent",
+      frequency: "infrequent",
       infinitive: "bewegen",
       pastTense: "bewog",
       presentPerfect: "bewogen",
-      translationEn: "to move",
+      translationEn: "to motivate",
       translationRus: "двигать"
     },
     {
@@ -199,14 +199,6 @@ export default {
       presentPerfect: "empfunden",
       translationEn: "to feel",
       translationRus: "чувствовать"
-    },
-    {
-      frequency: "infrequent",
-      infinitive: "erbleichen",
-      pastTense: "erblich",
-      presentPerfect: "erblichen",
-      translationEn: "to turn pale",
-      translationRus: "бледнеть"
     },
     {
       frequency: "infrequent",
@@ -779,7 +771,7 @@ export default {
       frequency: "infrequent",
       infinitive: "salzen",
       pastTense: "salzte",
-      presentPerfect: "gesalzt",
+      presentPerfect: "gesalzen",
       translationEn: "to salt",
       translationRus: "солить"
     },
@@ -1228,8 +1220,8 @@ export default {
       infinitive: "verbleichen",
       pastTense: "verblich",
       presentPerfect: "verblichen",
-      translationEn: "to grow pale",
-      translationRus: "бледнеть"
+      translationEn: "to die",
+      translationRus: "почить"
     },
     {
       frequency: "frequent",
@@ -1260,7 +1252,7 @@ export default {
       infinitive: "verlieren",
       pastTense: "verlor",
       presentPerfect: "verloren",
-      translationEn: "to loose",
+      translationEn: "to lose",
       translationRus: "терять"
     },
     {
@@ -1332,7 +1324,7 @@ export default {
       infinitive: "wiegen",
       pastTense: "wog",
       presentPerfect: "gewogen",
-      translationEn: "to rock",
+      translationEn: "to weigh; to rock",
       translationRus: "качать"
     },
     {

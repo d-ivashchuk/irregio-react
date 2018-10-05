@@ -3,10 +3,10 @@
 exports[`Controls component matches snapshot 1`] = `
 Array [
   <div
-    className="sc-EHOje fIYEwc"
+    className="sc-gzVnrw gWGKjZ"
   >
     <button
-      className="sc-ifAKCX cWBsvP"
+      className="sc-bdVaJa hszIIB"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -15,7 +15,7 @@ Array [
       easy
     </button>
     <button
-      className="sc-ifAKCX cWBsvP"
+      className="sc-bdVaJa hszIIB"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -24,7 +24,7 @@ Array [
       hard
     </button>
     <button
-      className="sc-ifAKCX cWBsvP"
+      className="sc-bdVaJa hszIIB"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -34,10 +34,10 @@ Array [
     </button>
   </div>,
   <div
-    className="sc-EHOje fIYEwc"
+    className="sc-gzVnrw gWGKjZ"
   >
     <button
-      className="sc-ifAKCX cWBsvP"
+      className="sc-bdVaJa hszIIB"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -46,7 +46,7 @@ Array [
       shuffle
     </button>
     <button
-      className="sc-ifAKCX cWBsvP"
+      className="sc-bdVaJa hszIIB"
       color={undefined}
       disabled={undefined}
       onClick={[Function]}
@@ -60,7 +60,7 @@ Array [
 
 exports[`Navigation component renders without crashing 1`] = `
 <div
-  className="sc-bxivhb dVTrOO"
+  className="sc-bZQynM dpGbXt"
 >
   <a
     aria-current="page"
@@ -71,7 +71,7 @@ exports[`Navigation component renders without crashing 1`] = `
   >
     <img
       alt="irregio icon"
-      className="sc-htpNat jJVdOH"
+      className="sc-EHOje fMxmcc"
       height="65px"
       src={undefined}
       width="65px"
@@ -105,6 +105,15 @@ exports[`Navigation component renders without crashing 1`] = `
     >
       Languages
     </a>
+    <a
+      aria-current={null}
+      className={undefined}
+      href="/phrasals"
+      onClick={[Function]}
+      style={undefined}
+    >
+      Phrases
+    </a>
   </div>
   <div>
     <img
@@ -117,17 +126,17 @@ exports[`Navigation component renders without crashing 1`] = `
 
 exports[`Progress bar component matches snapshot 1`] = `
 <div
-  className="sc-bwzfXH fTxpOP"
+  className="sc-ifAKCX bUkEvu"
 >
   <div
-    className="sc-bdVaJa bKNoPd"
+    className="sc-bxivhb gsjiRK"
   />
 </div>
 `;
 
 exports[`Title component matches snapshot 1`] = `
 <div
-  className="sc-bZQynM fyoVRI"
+  className="sc-htoDjs vXyyK"
 >
   i
   <span>

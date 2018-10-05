@@ -23,6 +23,18 @@ export default {
     {
       pVerb: "blow up",
       meaning: "explode"
+    },
+    {
+      pVerb: "stand out",
+      meaning: "noticeable"
+    }, 
+    {
+     pVerb: "stood up",
+     meaning: "To not meet with someone" 
+    },
+    {
+      pVerb: "against the grain",
+      meaning: "Rebellious"
     }
   ]
 };

@@ -1,0 +1,812 @@
+data: [
+    {
+      frequency: "frequent",
+      infinitive: "bakken",
+      pastTenseSingular: "bakte",
+      pastTensePlural: "bakten",
+      presentPerfectSimple: "gebakken",
+      translationEn: "to bake",
+      translationRus: "печь"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "beginnen",
+      pastTenseSingular: "begon",
+      pastTensePlural: "begonnen",
+      presentPerfectSimple: "begonnen",
+      translationEn: "to begin",
+      translationRus: "начать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "begrijpen",
+      pastTenseSingular: "begreep",
+      pastTensePlural: "begrepen",
+      presentPerfectSimple: "begrepen",
+      translationEn: "to understand",
+      translationRus: "понимать"
+    },
+    {
+      frequency: "infrequent",
+      infinitive: "bergen",
+      pastTenseSingular: "borg",
+      pastTensePlural: "borgen",
+      presentPerfectSimple: "geborgen",
+      translationEn: "to save",
+      translationRus: "магазин"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "bewegen",
+      pastTenseSingular: "bewoog",
+      pastTensePlural: "bewogen",
+      presentPerfectSimple: "bewogen",
+      translationEn: "to move",
+      translationRus: "движение"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "bezoeken",
+      pastTenseSingular: "bezocht",
+      pastTensePlural: "bezochten",
+      presentPerfectSimple: "bezocht",
+      translationEn: "to visit",
+      translationRus: "визит"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "bieden",
+      pastTenseSingular: "bood",
+      pastTensePlural: "boden",
+      presentPerfectSimple: geboden"",
+      translationEn: "to offer",
+      translationRus: "предложение"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "bijten",
+      pastTenseSingular: "beet",
+      pastTensePlural: "beten",
+      presentPerfectSimple: "gebeten",
+      translationEn: "to bite",
+      translationRus: "укусить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "binden",
+      pastTenseSingular: "bond",
+      pastTensePlural: "bonden",
+      presentPerfectSimple: "gebonden",
+      translationEn: "to bind",
+      translationRus: "привязывать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "blijven",
+      pastTenseSingular: "bleef",
+      pastTensePlural: "bleven",
+      presentPerfectSimple: "gebleven",
+      translationEn: "to stay",
+      translationRus: "остаться"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "breken",
+      pastTenseSingular: "brak",
+      pastTensePlural: "braken",
+      presentPerfectSimple: "gebroken",
+      translationEn: "to break",
+      translationRus: "перерыв"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "brengen",
+      pastTenseSingular: "bracht",
+      pastTensePlural: "brachten",
+      presentPerfectSimple: "gebracht",
+      translationEn: "to bring",
+      translationRus: "приносить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "denken",
+      pastTenseSingular: "dacht",
+      pastTensePlural: "dachten",
+      presentPerfectSimple: "gedacht",
+      translationEn: "to think",
+      translationRus: "думать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "doen",
+      pastTenseSingular: "deed",
+      pastTensePlural: "deden",
+      presentPerfectSimple: "gedaan",
+      translationEn: "to do",
+      translationRus: "сделать это"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "dragen",
+      pastTenseSingular: "droeg",
+      pastTensePlural: "droegen",
+      presentPerfectSimple: "gedragen",
+      translationEn: "to carry",
+      translationRus: "носить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "dringen",
+      pastTenseSingular: "drong",
+      pastTensePlural: "drongen",
+      presentPerfectSimple: "gedrongen",
+      translationEn: "to push",
+      translationRus: "толчок"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "drinken",
+      pastTenseSingular: "dronk",
+      pastTensePlural: "dronken",
+      presentPerfectSimple: "gedronken",
+      translationEn: "to drink",
+      translationRus: "пить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "duiken",
+      pastTenseSingular: "dook",
+      pastTensePlural: "doken",
+      presentPerfectSimple: "gedoken",
+      translationEn: "to dive",
+      translationRus: "дайвинг"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "eten",
+      pastTenseSingular: "at",
+      pastTensePlural: "aten",
+      presentPerfectSimple: "gegeten",
+      translationEn: "to eat",
+      translationRus: "питание"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "gaan",
+      pastTenseSingular: "ging",
+      pastTensePlural: "gingen",
+      presentPerfectSimple: "gegaan",
+      translationEn: "to go",
+      translationRus: "идти"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "genezen",
+      pastTenseSingular: "genas",
+      pastTensePlural: "genazen",
+      presentPerfectSimple: "genezen",
+      translationEn: "to heal",
+      translationRus: "излечивать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "geven",
+      pastTenseSingular: "gaf",
+      pastTensePlural: "gaven",
+      presentPerfectSimple: "gegeven",
+      translationEn: "to give",
+      translationRus: "дать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "hangen",
+      pastTenseSingular: "hing",
+      pastTensePlural: "hingen",
+      presentPerfectSimple: "gehangen",
+      translationEn: "to hang",
+      translationRus: "болтаться"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "hebben",
+      pastTenseSingular: "had",
+      pastTensePlural: "hadden",
+      presentPerfectSimple: "gehad",
+      translationEn: "to have",
+      translationRus: "имеют"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "helpen",
+      pastTenseSingular: "hielp",
+      pastTensePlural: "hielpen",
+      presentPerfectSimple: "geholpen",
+      translationEn: "to help",
+      translationRus: "помощь"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "heten",
+      pastTenseSingular: "heette",
+      pastTensePlural: "heetten",
+      presentPerfectSimple: "geheten",
+      translationEn: "to be named",
+      translationRus: "вызов"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "houden",
+      pastTenseSingular: "hield",
+      pastTensePlural: "hielden",
+      presentPerfectSimple: "gehouden",
+      translationEn: "to hold",
+      translationRus: "держать его"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "kiezen",
+      pastTenseSingular: "koos",
+      pastTensePlural: "kozen",
+      presentPerfectSimple: "gekozen",
+      translationEn: "to choose",
+      translationRus: "выбирать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "kijken",
+      pastTenseSingular: "keek",
+      pastTensePlural: "keken",
+      presentPerfectSimple: "gekeken",
+      translationEn: "to watch",
+      translationRus: "посмотреть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "klimmen",
+      pastTenseSingular: "klom",
+      pastTensePlural: "klommen",
+      presentPerfectSimple: "geklommen",
+      translationEn: "to climb",
+      translationRus: "восхождение"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "komen",
+      pastTenseSingular: "kwam",
+      pastTensePlural: "kwamen",
+      presentPerfectSimple: "gekomen",
+      translationEn: "to come",
+      translationRus: "прийти"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "kopen",
+      pastTenseSingular: "kocht",
+      pastTensePlural: "kochten",
+      presentPerfectSimple: "gekocht",
+      translationEn: "to buy",
+      translationRus: "купить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "krijgen",
+      pastTenseSingular: "kreeg",
+      pastTensePlural: "kregen",
+      presentPerfectSimple: "gekregen",
+      translationEn: "to get",
+      translationRus: "получить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "kunnen",
+      pastTenseSingular: "kon",
+      pastTensePlural: "konden",
+      presentPerfectSimple: "gekund",
+      translationEn: "to be able",
+      translationRus: "может"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "lachen",
+      pastTenseSingular: "lachte",
+      pastTensePlural: "lachten",
+      presentPerfectSimple: "gelachen",
+      translationEn: "to laugh",
+      translationRus: "смех"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "laten",
+      pastTenseSingular: "liet",
+      pastTensePlural: "lieten",
+      presentPerfectSimple: "gelaten",
+      translationEn: "to let",
+      translationRus: "отпуск"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "lezen",
+      pastTenseSingular: "las",
+      pastTensePlural: "lazen",
+      presentPerfectSimple: "gelezen",
+      translationEn: "to read",
+      translationRus: "считывание"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "liegen",
+      pastTenseSingular: "loog",
+      pastTensePlural: "logen",
+      presentPerfectSimple: "gelogen",
+      translationEn: "to lie (to tell a lie)",
+      translationRus: "лежать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "liggen",
+      pastTenseSingular: "lag",
+      pastTensePlural: "lagen",
+      presentPerfectSimple: "gelegen",
+      translationEn: "to lie",
+      translationRus: "лечь"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "lopen",
+      pastTenseSingular: "liep",
+      pastTensePlural: "liepen",
+      presentPerfectSimple: "gelopen",
+      translationEn: "to run",
+      translationRus: "ходить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "moeten",
+      pastTenseSingular: "moest",
+      pastTensePlural: "moesten",
+      presentPerfectSimple: "gemoeten",
+      translationEn: "to have to",
+      translationRus: "должен"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "mogen",
+      pastTenseSingular: "mocht",
+      pastTensePlural: "mochten",
+      presentPerfectSimple: "gemogen",
+      translationEn: "to be allowed",
+      translationRus: "может"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "nemen",
+      pastTenseSingular: "nam",
+      pastTensePlural: "namen",
+      presentPerfectSimple: "genomen",
+      translationEn: "to take",
+      translationRus: "принимать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "ontvangen",
+      pastTenseSingular: "ontving",
+      pastTensePlural: "ontvingen",
+      presentPerfectSimple: "ontvangen",
+      translationEn: "to receive",
+      translationRus: "получить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "rijden",
+      pastTenseSingular: "reed",
+      pastTensePlural: "reden",
+      presentPerfectSimple: "gereden",
+      translationEn: "to ride",
+      translationRus: "ездить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "roepen",
+      pastTenseSingular: "riep",
+      pastTensePlural: "riepen",
+      presentPerfectSimple: "geroepen",
+      translationEn: "to call",
+      translationRus: "вызов"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "schieten",
+      pastTenseSingular: "schoot",
+      pastTensePlural: "schoten",
+      presentPerfectSimple: "geschoten",
+      translationEn: "to shoot",
+      translationRus: "стрелять"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "schijnen",
+      pastTenseSingular: "scheen",
+      pastTensePlural: "schenen",
+      presentPerfectSimple: "geschenen",
+      translationEn: "to shine",
+      translationRus: "блеск"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "schrikken",
+      pastTenseSingular: "schrok",
+      pastTensePlural: "schrokken",
+      presentPerfectSimple: "geschrokken",
+      translationEn: "to scare",
+      translationRus: "застенчивый"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "schrijven",
+      pastTenseSingular: "schreef",
+      pastTensePlural: "schreven",
+      presentPerfectSimple: "geschreven",
+      translationEn: "to write",
+      translationRus: "запись"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "slapen",
+      pastTenseSingular: "sliep",
+      pastTensePlural: "sliepen",
+      presentPerfectSimple: "geslapen",
+      translationEn: "to sleep",
+      translationRus: "сон"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "sluiten",
+      pastTenseSingular: "sloot",
+      pastTensePlural: "sloten",
+      presentPerfectSimple: "gesloten",
+      translationEn: "to close",
+      translationRus: "близко"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "snijden",
+      pastTenseSingular: "sneed",
+      pastTensePlural: "sneden",
+      presentPerfectSimple: "gesneden",
+      translationEn: "to cut",
+      translationRus: "вырезать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "spreken",
+      pastTenseSingular: "sprak",
+      pastTensePlural: "spraken",
+      presentPerfectSimple: "gesproken",
+      translationEn: "to speak",
+      translationRus: "говорить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "springen",
+      pastTenseSingular: "sprong",
+      pastTensePlural: "sprongen",
+      presentPerfectSimple: "gesprongen",
+      translationEn: "to jump",
+      translationRus: "прыгать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "staan",
+      pastTenseSingular: "stond",
+      pastTensePlural: "stonden",
+      presentPerfectSimple: "gestaan",
+      translationEn: "to stand",
+      translationRus: "стоять"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "steken",
+      pastTenseSingular: "stak",
+      pastTensePlural: "staken",
+      presentPerfectSimple: "gestoken",
+      translationEn: "to sting",
+      translationRus: "колоть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "stelen",
+      pastTenseSingular: "stal",
+      pastTensePlural: "stalen",
+      presentPerfectSimple: "gestolen",
+      translationEn: "to steal",
+      translationRus: "украсть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "sterven",
+      pastTenseSingular: "stierf",
+      pastTensePlural: "stierven",
+      presentPerfectSimple: "stierven",
+      translationEn: "to die",
+      translationRus: "умереть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "trekken",
+      pastTenseSingular: "trok",
+      pastTensePlural: "trokken",
+      presentPerfectSimple: "getrokken",
+      translationEn: "to pull",
+      translationRus: "тянуть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vallen",
+      pastTenseSingular: "viel",
+      pastTensePlural: "vielen",
+      presentPerfectSimple: "gevallen",
+      translationEn: "to fall",
+      translationRus: "падение"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vangen",
+      pastTenseSingular: "ving",
+      pastTensePlural: "vingen",
+      presentPerfectSimple: "gevangen",
+      translationEn: "to catch",
+      translationRus: "поймать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "varen",
+      pastTenseSingular: "voer",
+      pastTensePlural: "voeren",
+      presentPerfectSimple: "gevaren",
+      translationEn: "to sail",
+      translationRus: "парус"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vechten",
+      pastTenseSingular: "vocht",
+      pastTensePlural: "vochten",
+      presentPerfectSimple: "gevochten",
+      translationEn: "to fight",
+      translationRus: "бой"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "verbieden",
+      pastTenseSingular: "verbood",
+      pastTensePlural: "verboden",
+      presentPerfectSimple: "verboden",
+      translationEn: "to forbid",
+      translationRus: "запрещать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "verdwijnen",
+      pastTenseSingular: "verdween",
+      pastTensePlural: "verdwenen",
+      presentPerfectSimple: "verdwenen",
+      translationEn: "to disappear",
+      translationRus: "исчезать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vergeten",
+      pastTenseSingular: "vergat",
+      pastTensePlural: "vergaten",
+      presentPerfectSimple: "vergeten",
+      translationEn: "to forget",
+      translationRus: "забывать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "verlaten",
+      pastTenseSingular: "verliet",
+      pastTensePlural: "verlieten",
+      presentPerfectSimple: "verlaten",
+      translationEn: "to leave",
+      translationRus: "отпуск"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "verliezen",
+      pastTenseSingular: "verloor",
+      pastTensePlural: "verloren",
+      presentPerfectSimple: "verloren",
+      translationEn: "to lose",
+      translationRus: "потери"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vertrekken",
+      pastTenseSingular: "vertrok",
+      pastTensePlural: "vertrokken",
+      presentPerfectSimple: "vertrokken",
+      translationEn: "to leave",
+      translationRus: "отпуск"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vinden",
+      pastTenseSingular: "vond",
+      pastTensePlural: "vonden",
+      presentPerfectSimple: "gevonden",
+      translationEn: "to find",
+      translationRus: "найти"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vliegen",
+      pastTenseSingular: "vloog",
+      pastTensePlural: "vlogen",
+      presentPerfectSimple: "gevlogen",
+      translationEn: "to fly",
+      translationRus: "летать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "vragen",
+      pastTenseSingular: "vroeg",
+      pastTensePlural: "vroegen",
+      presentPerfectSimple: "gevraagd",
+      translationEn: "to ask",
+      translationRus: "спросить"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "wassen",
+      pastTenseSingular: "waste",
+      pastTensePlural: "wasten",
+      presentPerfectSimple: "gewassen",
+      translationEn: "to wash",
+      translationRus: "мыть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "werpen",
+      pastTenseSingular: "wierp",
+      pastTensePlural: "wierpen",
+      presentPerfectSimple: "geworpen",
+      translationEn: "to throw",
+      translationRus: "бросать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "weten",
+      pastTenseSingular: "wist",
+      pastTensePlural: "wisten",
+      presentPerfectSimple: "geweten",
+      translationEn: "to know",
+      translationRus: "знать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "wijzen",
+      pastTenseSingular: "wees",
+      pastTensePlural: "wezen",
+      presentPerfectSimple: "gewezen",
+      translationEn: "to point",
+      translationRus: "шоу"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "willen",
+      pastTenseSingular: "wilde",
+      pastTensePlural: "wilden",
+      presentPerfectSimple: "gewild",
+      translationEn: "to want",
+      translationRus: "хочу"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "winnen",
+      pastTenseSingular: "won",
+      pastTensePlural: "wonnen",
+      presentPerfectSimple: "gewonnen",
+      translationEn: "to win",
+      translationRus: "победа"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "worden",
+      pastTenseSingular: "werd",
+      pastTensePlural: "werden",
+      presentPerfectSimple: "geworden",
+      translationEn: "to become",
+      translationRus: "быть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zeggen",
+      pastTenseSingular: "zei",
+      pastTensePlural: "zeiden",
+      presentPerfectSimple: "gezegd",
+      translationEn: "to say",
+      translationRus: "сказать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zenden",
+      pastTenseSingular: "zond",
+      pastTensePlural: "zonden",
+      presentPerfectSimple: "gezonden",
+      translationEn: "to send",
+      translationRus: "послать"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zien",
+      pastTenseSingular: "zag",
+      pastTensePlural: "zagen",
+      presentPerfectSimple: "gezien",
+      translationEn: "to see",
+      translationRus: "увидеть"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zijn",
+      pastTenseSingular: "was",
+      pastTensePlural: "waren",
+      presentPerfectSimple: "geweest",
+      translationEn: "to be",
+      translationRus: "его"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zingen",
+      pastTenseSingular: "zong",
+      pastTensePlural: "zongen",
+      presentPerfectSimple: "gezongen",
+      translationEn: "to sing",
+      translationRus: "петь"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zitten",
+      pastTenseSingular: "zat",
+      pastTensePlural: "zaten",
+      presentPerfectSimple: "gezeten",
+      translationEn: "to sit",
+      translationRus: "садиться"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zoeken",
+      pastTenseSingular: "zocht",
+      pastTensePlural: "zochten",
+      presentPerfectSimple: "gezocht",
+      translationEn: "to search",
+      translationRus: "поиск"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zullen",
+      pastTenseSingular: "zou",
+      pastTensePlural: "zouden",
+      presentPerfectSimple: "/",
+      translationEn: "shall",
+      translationRus: "воли"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zwemmen",
+      pastTenseSingular: "zwom",
+      pastTensePlural: "zwommen",
+      presentPerfectSimple: "gezwommen",
+      translationEn: "to swim",
+      translationRus: "плавание"
+    },
+    {
+      frequency: "frequent",
+      infinitive: "zwijgen",
+      pastTenseSingular: "zweeg",
+      pastTensePlural: "zwegen",
+      presentPerfectSimple: "gezwegen",
+      translationEn: "to keep silent",
+      translationRus: "молчать"
+    }
+]

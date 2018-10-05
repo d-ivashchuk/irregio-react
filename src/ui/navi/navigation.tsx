@@ -55,6 +55,7 @@ const Navi: React.StatelessComponent<IProps> = props => (
       <NavLink to="/learn">Learn</NavLink>
       <NavLink to="/practice">Practice</NavLink>
       <NavLink to="/supported-languages">Languages</NavLink>
+      <NavLink to="/phrasals">Phrases</NavLink>
     </div>
     <div>
       {props.language === "de" ? (

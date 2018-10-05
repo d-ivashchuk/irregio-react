@@ -6,6 +6,8 @@ import en from "../data/en";
 
 import { injectGlobal } from "../../theme/styled-components";
 
+import PhrasalVerbs from "../PhrasalVerbs/PhrasalVerbs";
+
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Navigation from "../../ui/navi/navigation";
 
@@ -386,6 +388,16 @@ class App extends React.Component<{}, IState> {
                       toggleTranslation={() => this.toggleShowTranslation}
                     />
                   </Practice>
+                </Layout>
+              );
+            }}
+          />
+          <Route
+            path="/phrasals"
+            render={() => {
+              return (
+                <Layout>
+                  <PhrasalVerbs />
                 </Layout>
               );
             }}

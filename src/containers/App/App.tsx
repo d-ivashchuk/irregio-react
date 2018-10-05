@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import de from "../data/data";
 import en from "../data/en";
+// import dutch from "../data/dutch";
 
 import { injectGlobal } from "../../theme/styled-components";
 

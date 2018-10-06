@@ -24,5 +24,13 @@ export default {
       pVerb: "blow up",
       meaning: "explode"
     }
+    {
+      pVerb: "look for something"
+      meaning: "search"
+    }
+    {
+      pVerb: "give up"
+      meaning: "surrender"
+    }
   ]
 };

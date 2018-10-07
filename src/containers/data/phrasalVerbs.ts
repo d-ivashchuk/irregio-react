@@ -31,6 +31,14 @@ export default {
     {
       pVerb: "give up",
       meaning: "surrender"
+    },
+    {
+      pVerb: "come in",
+      meaning: "to enter"
+    },
+    {
+      pVerb: "fall apart",
+      meaning: "to break into pieces"
     }
   ]
 };

@@ -1,7 +1,9 @@
 import * as React from "react";
 import styled from "../../theme/styled-components";
 
-import Button from "../../ui/button/button";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+
+// import Button from "../../ui/button/button";
 
 const StyledPhrasalVerbs = styled.div`
   display: flex;
@@ -10,19 +12,39 @@ const StyledPhrasalVerbs = styled.div`
   font-size: 1.6rem;
   flex-direction: column;
   text-align: center;
-  div {
-    margin: 5px;
-  }
+
   button {
     margin-right: 5px;
   }
 `;
+
+const CurrentPVerb = styled.div`
+  font-size: 2rem;
+`;
 const StyledOption = styled.div`
-  color: #bada55;
+  color: #f1f1f1;
   margin: 5px;
-  padding: 5px;
-  border: 1px solid palevioletred;
+  padding: 6px;
+  font-size: 1.5rem;
   text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+`;
+const ProgressContainer = styled.div`
+  margin: 10px auto 10px auto;
+  width: 350px;
+`;
+
+const Congratulations = styled.div`
+  max-width: 300px;
+  margin: auto;
+  font-size: 1.3rem;
+  span {
+    color: white;
+  }
 `;
 
 import phrasalVerbs from "../data/phrasalVerbs";
@@ -31,18 +53,51 @@ interface IState {
   pVerbs: any;
   progress: number;
   answerOptions: any[];
+  fractionCompleted: number;
+  mistakesCount: number;
+  isCompleted: boolean;
 }
 
 class PhrasalVerbs extends React.Component<{}, IState> {
   public state: IState = {
     pVerbs: phrasalVerbs,
     progress: 0,
-    answerOptions: []
+    answerOptions: [],
+    fractionCompleted: 0,
+    mistakesCount: 0,
+    isCompleted: false
   };
 
   public componentDidMount() {
     this.prepareAnswerOptions();
   }
+
+  public checkAnswer = (option: number) => {
+    if (
+      this.state.answerOptions[this.state.progress][option].meaning ===
+        this.state.pVerbs.data[this.state.progress].meaning &&
+      this.state.progress !== this.state.pVerbs.data.length - 1
+    ) {
+      this.setState({
+        ...this.state,
+        progress: this.state.progress + 1,
+        fractionCompleted:
+          this.state.fractionCompleted + 100 / this.state.pVerbs.data.length
+      });
+    } else if (this.state.progress === this.state.pVerbs.data.length - 1) {
+      this.setState({
+        ...this.state,
+        progress: this.state.pVerbs.data.length - 1,
+        fractionCompleted: 100,
+        isCompleted: true
+      });
+    } else {
+      this.setState({
+        ...this.state,
+        mistakesCount: this.state.mistakesCount + 1
+      });
+    }
+  };
 
   public handleButton = (type: string) => {
     if (type === "incr") {
@@ -94,33 +149,58 @@ class PhrasalVerbs extends React.Component<{}, IState> {
   };
 
   public render() {
-    const { pVerbs, progress } = this.state;
-    return (
-      <StyledPhrasalVerbs>
-        <div>
-          {pVerbs.data[progress].pVerb}-{pVerbs.data[progress].meaning}
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button label="previous" clicked={() => this.handleButton("decr")} />
-          <Button label="next" clicked={() => this.handleButton("incr")} />
-        </div>
-        <div>{pVerbs.data[progress].pVerb}</div>
-        <StyledOption>
+    const {
+      pVerbs,
+      progress,
+      fractionCompleted,
+      isCompleted,
+      mistakesCount
+    } = this.state;
+    const options = (
+      <React.Fragment>
+        <StyledOption onClick={() => this.checkAnswer(0)}>
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][0].meaning
             : null}
         </StyledOption>
-        <StyledOption>
+        <StyledOption onClick={() => this.checkAnswer(1)}>
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][1].meaning
             : null}
         </StyledOption>
-        <StyledOption>
+        <StyledOption onClick={() => this.checkAnswer(2)}>
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][2].meaning
             : null}
         </StyledOption>
-      </StyledPhrasalVerbs>
+      </React.Fragment>
+    );
+    const displayedBlock = !isCompleted ? (
+      options
+    ) : (
+      <Congratulations>
+        Congratulations you have finished English phrasal verbs with{" "}
+        <span>{mistakesCount}</span> mistakes
+      </Congratulations>
+    );
+
+    return (
+      <React.Fragment>
+        <StyledPhrasalVerbs>
+          <CurrentPVerb>{pVerbs.data[progress].pVerb}</CurrentPVerb>
+          {/* <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              label="previous"
+              clicked={() => this.handleButton("decr")}
+            />
+            <Button label="next" clicked={() => this.handleButton("incr")} />
+          </div> */}
+          <ProgressContainer>
+            <ProgressBar fractionCompleted={fractionCompleted} />
+          </ProgressContainer>
+          {displayedBlock}
+        </StyledPhrasalVerbs>
+      </React.Fragment>
     );
   }
 }

@@ -1,9 +1,12 @@
 import * as React from "react";
 import styled from "../../theme/styled-components";
+import { withRouter } from "react-router-dom";
+import { RouteComponentProps } from "react-router";
+import { NavLink } from "react-router-dom";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
-// import Button from "../../ui/button/button";
+import Button from "../../ui/button/button";
 
 const StyledPhrasalVerbs = styled.div`
   display: flex;
@@ -16,16 +19,18 @@ const StyledPhrasalVerbs = styled.div`
   button {
     margin-right: 5px;
   }
+  > div {
+    margin-top: 5px;
+  }
 `;
 
 const CurrentPVerb = styled.div`
-  font-size: 2rem;
+  font-size: 3rem;
 `;
 const StyledOption = styled.div`
   color: #f1f1f1;
-  margin: 5px;
   padding: 6px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-align: center;
 
   &:hover {
@@ -47,6 +52,34 @@ const Congratulations = styled.div`
   }
 `;
 
+const LinkContainer = styled.div`
+  width: 300px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 5px;
+    transition: all 0.3s, opacity 0.3s;
+    &:hover {
+      color: #ccc;
+      transition: all 0.3s, opacity 0.3s;
+    }
+  }
+  .active {
+    color: #ccc;
+    opacity: 0.8;
+    transition: all 0.3s, opacity 0.3s;
+  }
+`;
+
+const CurrentPVerbMeaning = styled.div`
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1.7rem;
+`;
+
 import phrasalVerbs from "../data/phrasalVerbs";
 
 interface IState {
@@ -58,7 +91,9 @@ interface IState {
   isCompleted: boolean;
 }
 
-class PhrasalVerbs extends React.Component<{}, IState> {
+type IProps = RouteComponentProps;
+
+class PhrasalVerbs extends React.Component<IProps, IState> {
   public state: IState = {
     pVerbs: phrasalVerbs,
     progress: 0,
@@ -100,7 +135,10 @@ class PhrasalVerbs extends React.Component<{}, IState> {
   };
 
   public handleButton = (type: string) => {
-    if (type === "incr") {
+    if (
+      type === "incr" &&
+      this.state.progress !== this.state.pVerbs.data.length - 1
+    ) {
       this.setState({
         ...this.state,
         progress: this.state.progress + 1
@@ -158,6 +196,10 @@ class PhrasalVerbs extends React.Component<{}, IState> {
     } = this.state;
     const options = (
       <React.Fragment>
+        <CurrentPVerb>{pVerbs.data[progress].pVerb}</CurrentPVerb>
+        <ProgressContainer>
+          <ProgressBar fractionCompleted={fractionCompleted} />
+        </ProgressContainer>
         <StyledOption onClick={() => this.checkAnswer(0)}>
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][0].meaning
@@ -175,7 +217,7 @@ class PhrasalVerbs extends React.Component<{}, IState> {
         </StyledOption>
       </React.Fragment>
     );
-    const displayedBlock = !isCompleted ? (
+    const practiceBlock = !isCompleted ? (
       options
     ) : (
       <Congratulations>
@@ -183,26 +225,43 @@ class PhrasalVerbs extends React.Component<{}, IState> {
         <span>{mistakesCount}</span> mistakes
       </Congratulations>
     );
+    const learnBlock = (
+      <React.Fragment>
+        {" "}
+        <CurrentPVerb>{pVerbs.data[progress].pVerb}</CurrentPVerb>
+        <CurrentPVerbMeaning>
+          {pVerbs.data[progress].meaning}
+        </CurrentPVerbMeaning>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "10px"
+          }}
+        >
+          <Button label="previous" clicked={() => this.handleButton("decr")} />
+          <Button label="next" clicked={() => this.handleButton("incr")} />
+        </div>
+      </React.Fragment>
+    );
 
     return (
       <React.Fragment>
+        <LinkContainer>
+          <NavLink to="/phrasals/learn">Learn</NavLink>
+          <NavLink to="/phrasals/practice">Practice</NavLink>
+        </LinkContainer>
         <StyledPhrasalVerbs>
-          <CurrentPVerb>{pVerbs.data[progress].pVerb}</CurrentPVerb>
-          {/* <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button
-              label="previous"
-              clicked={() => this.handleButton("decr")}
-            />
-            <Button label="next" clicked={() => this.handleButton("incr")} />
-          </div> */}
-          <ProgressContainer>
-            <ProgressBar fractionCompleted={fractionCompleted} />
-          </ProgressContainer>
-          {displayedBlock}
+          {this.props.location.pathname === "/phrasals/practice"
+            ? practiceBlock
+            : null}
+          {this.props.location.pathname === "/phrasals/learn"
+            ? learnBlock
+            : null}
         </StyledPhrasalVerbs>
       </React.Fragment>
     );
   }
 }
 
-export default PhrasalVerbs;
+export default withRouter(PhrasalVerbs);

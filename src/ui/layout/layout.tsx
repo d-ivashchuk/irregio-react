@@ -7,6 +7,7 @@ const StyledLayout = styled.div`
   width: 100%;
   height: 70%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `;
 

@@ -2,13 +2,13 @@ import * as React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "../../theme/styled-components";
 
-import de from "../../assets/de.svg";
-import en from "../../assets/uk.svg";
+// import de from "../../assets/de.svg";
+// import en from "../../assets/uk.svg";
 
 import Icon from "../icon/icon";
 
 interface IProps {
-  language: string;
+  language?: string;
   toggleLanguage?: () => void;
 }
 
@@ -16,7 +16,7 @@ const StyledNavi = styled.div`
   display: flex;
   align-items: center;
   background: white;
-  justify-content: space-between;
+  justify-content: center;
   img {
     width: 45px;
     height: 45px;
@@ -52,18 +52,17 @@ const Navi: React.StatelessComponent<IProps> = props => (
       <Icon height="65px" width="65px" />
     </NavLink>
     <div>
-      <NavLink to="/learn">Learn</NavLink>
-      <NavLink to="/practice">Practice</NavLink>
-      <NavLink to="/supported-languages">Languages</NavLink>
+      <NavLink to="/verbs/learn">Verbs</NavLink>
       <NavLink to="/phrasals/learn">Phrases</NavLink>
+      <NavLink to="/supported-languages">Languages</NavLink>
     </div>
-    <div>
+    {/* <div>
       {props.language === "de" ? (
         <img src={de} onClick={props.toggleLanguage} />
       ) : (
-        <img src={en} onClick={props.toggleLanguage} />
-      )}
-    </div>
+          <img src={en} onClick={props.toggleLanguage} />
+        )}
+    </div> */}
   </StyledNavi>
 );
 

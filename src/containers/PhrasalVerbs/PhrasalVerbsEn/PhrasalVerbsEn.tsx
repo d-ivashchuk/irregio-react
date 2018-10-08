@@ -1,12 +1,12 @@
 import * as React from "react";
-import styled from "../../theme/styled-components";
+import styled from "../../../theme/styled-components";
 import { withRouter } from "react-router-dom";
 import { RouteComponentProps } from "react-router";
 import { NavLink } from "react-router-dom";
 
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import ProgressBar from "../../../components/ProgressBar/ProgressBar";
 
-import Button from "../../ui/button/button";
+import Button from "../../../ui/button/button";
 
 const StyledPhrasalVerbs = styled.div`
   display: flex;
@@ -80,7 +80,7 @@ const CurrentPVerbMeaning = styled.div`
   font-size: 1.7rem;
 `;
 
-import phrasalVerbs from "../data/phrasalVerbs";
+import phrasalVerbs from "../../data/phrasalVerbs";
 
 interface IState {
   pVerbs: any;
@@ -110,7 +110,7 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
   public checkAnswer = (option: number) => {
     if (
       this.state.answerOptions[this.state.progress][option].meaning ===
-        this.state.pVerbs.data[this.state.progress].meaning &&
+      this.state.pVerbs.data[this.state.progress].meaning &&
       this.state.progress !== this.state.pVerbs.data.length - 1
     ) {
       this.setState({
@@ -220,11 +220,11 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
     const practiceBlock = !isCompleted ? (
       options
     ) : (
-      <Congratulations>
-        Congratulations you have finished English phrasal verbs with{" "}
-        <span>{mistakesCount}</span> mistakes
+        <Congratulations>
+          Congratulations you have finished English phrasal verbs with{" "}
+          <span>{mistakesCount}</span> mistakes
       </Congratulations>
-    );
+      );
     const learnBlock = (
       <React.Fragment>
         {" "}

@@ -35,7 +35,7 @@ class Controls extends React.Component<IProps, {}> {
 
     return (
       <React.Fragment>
-        {location.pathname === "/learn" ? (
+        {location.pathname === "/verbs/learn" ? (
           <StyledControlGroup>
             <Button clicked={() => handleButton("decr")} label="previous" />
             <Button clicked={() => handleButton("incr")} label="next" />
@@ -55,7 +55,7 @@ class Controls extends React.Component<IProps, {}> {
         </StyledControlGroup>
         <StyledControlGroup>
           <Button clicked={handleShuffle()} label="shuffle" />
-          {location.pathname === "/practice" ? (
+          {location.pathname === "/verbs/practice" ? (
             <Button clicked={handleHelp()} label="help" />
           ) : null}
           <Button clicked={toggleTranslation()} label="show translation" />

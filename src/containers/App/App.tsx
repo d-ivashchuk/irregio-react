@@ -1,19 +1,15 @@
 import * as React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Navigation from '../../ui/navi/navigation'
-import Layout from '../../ui/layout/layout'
+import Navigation from "../../ui/navi/navigation";
+import Layout from "../../ui/layout/layout";
 
-import PhrasalVerbsEn from '../../containers/PhrasalVerbs/PhrasalVerbsEn/PhrasalVerbsEn'
-import Languages from '../../components/Languages/Languages'
-import Home from '../../components/Home/Home'
+import PhrasalVerbsEn from "../../containers/PhrasalVerbs/PhrasalVerbsEn/PhrasalVerbsEn";
+import Languages from "../../components/Languages/Languages";
+import Home from "../../components/Home/Home";
 
-import IrregularVerbs from '../../containers/IrregularVerbs/IrregularVerbs'
+import IrregularVerbs from "../../containers/IrregularVerbs/IrregularVerbs";
 
 import { injectGlobal } from "../../theme/styled-components";
-
-
-
-
 
 injectGlobal`*{ 
   margin:0;
@@ -29,19 +25,11 @@ injectGlobal`*{
 } `;
 
 class App extends React.Component<{}, {}> {
-
-
-
   public render() {
-
-
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <React.Fragment>
-
-          <Navigation
-            language={'en'}
-          />
+          <Navigation language={"en"} />
           <Route
             path="/phrasals"
             render={() => {

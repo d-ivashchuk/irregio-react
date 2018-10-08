@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import ProgressBar from "../../../components/ProgressBar/ProgressBar";
 
 import Button from "../../../ui/button/button";
+import phrasalVerbs from "../../data/phrasalVerbs";
 
 const StyledPhrasalVerbs = styled.div`
   display: flex;
@@ -25,17 +26,20 @@ const StyledPhrasalVerbs = styled.div`
 `;
 
 const CurrentPVerb = styled.div`
-  font-size: 3rem;
+  font-size: 2.6rem;
 `;
 const StyledOption = styled.div`
   color: #f1f1f1;
   padding: 6px;
   font-size: 1.7rem;
   text-align: center;
-
+  opacity: 0.6;
+  transition: all 0.3s;
   &:hover {
     cursor: pointer;
     color: white;
+    opacity: 1;
+    transition: all 0.3s;
   }
 `;
 const ProgressContainer = styled.div`
@@ -54,33 +58,38 @@ const Congratulations = styled.div`
 
 const LinkContainer = styled.div`
   width: 300px;
-  margin: 0 auto 0 auto;
+  margin: 20px auto 0 auto;
   text-align: center;
   a {
     text-decoration: none;
+    opacity: 0.5;
     color: white;
     font-size: 1.4rem;
     margin-right: 5px;
-    transition: all 0.3s, opacity 0.3s;
+    transition: all 0.3s;
     &:hover {
-      color: #ccc;
-      transition: all 0.3s, opacity 0.3s;
+      opacity: 1;
+      transition: all 0.3s;
     }
   }
   .active {
-    color: #ccc;
-    opacity: 0.8;
+    color: white;
+    opacity: 1;
     transition: all 0.3s, opacity 0.3s;
   }
 `;
 
 const CurrentPVerbMeaning = styled.div`
   text-align: center;
-  color: #e0e0e0;
+  color: #f0f0f0;
+  opacity: 0.4;
   font-size: 1.7rem;
 `;
 
-import phrasalVerbs from "../../data/phrasalVerbs";
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 interface IState {
   pVerbs: any;
@@ -110,7 +119,7 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
   public checkAnswer = (option: number) => {
     if (
       this.state.answerOptions[this.state.progress][option].meaning ===
-      this.state.pVerbs.data[this.state.progress].meaning &&
+        this.state.pVerbs.data[this.state.progress].meaning &&
       this.state.progress !== this.state.pVerbs.data.length - 1
     ) {
       this.setState({
@@ -182,8 +191,25 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
       randomTripleIncluding(scratchInput, n)
     );
     this.setState({
-      answerOptions: result
+      answerOptions: result,
+      progress: 0,
+      fractionCompleted: 0
     });
+  };
+  public handleShuffle = () => {
+    const currentPVerbs = this.state.pVerbs.data;
+    const shuffledPVerbs = currentPVerbs
+      .map((a: any) => [Math.random(), a])
+      .sort((a: any, b: any): any => a[0] - b[0])
+      .map((a: any) => a[1]);
+    this.setState(
+      {
+        pVerbs: { data: shuffledPVerbs }
+      },
+      () => {
+        this.prepareAnswerOptions();
+      }
+    );
   };
 
   public render() {
@@ -215,16 +241,19 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
             ? this.state.answerOptions[progress][2].meaning
             : null}
         </StyledOption>
+        <ButtonContainer>
+          <Button label="shuffle" clicked={() => this.handleShuffle()} />
+        </ButtonContainer>
       </React.Fragment>
     );
     const practiceBlock = !isCompleted ? (
       options
     ) : (
-        <Congratulations>
-          Congratulations you have finished English phrasal verbs with{" "}
-          <span>{mistakesCount}</span> mistakes
+      <Congratulations>
+        Congratulations you have finished English phrasal verbs with{" "}
+        <span>{mistakesCount}</span> mistakes
       </Congratulations>
-      );
+    );
     const learnBlock = (
       <React.Fragment>
         {" "}
@@ -240,6 +269,7 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
           }}
         >
           <Button label="previous" clicked={() => this.handleButton("decr")} />
+          <Button label="shuffle" clicked={() => this.handleShuffle()} />
           <Button label="next" clicked={() => this.handleButton("incr")} />
         </div>
       </React.Fragment>
@@ -249,7 +279,9 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
       <React.Fragment>
         <LinkContainer>
           <NavLink to="/phrasals/learn">Learn</NavLink>
-          <NavLink to="/phrasals/practice">Practice</NavLink>
+          <NavLink to="/phrasals/practice" onClick={this.prepareAnswerOptions}>
+            Practice
+          </NavLink>
         </LinkContainer>
         <StyledPhrasalVerbs>
           {this.props.location.pathname === "/phrasals/practice"

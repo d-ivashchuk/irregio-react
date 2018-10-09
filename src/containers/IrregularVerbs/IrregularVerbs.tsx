@@ -311,6 +311,7 @@ class IrregularVerbs extends React.Component<IProps, IState> {
             }
             handleHelp={() => this.handleHelp}
             toggleTranslation={() => this.toggleShowTranslation}
+            language={language}
           />
         </Learn>
       </React.Fragment>
@@ -350,6 +351,7 @@ class IrregularVerbs extends React.Component<IProps, IState> {
             }
             handleHelp={() => this.handleHelp}
             toggleTranslation={() => this.toggleShowTranslation}
+            language={language}
           />
         </Practice>
       </React.Fragment>

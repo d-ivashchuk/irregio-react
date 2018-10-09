@@ -43,7 +43,7 @@ const StyledTranslation = styled.div`
   color: #f0f0f0;
   opacity: 0.4;
   font-size: 2rem;
-  top: -15px;
+  top: -13px;
 `;
 const StyledRedo = styled.button`
   margin: 20px auto 0 auto;

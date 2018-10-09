@@ -10,6 +10,7 @@ import Home from "../../components/Home/Home";
 import IrregularVerbs from "../../containers/IrregularVerbs/IrregularVerbs";
 
 import { injectGlobal } from "../../theme/styled-components";
+import CourseList from "../../components/CoursesList/CoursesList";
 
 injectGlobal`*{ 
   margin:0;
@@ -69,6 +70,13 @@ class App extends React.Component<{}, {}> {
                   <Home />
                 </Layout>
               );
+            }}
+          />
+          <Route
+            path="/courses"
+            exact={true}
+            render={() => {
+              return <CourseList />;
             }}
           />
         </React.Fragment>

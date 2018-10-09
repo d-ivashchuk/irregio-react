@@ -5,11 +5,11 @@ import { withRouter } from "react-router-dom";
 import { RouteComponentProps } from "react-router";
 import { NavLink } from "react-router-dom";
 
-import de from "../data/data";
+import de from "../data/ge";
 import en from "../data/en";
 
-import deIcon from "../../assets/de.svg";
-import enIcon from "../../assets/uk.svg";
+// import deIcon from "../../assets/de.svg";
+// import enIcon from "../../assets/uk.svg";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
@@ -40,14 +40,14 @@ const LinkContainer = styled.div`
     transition: all 0.3s, opacity 0.3s;
   }
 `;
-const FlagContainer = styled.div`
-  margin: 20px auto 20px auto;
-  height: 40px;
-  width: 40px;
-  &:hover {
-    cursor: pointer;
-  }
-`;
+// const FlagContainer = styled.div`
+//   margin: 20px auto 20px auto;
+//   height: 40px;
+//   width: 40px;
+//   &:hover {
+//     cursor: pointer;
+//   }
+// `;
 
 interface IState {
   currentPastForm: string;
@@ -86,6 +86,18 @@ class IrregularVerbs extends React.Component<IProps, IState> {
     verbs: de
   };
 
+  public componentDidMount() {
+    if (
+      this.props.location.pathname === "/verbs/en/learn" ||
+      this.props.location.pathname === "/verbs/en/practice"
+    ) {
+      this.setState({
+        filteredVerbs: en.data,
+        language: "en",
+        verbs: en
+      });
+    }
+  }
   public componentDidUpdate() {
     if (
       this.state.currentPastForm ===
@@ -249,35 +261,6 @@ class IrregularVerbs extends React.Component<IProps, IState> {
     });
   };
 
-  public toggleLanguage = () => {
-    if (this.state.language === "de") {
-      this.setState({
-        ...this.state,
-        filteredVerbs: en.data,
-        language: "en",
-        verbs: en,
-        progress: 0,
-        fractionCompleted: 0,
-        hintsTaken: 0,
-        isCompleted: false,
-        pastFormHint: "",
-        perfectFormHint: ""
-      });
-    } else if (this.state.language === "en") {
-      this.setState({
-        ...this.state,
-        filteredVerbs: de.data,
-        language: "de",
-        verbs: de,
-        progress: 0,
-        fractionCompleted: 0,
-        hintsTaken: 0,
-        isCompleted: false,
-        pastFormHint: "",
-        perfectFormHint: ""
-      });
-    }
-  };
   public resetProgress = () => {
     this.setState({
       ...this.state,
@@ -371,23 +354,26 @@ class IrregularVerbs extends React.Component<IProps, IState> {
         </Practice>
       </React.Fragment>
     );
-    console.log(learn, practice);
     return (
       <React.Fragment>
         <LinkContainer>
-          <NavLink to="/verbs/learn">Learn</NavLink>
-          <NavLink to="/verbs/practice">Practice</NavLink>
-          <FlagContainer>
+          <NavLink to={`/verbs/${language}/learn`}>Learn</NavLink>
+          <NavLink to={`/verbs/${language}/practice`}>Practice</NavLink>
+          {/* <FlagContainer>
             {language === "de" ? (
               <img src={deIcon} onClick={this.toggleLanguage} />
             ) : (
               <img src={enIcon} onClick={this.toggleLanguage} />
             )}
-          </FlagContainer>
+          </FlagContainer> */}
         </LinkContainer>
 
-        {this.props.location.pathname === "/verbs/learn" ? learn : null}
-        {this.props.location.pathname === "/verbs/practice" ? practice : null}
+        {this.props.location.pathname === `/verbs/${language}/learn`
+          ? learn
+          : null}
+        {this.props.location.pathname === `/verbs/${language}/practice`
+          ? practice
+          : null}
       </React.Fragment>
     );
   }

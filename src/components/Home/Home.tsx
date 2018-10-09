@@ -51,7 +51,7 @@ class Home extends React.Component<{}> {
           and mastering them with the help of powerful yet simple tool
         </StyledInfo>
         <LinkContainer>
-          <NavLink to="/verbs/learn">Get started</NavLink>
+          <NavLink to="/courses">Get started</NavLink>
         </LinkContainer>
       </StyledHome>
     );

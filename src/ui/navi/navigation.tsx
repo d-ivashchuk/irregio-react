@@ -48,9 +48,9 @@ const Navi: React.StatelessComponent<IProps> = props => (
     <NavLink to="/">
       <Icon height="65px" width="65px" />
     </NavLink>
-
-    <NavLink to="/verbs/learn">Verbs</NavLink>
-    <NavLink to="/phrasals/learn">Phrases</NavLink>
+    {/* <NavLink to="/verbs/learn">Verbs</NavLink>
+    <NavLink to="/phrasals/learn">Phrases</NavLink> */}
+    <NavLink to="/courses">Courses</NavLink>
     <NavLink to="/supported-languages">Languages</NavLink>
   </StyledNavi>
 );

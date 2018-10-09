@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import ProgressBar from "../../../components/ProgressBar/ProgressBar";
 
 import Button from "../../../ui/button/button";
-import phrasalVerbs from "../../data/phrasalVerbs";
+import phrasalVerbs from "../../data/phrasalVerbsEn";
 
 const StyledPhrasalVerbs = styled.div`
   display: flex;

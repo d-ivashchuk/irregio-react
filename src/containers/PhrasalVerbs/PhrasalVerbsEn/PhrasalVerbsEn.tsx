@@ -351,16 +351,19 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
     return (
       <React.Fragment>
         <LinkContainer>
-          <NavLink to="/phrasals/learn">Learn</NavLink>
-          <NavLink to="/phrasals/practice" onClick={this.prepareAnswerOptions}>
+          <NavLink to="/phrasals/en/learn">Learn</NavLink>
+          <NavLink
+            to="/phrasals/en/practice"
+            onClick={this.prepareAnswerOptions}
+          >
             Practice
           </NavLink>
         </LinkContainer>
         <StyledPhrasalVerbs>
-          {this.props.location.pathname === "/phrasals/practice"
+          {this.props.location.pathname === "/phrasals/en/practice"
             ? practiceBlock
             : null}
-          {this.props.location.pathname === "/phrasals/learn"
+          {this.props.location.pathname === "/phrasals/en/learn"
             ? learnBlock
             : null}
         </StyledPhrasalVerbs>

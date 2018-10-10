@@ -6,7 +6,7 @@ import germanVerbs from "../../containers/data/ge";
 import englishVerbs from "../../containers/data/en";
 
 import englishPhrasalVerbs from "../../containers/data/phrasalVerbsEn";
-// import germanPhrasalVerbs from "../../containers/data/phrasalVerbsDe";
+import germanPhrasalVerbs from "../../containers/data/phrasalVerbsGe";
 
 const StyledCourseList = styled.div`
   display: flex;
@@ -39,14 +39,14 @@ class CourseList extends React.Component<{}> {
           courseName="Phrasal verbs"
           itemsNumber={englishPhrasalVerbs.data.length}
           language="English"
-          link="/phrasals/learn"
+          link="/phrasals/en/learn"
         />
-        {/* <Course
+        <Course
           courseName="Phrasal verbs"
           itemsNumber={germanPhrasalVerbs.data.length}
           language="German"
-          link="/verbs/learn"
-        /> */}
+          link="/phrasals/ge/learn"
+        />
       </StyledCourseList>
     );
   }

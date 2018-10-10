@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "../../../theme/styled-components";
+import { keyframes } from "../../../theme/styled-components";
 import { withRouter } from "react-router-dom";
 import { RouteComponentProps } from "react-router";
 import { NavLink } from "react-router-dom";
@@ -9,6 +10,10 @@ import ProgressBar from "../../../components/ProgressBar/ProgressBar";
 import Button from "../../../ui/button/button";
 import phrasalVerbs from "../../data/phrasalVerbsEn";
 
+interface IOption {
+  test?: boolean;
+}
+
 const StyledPhrasalVerbs = styled.div`
   display: flex;
   margin: auto;
@@ -16,7 +21,6 @@ const StyledPhrasalVerbs = styled.div`
   font-size: 1.6rem;
   flex-direction: column;
   text-align: center;
-
   button {
     margin-right: 5px;
   }
@@ -28,7 +32,29 @@ const StyledPhrasalVerbs = styled.div`
 const CurrentPVerb = styled.div`
   font-size: 2.6rem;
 `;
-const StyledOption = styled.div`
+const shake = keyframes`
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  `;
+const StyledOption = styled.div<IOption>`
   color: #f1f1f1;
   padding: 6px;
   font-size: 1.7rem;
@@ -41,7 +67,16 @@ const StyledOption = styled.div`
     opacity: 1;
     transition: all 0.3s;
   }
+
+  animation: ${props =>
+    props.test
+      ? `${shake} 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both`
+      : null} 
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 `;
+
 const ProgressContainer = styled.div`
   margin: 10px auto 10px auto;
   width: 350px;
@@ -98,6 +133,9 @@ interface IState {
   fractionCompleted: number;
   mistakesCount: number;
   isCompleted: boolean;
+  mistakeOne: boolean;
+  mistakeTwo: boolean;
+  mistakeThree: boolean;
 }
 
 type IProps = RouteComponentProps;
@@ -109,8 +147,13 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
     answerOptions: [],
     fractionCompleted: 0,
     mistakesCount: 0,
-    isCompleted: false
+    isCompleted: false,
+    mistakeOne: false,
+    mistakeTwo: false,
+    mistakeThree: false
   };
+
+  public refOne: HTMLDivElement;
 
   public componentDidMount() {
     this.prepareAnswerOptions();
@@ -136,10 +179,31 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
         isCompleted: true
       });
     } else {
-      this.setState({
-        ...this.state,
-        mistakesCount: this.state.mistakesCount + 1
-      });
+      if (option === 0) {
+        this.setState({
+          mistakesCount: this.state.mistakesCount + 1,
+          mistakeOne: true
+        });
+        setTimeout(() => {
+          this.setState({ mistakeOne: false });
+        }, 2000);
+      } else if (option === 1) {
+        this.setState({
+          mistakesCount: this.state.mistakesCount + 1,
+          mistakeTwo: true
+        });
+        setTimeout(() => {
+          this.setState({ mistakeTwo: false });
+        }, 2000);
+      } else if (option === 2) {
+        this.setState({
+          mistakesCount: this.state.mistakesCount + 1,
+          mistakeThree: true
+        });
+        setTimeout(() => {
+          this.setState({ mistakeThree: false });
+        }, 2000);
+      }
     }
   };
 
@@ -226,17 +290,26 @@ class PhrasalVerbs extends React.Component<IProps, IState> {
         <ProgressContainer>
           <ProgressBar fractionCompleted={fractionCompleted} />
         </ProgressContainer>
-        <StyledOption onClick={() => this.checkAnswer(0)}>
+        <StyledOption
+          test={this.state.mistakeOne}
+          onClick={() => this.checkAnswer(0)}
+        >
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][0].meaning
             : null}
         </StyledOption>
-        <StyledOption onClick={() => this.checkAnswer(1)}>
+        <StyledOption
+          test={this.state.mistakeTwo}
+          onClick={() => this.checkAnswer(1)}
+        >
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][1].meaning
             : null}
         </StyledOption>
-        <StyledOption onClick={() => this.checkAnswer(2)}>
+        <StyledOption
+          test={this.state.mistakeThree}
+          onClick={() => this.checkAnswer(2)}
+        >
           {this.state.answerOptions.length
             ? this.state.answerOptions[progress][2].meaning
             : null}

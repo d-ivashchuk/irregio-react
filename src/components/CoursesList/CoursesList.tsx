@@ -13,6 +13,7 @@ const StyledCourseList = styled.div`
   padding: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   div {
     margin: 5px;
   }

@@ -1,5 +1,8 @@
 import * as React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
+import { RouteComponentProps } from "react-router";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 import Navigation from "../../ui/navi/navigation";
 import Layout from "../../ui/layout/layout";
 
@@ -22,67 +25,93 @@ injectGlobal`*{
   background: #56ccf2; 
   background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed); 
   background: linear-gradient(to right, #56ccf2, #2f80ed); 
-  
-} `;
+} 
 
-class App extends React.Component<{}, {}> {
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+.fade-exit{
+  opacity:1;
+}
+.fade-exit.fade-exit-active{
+  opacity:0;
+  transition:all 400ms;
+}
+`;
+
+type IProps = RouteComponentProps;
+class App extends React.Component<IProps, {}> {
   public render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <React.Fragment>
-          <Navigation language={"en"} />
-          <Route
-            path="/phrasals"
-            render={() => {
-              return (
-                <Layout>
-                  <PhrasalVerbsEn />
-                </Layout>
-              );
-            }}
-          />
-          <Route
-            path="/verbs"
-            render={() => {
-              return (
-                <Layout>
-                  <IrregularVerbs />
-                </Layout>
-              );
-            }}
-          />
-          <Route
-            path="/supported-languages"
-            render={() => {
-              return (
-                <Layout>
-                  <Languages />
-                </Layout>
-              );
-            }}
-          />
-          <Route
-            path="/"
-            exact={true}
-            render={() => {
-              return (
-                <Layout>
-                  <Home />
-                </Layout>
-              );
-            }}
-          />
-          <Route
-            path="/courses"
-            exact={true}
-            render={() => {
-              return <CourseList />;
-            }}
-          />
-        </React.Fragment>
-      </BrowserRouter>
+      <React.Fragment>
+        <Navigation language={"en"} />
+
+        <TransitionGroup>
+          <CSSTransition
+            key={this.props.location.key}
+            timeout={{ enter: 300, exit: 300 }}
+            classNames="fade"
+          >
+            <Switch location={this.props.location}>
+              <Route
+                path="/phrasals"
+                render={() => {
+                  return (
+                    <Layout>
+                      <PhrasalVerbsEn />
+                    </Layout>
+                  );
+                }}
+              />
+              <Route
+                path="/verbs"
+                render={() => {
+                  return (
+                    <Layout>
+                      <IrregularVerbs />
+                    </Layout>
+                  );
+                }}
+              />
+              <Route
+                path="/supported-languages"
+                render={() => {
+                  return (
+                    <Layout>
+                      <Languages />
+                    </Layout>
+                  );
+                }}
+              />
+              <Route
+                path="/"
+                exact={true}
+                render={() => {
+                  return (
+                    <Layout>
+                      <Home />
+                    </Layout>
+                  );
+                }}
+              />
+              <Route
+                path="/courses"
+                exact={true}
+                render={() => {
+                  return <CourseList />;
+                }}
+              />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      </React.Fragment>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

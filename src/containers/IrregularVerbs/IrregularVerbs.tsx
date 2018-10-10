@@ -40,15 +40,6 @@ const LinkContainer = styled.div`
     transition: all 0.3s, opacity 0.3s;
   }
 `;
-// const FlagContainer = styled.div`
-//   margin: 20px auto 20px auto;
-//   height: 40px;
-//   width: 40px;
-//   &:hover {
-//     cursor: pointer;
-//   }
-// `;
-
 interface IState {
   currentPastForm: string;
   currentPerfectForm: string;
@@ -361,13 +352,6 @@ class IrregularVerbs extends React.Component<IProps, IState> {
         <LinkContainer>
           <NavLink to={`/verbs/${language}/learn`}>Learn</NavLink>
           <NavLink to={`/verbs/${language}/practice`}>Practice</NavLink>
-          {/* <FlagContainer>
-            {language === "de" ? (
-              <img src={deIcon} onClick={this.toggleLanguage} />
-            ) : (
-              <img src={enIcon} onClick={this.toggleLanguage} />
-            )}
-          </FlagContainer> */}
         </LinkContainer>
 
         {this.props.location.pathname === `/verbs/${language}/learn`

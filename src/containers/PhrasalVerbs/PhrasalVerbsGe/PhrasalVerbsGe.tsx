@@ -52,10 +52,47 @@ const LinkContainer = styled.div`
 
 const Preposition = styled.span`
   color: #ff937f;
+  input {
+    color: #ff937f;
+    padding: 1px;
+    border-radius: 5px;
+    position: relative;
+    width: 200px;
+    border: none;
+    height: 2rem;
+    text-align: center;
+    font-size: 30px;
+  }
+`;
+const PrepositionOptionsContainer = styled.div`
+  display: flex;
+  button {
+    padding: 5px;
+    border: none;
+    box-shadow: none;
+  }
+`;
+const KasusOptionContainer = styled.div`
+  display: flex;
+  margin: 10px;
+  button {
+    padding: 5px;
+    border: none;
+    box-shadow: none;
+  }
 `;
 
 const Kasus = styled.span`
   color: #ffd97f;
+  input {
+    font-size: 30px;
+    color: #ffd97f;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+  }
 `;
 
 const StyledTranslation = styled.div`
@@ -67,6 +104,8 @@ interface IState {
   pVerbs: any;
   progress: number;
   fractionCompleted: number;
+  currentPreposition: string;
+  currentKasus: string;
 }
 
 type IProps = RouteComponentProps;
@@ -75,7 +114,9 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
   public state: IState = {
     pVerbs: germanPhrasalVerbs,
     progress: 0,
-    fractionCompleted: 0
+    fractionCompleted: 0,
+    currentPreposition: "",
+    currentKasus: ""
   };
 
   public handleButton = (type: string) => {
@@ -110,6 +151,19 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
       pVerbs: { data: shuffledPVerbs }
     });
   };
+  public handlePreposition = (preposition: string) => {
+    this.setState({ currentPreposition: preposition });
+  };
+  public handleKasus = (kasus: string) => {
+    this.setState({ currentKasus: kasus });
+  };
+  public handleInputChange = (event: any, target: string) => {
+    if (target === "preposition") {
+      this.setState({ currentPreposition: event.target.value });
+    } else if (target === "kasus") {
+      this.setState({ currentKasus: event.target.value });
+    }
+  };
 
   public render() {
     const { pVerbs, progress } = this.state;
@@ -137,6 +191,46 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
         </div>
       </React.Fragment>
     );
+    const practice = (
+      <React.Fragment>
+        <PhrasalVerb>
+          <span>{pVerbs.data[progress].pVerb}</span>{" "}
+          <Preposition>
+            <input
+              onChange={event => this.handleInputChange(event, "preposition")}
+              type="text"
+              value={this.state.currentPreposition}
+            />
+          </Preposition>{" "}
+          <Kasus>
+            <input
+              onChange={event => this.handleInputChange(event, "kasus")}
+              type="text"
+              value={this.state.currentKasus}
+            />
+          </Kasus>
+          <PrepositionOptionsContainer>
+            <button onClick={() => this.handlePreposition("von")}>von</button>
+            <button onClick={() => this.handlePreposition("über")}>über</button>
+            <button onClick={() => this.handlePreposition("auf")}>auf</button>
+            <button onClick={() => this.handlePreposition("aus")}>aus</button>
+            <button onClick={() => this.handlePreposition("mit")}>mit</button>
+            <button onClick={() => this.handlePreposition("an")}>an</button>
+            <button onClick={() => this.handlePreposition("vor")}>vor</button>
+            <button onClick={() => this.handlePreposition("bei")}>bei</button>
+            <button onClick={() => this.handlePreposition("zu")}>zu</button>
+            <button onClick={() => this.handlePreposition("gegen")}>
+              gegen
+            </button>
+          </PrepositionOptionsContainer>
+          <KasusOptionContainer>
+            <button onClick={() => this.handleKasus("A")}>A</button>
+            <button onClick={() => this.handleKasus("D")}>D</button>
+            <button onClick={() => this.handleKasus("G")}>G</button>
+          </KasusOptionContainer>
+        </PhrasalVerb>
+      </React.Fragment>
+    );
     return (
       <React.Fragment>
         <LinkContainer>
@@ -145,6 +239,9 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
         </LinkContainer>
         <StyledPhrasalVerbs>
           {this.props.location.pathname === "/phrasals/ge/learn" ? learn : null}
+          {this.props.location.pathname === "/phrasals/ge/practice"
+            ? practice
+            : null}
         </StyledPhrasalVerbs>
       </React.Fragment>
     );

@@ -31,17 +31,21 @@ injectGlobal`*{
 .fade-enter {
   opacity: 0;
   z-index: 1;
+ 
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 250ms ease-in;
+  transition: opacity 0.6s ;
+ 
 }
 .fade-exit{
   opacity:1;
+  transform: translateY(-1024px);
 }
 .fade-exit.fade-exit-active{
   opacity:0;
-  transition:all 400ms;
+  transition:all 0.5s;
+  transform: translateY(-1024px);
 }
 `;
 
@@ -55,7 +59,7 @@ class App extends React.Component<IProps, {}> {
         <TransitionGroup>
           <CSSTransition
             key={this.props.location.key}
-            timeout={{ enter: 300, exit: 300 }}
+            timeout={{ enter: 500, exit: 400 }}
             classNames="fade"
           >
             <Switch location={this.props.location}>

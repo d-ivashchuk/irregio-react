@@ -47,8 +47,9 @@ class Home extends React.Component<{}> {
         <Icon />
         <Title />
         <StyledInfo>
-          Irreg.io is designed to help you with learning foreign irregular verbs
-          and mastering them with the help of powerful yet simple tool
+          Irreg.io is designed to help you with learning irregularities of
+          foreign languages and mastering them with the help of powerful yet
+          simple tool
         </StyledInfo>
         <LinkContainer>
           <NavLink to="/courses">Get started</NavLink>

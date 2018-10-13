@@ -6,7 +6,28 @@ import { withRouter } from "react-router-dom";
 import { RouteComponentProps } from "react-router";
 import { NavLink } from "react-router-dom";
 
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
+{
+  /* <TransitionGroup>
+          <CSSTransition
+            key={this.state.progress}
+            timeout={{ enter: 500, exit: 400 }}
+            classNames="fade"
+          >
+            <div key={progress}>{progress}</div>
+          </CSSTransition>
+        </TransitionGroup> */
+}
+
 import germanPhrasalVerbs from "../../data/phrasalVerbsGe";
+
+interface IPrepositionProps {
+  isPrepositionCorrect?: boolean;
+}
+
+interface IKasusProps {
+  isKasusCorrect?: boolean;
+}
 
 const StyledPhrasalVerbs = styled.div`
   display: flex;
@@ -19,7 +40,9 @@ const StyledPhrasalVerbs = styled.div`
     margin-right: 5px;
   }
   > div {
-    margin-top: 5px;
+    div {
+      margin: 10px 0 10px 0;
+    }
   }
 `;
 
@@ -50,54 +73,83 @@ const LinkContainer = styled.div`
   }
 `;
 
-const Preposition = styled.span`
-  color: #ff937f;
+const Preposition = styled.span<IPrepositionProps>`
+  color: #ccc;
   input {
-    color: #ff937f;
-    padding: 1px;
+    color: ${props => (props.isPrepositionCorrect ? "#ff937f" : "#ccc")};
+    padding: 2px;
     border-radius: 5px;
     position: relative;
-    width: 200px;
+    width: 100px;
     border: none;
     height: 2rem;
     text-align: center;
     font-size: 30px;
+    transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 `;
 const PrepositionOptionsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
   button {
+    opacity: 0.8;
+    font-size: 1.3rem;
     padding: 5px;
     border: none;
     box-shadow: none;
+    background: none;
+    color: white;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 `;
 const KasusOptionContainer = styled.div`
   display: flex;
   margin: 10px;
+  justify-content: center;
   button {
+    opacity: 0.8;
+    font-size: 1.5rem;
     padding: 5px;
     border: none;
     box-shadow: none;
+    background: none;
+    color: white;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 `;
 
-const Kasus = styled.span`
-  color: #ffd97f;
+const Kasus = styled.span<IKasusProps>`
+  color: #ccc;
   input {
+    color: ${props => (props.isKasusCorrect ? "#ffd97f" : "#ccc")};
     font-size: 30px;
-    color: #ffd97f;
     width: 50px;
     height: 50px;
     border-radius: 50px;
     border: none;
     text-align: center;
+    transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 `;
 
 const StyledTranslation = styled.div`
   color: #f0f0f0;
   opacity: 0.7;
+`;
+
+const LearnPreposition = styled(Preposition)`
+  color: #ff937f;
+`;
+const LearnKasus = styled(Kasus)`
+  color: #ffd97f;
 `;
 
 interface IState {
@@ -118,6 +170,23 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
     currentPreposition: "",
     currentKasus: ""
   };
+
+  public componentDidUpdate() {
+    if (
+      this.state.currentPreposition ===
+        this.state.pVerbs.data[this.state.progress].prae &&
+      this.state.currentKasus ===
+        this.state.pVerbs.data[this.state.progress].kasus
+    ) {
+      setTimeout(() => {
+        this.setState({
+          progress: this.state.progress + 1,
+          currentKasus: "",
+          currentPreposition: ""
+        });
+      }, 800);
+    }
+  }
 
   public handleButton = (type: string) => {
     if (
@@ -168,12 +237,14 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
   public render() {
     const { pVerbs, progress } = this.state;
 
+    console.log(pVerbs.data[progress].kasus === this.state.currentKasus);
+
     const learn = (
       <React.Fragment>
         <PhrasalVerb>
           <span>{pVerbs.data[progress].pVerb}</span>{" "}
-          <Preposition>{pVerbs.data[progress].prae}</Preposition>{" "}
-          <Kasus>{pVerbs.data[progress].kasus}</Kasus>
+          <LearnPreposition>{pVerbs.data[progress].prae}</LearnPreposition>{" "}
+          <LearnKasus>{pVerbs.data[progress].kasus}</LearnKasus>
         </PhrasalVerb>
         <StyledTranslation>
           {pVerbs.data[progress].translationGe}
@@ -195,14 +266,22 @@ class PhrasalVerbsGe extends React.Component<IProps, IState> {
       <React.Fragment>
         <PhrasalVerb>
           <span>{pVerbs.data[progress].pVerb}</span>{" "}
-          <Preposition>
+          <Preposition
+            isPrepositionCorrect={
+              pVerbs.data[progress].prae === this.state.currentPreposition
+            }
+          >
             <input
               onChange={event => this.handleInputChange(event, "preposition")}
               type="text"
               value={this.state.currentPreposition}
             />
           </Preposition>{" "}
-          <Kasus>
+          <Kasus
+            isKasusCorrect={
+              pVerbs.data[progress].kasus === this.state.currentKasus
+            }
+          >
             <input
               onChange={event => this.handleInputChange(event, "kasus")}
               type="text"
